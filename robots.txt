@@ -1,0 +1,4 @@
+Sitemap: https://blog.fromkk.com/sitemapindex.xml
+
+User-Agent: *
+Host: blog.fromkk.com
