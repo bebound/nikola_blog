@@ -183,11 +183,13 @@ THEME_COLOR = '#5670d4'
 
 POSTS = (
     ("posts/*.rst", "posts", "post.tmpl"),
+    ("posts/*.md", "posts", "post.tmpl"),
     ("posts/*.txt", "posts", "post.tmpl"),
     ("posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
     ("pages/*.rst", "pages", "story.tmpl"),
+    ("pages/*.md", "pages", "story.tmpl"),
     ("pages/*.txt", "pages", "story.tmpl"),
     ("pages/*.html", "pages", "story.tmpl"),
 )
@@ -581,11 +583,13 @@ REDIRECTIONS = []
 # to `nikola deploy`.  If no arguments are specified, a preset
 # named `default` will be executed.  You can use as many presets
 # in a `nikola deploy` command as you like.
-# DEPLOY_COMMANDS = {
-#     'default': [
-#         "rsync -rav --delete output/ joe@my.site:/srv/www/site",
-#     ]
-# }
+DEPLOY_COMMANDS = {
+    'default': [
+        "git add .",
+        "git commit -m 'Add new post'",
+        "git push",
+    ]
+}
 
 # github_deploy configuration
 # For more details, read the manual:
