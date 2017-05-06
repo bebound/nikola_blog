@@ -1,26 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog</title><link>https://blog.fromkk.com/</link><description>KK's personal blog</description><atom:link href="https://blog.fromkk.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2017 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Sat, 06 May 2017 16:44:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Some Useful Shell Tools</title><link>https://blog.fromkk.com/posts/some-useful-shell-tools/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here are some shell tools I use, which can boost your productivity.&lt;/p&gt;
-&lt;h4&gt;&lt;a href="https://github.com/sorin-ionescu/prezto"&gt;Prezto&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;A zsh configuration framework. Provides auto completion, prompt thems and lots of modules to work with other useful tools. I exremely love the &lt;code&gt;agnoster&lt;/code&gt; theme.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="agnoster" src="https://blog.fromkk.com/images/agnoster.png"&gt;&lt;/p&gt;
-&lt;h4&gt;&lt;a href="https://github.com/clvv/fasd"&gt;Fasd&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Help you to navigate between folders and launch application.&lt;/p&gt;
-&lt;p&gt;Here are the official usage example:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;  v def conf       =&amp;gt;     vim /some/awkward/path/to/type/default.conf
-  j abc            =&amp;gt;     cd /hell/of/a/awkward/path/to/get/to/abcdef
-  m movie          =&amp;gt;     mplayer /whatever/whatever/whatever/awesome_movie.mp4
-  o eng paper      =&amp;gt;     xdg-open /you/dont/remember/where/english_paper.pdf
-  vim `f rc lo`    =&amp;gt;     vim /etc/rc.local
-  vim `f rc conf`  =&amp;gt;     vim /etc/rc.conf
-&lt;/pre&gt;
-
-
-&lt;h4&gt;&lt;a href="https://github.com/monochromegane/the_platinum_searcher"&gt;pt&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;A fast code search tool similar to &lt;code&gt;ack&lt;/code&gt;.&lt;/p&gt;
-&lt;h4&gt;&lt;a href="https://github.com/junegunn/fzf"&gt;fzf&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;A great fuzzy finder, it can also integrate with vim by &lt;a href="https://github.com/junegunn/fzf.vim"&gt;fzf.vim&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="fzf" src="https://blog.fromkk.com/images/fzf.gif"&gt;&lt;/p&gt;
-&lt;h4&gt;&lt;a href="https://github.com/nvbn/thefuck"&gt;thefuck&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Magnificent app which corrects your previous console command.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="thefuck" src="https://blog.fromkk.com/images/thefuck.gif"&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://blog.fromkk.com/posts/some-useful-shell-tools/</guid><pubDate>Sat, 06 May 2017 16:10:25 GMT</pubDate></item><item><title>Start</title><link>https://blog.fromkk.com/posts/start/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Over the years, I have read so many programmers’ blogs, which has  helped me a lot. Now I think it’s the time to start my own blog.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog</title><link>https://blog.fromkk.com/</link><description>KK's personal blog</description><atom:link href="https://blog.fromkk.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2017 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Sat, 06 May 2017 18:41:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Start</title><link>https://blog.fromkk.com/posts/start/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Over the years, I have read so many programmers’ blogs, which has  helped me a lot. Now I think it’s the time to start my own blog.&lt;/p&gt;
 &lt;p&gt;I hope this can enforce myself to review what I have learned, and it would even be better if someone can benefit from it.&lt;/p&gt;&lt;/div&gt;</description><guid>https://blog.fromkk.com/posts/start/</guid><pubDate>Tue, 18 Apr 2017 15:33:55 GMT</pubDate></item></channel></rss>

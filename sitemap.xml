@@ -7,102 +7,98 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://blog.fromkk.com/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/2017/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/archive.html</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/categories/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/galleries/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/galleries/demo/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/listings/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/listings/hello.py.html</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/about-nikola/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/bootstrap-demo/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/charts/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/creating-a-theme/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/dr-nikolas-vendetta/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/extending/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/handbook/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/internals/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/listings-demo/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/path-handlers/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/quickref/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/quickstart/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/slides-demo/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/social_buttons/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/pages/theming/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
- </url>
- <url>
-  <loc>https://blog.fromkk.com/posts/some-useful-shell-tools/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.fromkk.com/posts/start/</loc>
-  <lastmod>2017-05-06T16:44:00Z</lastmod>
+  <lastmod>2017-05-06T18:41:00Z</lastmod>
  </url>
 </urlset>
