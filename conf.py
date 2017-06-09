@@ -21,10 +21,10 @@ BLOG_AUTHOR = "Kurt Lei"  # (translatable)
 BLOG_TITLE = "KK's Blog"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://blog.fromkk.com/"
+SITE_URL = "https://bebound.github.io/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
-# BASE_URL = "https://blog.fromkk.com/"
+# BASE_URL = "https://bebound.github.io/"
 BLOG_EMAIL = "bebound gm@il.com"
 BLOG_DESCRIPTION = "KK's personal blog"  # (translatable)
 
