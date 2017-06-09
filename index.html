@@ -9,8 +9,8 @@
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
-<link rel="canonical" href="https://blog.fromkk.com/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/some-useful-shell-tools/" type="text/html">
+<link rel="canonical" href="https://bebound.github.io/">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/enable-c-extension-for-gensim-on-windows/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -26,7 +26,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://blog.fromkk.com/">
+            <a class="navbar-brand" href="https://bebound.github.io/">
 
                 <span id="blog-title">KK's Blog</span>
             </a>
@@ -60,7 +60,37 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/some-useful-shell-tools/" class="u-url">Some Useful Shell Tools</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/enable-c-extension-for-gensim-on-windows/" class="u-url">Enable C Extension for gensim on Windows</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Kurt Lei
+            </span></p>
+            <p class="dateline"><a href="posts/enable-c-extension-for-gensim-on-windows/" rel="bookmark"><time class="published dt-published" datetime="2017-06-10T03:40:32+08:00" title="2017-06-10 03:40">2017-06-10 03:40</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/enable-c-extension-for-gensim-on-windows/#disqus_thread" data-disqus-identifier="cache/posts/enable-c-extension-for-gensim-on-windows.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>For these days, I’m working on some text classificatin works, and I use <code>gensim</code>’s <code>doc2vec</code> function.</p>
+<p>When using gensim, it shows this warning message:</p>
+<pre class="code literal-block"><span></span>C extension not loaded for Word2Vec, training will be slow.
+</pre>
+
+
+<p>I search this on Internet and found that gensim has rewrite some part of the code using <code>cython</code> rather than <code>numpy</code> to get better performance. A compiler is required to enable this featrue.</p>
+<p>I tried to install mingw and add it into the path, but it's not wroking.</p>
+<p>Finally, I tried to install <a href="http://landinghub.visualstudio.com/visual-cpp-build-tools">Visual C++ Build Tools</a> and it works.</p>
+<p>If this output a none <code>-1</code> digit, then it's fine.</p>
+<pre class="code literal-block"><span></span><span class="kn">from</span> <span class="nn">gensim.models</span> <span class="k">import</span> <span class="n">word2vec</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word2vec</span><span class="o">.</span><span class="n">FAST_VERSION</span><span class="p">)</span>
+</pre>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/some-useful-shell-tools/" class="u-url">Some Useful Shell Tools</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Kurt Lei
