@@ -13,7 +13,7 @@ Here are some shell tools I use, which can boost your productivity.
 
 ### [Prezto](https://github.com/sorin-ionescu/prezto)
 
-A zsh configuration framework. Provides auto completion, prompt thems and lots of modules to work with other useful tools. I exremely love the `agnoster` theme.
+A zsh configuration framework. Provides auto completion, prompt theme and lots of modules to work with other useful tools. I extremely love the `agnoster` theme.
 
 ![agnoster](/images/agnoster.png)
 
