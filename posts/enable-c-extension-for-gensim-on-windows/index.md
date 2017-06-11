@@ -9,16 +9,16 @@
 .. type: text
 -->
 
-For these days, I’m working on some text classificatin works, and I use `gensim`’s `doc2vec` function.
+For these days, I’m working on some text classification works, and I use `gensim`’s `doc2vec` function.
 
 When using gensim, it shows this warning message:
 ```
 C extension not loaded for Word2Vec, training will be slow.
 ```
 
-I search this on Internet and found that gensim has rewrite some part of the code using `cython` rather than `numpy` to get better performance. A compiler is required to enable this featrue.
+I search this on Internet and found that gensim has rewrite some part of the code using `cython` rather than `numpy` to get better performance. A compiler is required to enable this feature.
 
-I tried to install mingw and add it into the path, but it's not wroking.
+I tried to install mingw and add it into the path, but it's not working.
 
 Finally, I tried to install [Visual C++ Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools) and it works.
 
