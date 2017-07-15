@@ -1,78 +1,70 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<html prefix="
+og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" vocab="http://ogp.me/ns" lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="description" content="KK's personal blog">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width">
 <title>KK's Blog</title>
-<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<meta name="theme-color" content="#5670d4">
-<meta name="generator" content="Nikola (getnikola.com)">
+<link href="assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700%7CAbril+Fatface">
+<meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://bebound.github.io/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/enable-c-extension-for-gensim-on-windows/" type="text/html">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'left', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/enable-c-extension-for-gensim-on-windows/" type="text/html">
 </head>
-<body>
-<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+<body class="">
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
-<!-- Menubar -->
+    <div class="sidebar">
+        <div class="container sidebar-sticky">
+            <div class="sidebar-about">
+              <h1>
+                <a href="https://bebound.github.io/">
+                      <h1 id="brand"><a href="https://bebound.github.io/" title="KK's Blog" rel="home">
 
-<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
-<!-- This keeps the margins nice -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://bebound.github.io/">
+        <span id="blog-title">KK's Blog</span>
+    </a></h1>
 
-                <span id="blog-title">KK's Blog</span>
-            </a>
-        </div>
-<!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
-            <ul class="nav navbar-nav">
-<li>
-<a href="archive.html">Archive</a>
-                </li>
-<li>
-<a href="categories/">Tags</a>
-                </li>
-<li>
-<a href="rss.xml">RSS feed</a>
+                </a>
+              </h1>
+                <p class="lead">KK's personal blog</p>
 
-                
-            </li>
-</ul>
-<ul class="nav navbar-nav navbar-right"></ul>
-</div>
-<!-- /.navbar-collapse -->
-    </div>
-<!-- /.container -->
-</nav><!-- End of Menubar --><div class="container" id="content" role="main">
-    <div class="body-content">
-        <!--Body content-->
-        <div class="row">
-            
-            
-
+            </div>
+                <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="archive.html">Archive</a>
+        <a class="sidebar-nav-item" href="categories/">Tags</a>
+        <a class="sidebar-nav-item" href="rss.xml">RSS feed</a>
     
-<div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/enable-c-extension-for-gensim-on-windows/" class="u-url">Enable C Extension for gensim on Windows</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Kurt Lei
-            </span></p>
-            <p class="dateline"><a href="posts/enable-c-extension-for-gensim-on-windows/" rel="bookmark"><time class="published dt-published" datetime="2017-06-10T03:40:32+08:00" title="2017-06-10 03:40">2017-06-10 03:40</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/enable-c-extension-for-gensim-on-windows/#disqus_thread" data-disqus-identifier="cache/posts/enable-c-extension-for-gensim-on-windows.html">Comments</a>
-
-
-        </p>
+    
+    </nav><footer id="footer"><span class="copyright">
+              Contents © 2017         <a href="mailto:bebound%20gm@il.com">Kurt Lei</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            </span>
+            
+            
+        </footer>
 </div>
+    </div>
+
+    <div class="content container" id="content">
+    
+<div class="post">
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/enable-c-extension-for-gensim-on-windows/" class="u-url">Enable C Extension for gensim on Windows</a></h1>
+        <div class="metadata">
+            <span class="post-date dateline"><time class="published dt-published" datetime="2017-06-10T03:40:32+08:00" title="2017-06-10 03:40">2017-06-10 03:40</time></span>
+        </div>
     </header><div class="e-content entry-content">
     <div>
 <p>For these days, I’m working on some text classification works, and I use <code>gensim</code>’s <code>doc2vec</code> function.</p>
@@ -90,19 +82,10 @@
 </pre>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/some-useful-shell-tools/" class="u-url">Some Useful Shell Tools</a></h1>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/some-useful-shell-tools/" class="u-url">Some Useful Shell Tools</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Kurt Lei
-            </span></p>
-            <p class="dateline"><a href="posts/some-useful-shell-tools/" rel="bookmark"><time class="published dt-published" datetime="2017-05-07T00:10:25+08:00" title="2017-05-07 00:10">2017-05-07 00:10</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/some-useful-shell-tools/#disqus_thread" data-disqus-identifier="cache/posts/some-useful-shell-tools.html">Comments</a>
-
-
-        </p>
-</div>
+            <span class="post-date dateline"><time class="published dt-published" datetime="2017-05-07T00:10:25+08:00" title="2017-05-07 00:10">2017-05-07 00:10</time></span>
+        </div>
     </header><div class="e-content entry-content">
     <div>
 <p>Here are some shell tools I use, which can boost your productivity.</p>
@@ -131,19 +114,10 @@
 <p><img alt="thefuck" src="images/thefuck.gif"></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/start/" class="u-url">Start</a></h1>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/start/" class="u-url">Start</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Kurt Lei
-            </span></p>
-            <p class="dateline"><a href="posts/start/" rel="bookmark"><time class="published dt-published" datetime="2017-04-18T23:33:55+08:00" title="2017-04-18 23:33">2017-04-18 23:33</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/start/#disqus_thread" data-disqus-identifier="cache/posts/start.html">Comments</a>
-
-
-        </p>
-</div>
+            <span class="post-date dateline"><time class="published dt-published" datetime="2017-04-18T23:33:55+08:00" title="2017-04-18 23:33">2017-04-18 23:33</time></span>
+        </div>
     </header><div class="e-content entry-content">
     <div>
 <p>Over the years, I have read so many programmers’ blogs, which has  helped me a lot. Now I think it’s the time to start my own blog.</p>
@@ -153,24 +127,12 @@
     </article>
 </div>
 
+               <script>var disqus_shortname="kkblog-1";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
 
-
+    
+    
         
-       <script>var disqus_shortname="kkblog-1";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
-</div>
-        <!--End of body content-->
 
-        <footer id="footer">
-            Contents © 2017         <a href="mailto:bebound%20gm@il.com">Kurt Lei</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
-            
-        </footer>
-</div>
-</div>
-
-
-            <script src="assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
-    moment.locale("en");
-    fancydates(0, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates -->
 </body>
 </html>
