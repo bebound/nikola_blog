@@ -1051,19 +1051,18 @@ MathJax.Hub.Config({
 # it's faster and the output looks better.
 # If you set USE_KATEX to True, you also need to add an extra CSS file
 # like this:
-# EXTRA_HEAD_DATA = """<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">"""
-# USE_KATEX = False
+USE_KATEX = True
 
 # If you want to use the old (buggy) inline math $.$ with KaTeX, then
 # you might want to use this feature.
-# KATEX_AUTO_RENDER = """
-# delimiters: [
-#     {left: "$$", right: "$$", display: true},
-#     {left: "\\\[", right: "\\\]", display: true},
-#     {left: "$", right: "$", display: false},
-#     {left: "\\\(", right: "\\\)", display: false}
-# ]
-# """
+KATEX_AUTO_RENDER = """
+delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "\\\[", right: "\\\]", display: true},
+    {left: "$", right: "$", display: false},
+    {left: "\\\(", right: "\\\)", display: false}
+]
+"""
 
 # Do you want to customize the nbconversion of your IPython notebook?
 # IPYNB_CONFIG = {}
