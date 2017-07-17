@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog (Posts about mathjax)</title><link>https://bebound.github.io/</link><description></description><atom:link href="https://bebound.github.io/categories/mathjax.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2017 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Mon, 17 Jul 2017 13:10:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Brief Introduction of Label Propagation Algorithm</title><link>https://bebound.github.io/posts/brief-introduction-of-label-propagation-algorithm/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;As I said before, I'm working on a text classification project. I use &lt;code&gt;doc2vec&lt;/code&gt; to convert text into vectors, then I use LPA to classify the vectors.&lt;/p&gt;
+&lt;p&gt;LPA is a simple, effective semi-supervised algotithm. It can use the density of unlabeled data to find a hyperplane to split the data.&lt;/p&gt;
+&lt;p&gt;Here are the main stop of the algorithm:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Let $ (x_1,y1)...(x_l,y_l)$ be labeled data, $Y_L = {y_1...y_l} $ are the class labels. Let $(x_{l+1},y_{l+u})$ be unlabeled data where $Y_U = {y_{l+1}...y_{l+u}}$ are unobserved, useally $l \ll u$. Let $X={x_1...x_{l+u}}$ where $x_i\in R^D$. The problem is to estimate $Y_U$ for $X$ and $Y_L$.&lt;/li&gt;
+&lt;li&gt;Calculate the similarity of the data points. The most simple metric is Euclidean distance. Use a parameter $\sigma$ to cotrol the weights.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$w_{ij}= exp(-\frac{d^2_{ij}}{\sigma^2})=exp(-\frac{\sum^D_{d=1}{(x^d_i-x^d_j})^2}{\sigma^2})$$&lt;/p&gt;
+&lt;p&gt;Larger weight allow labels to travel through easier.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Define a $(l+u)*(l+u)$ probabilistic transition matrix $T$.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$T_{ij}=P(j \rightarrow i)=\frac{w_{ij}}{\sum^{l+u}&lt;em kj&gt;{k=2}w&lt;/em&gt;}$$&lt;/p&gt;
+&lt;p&gt;$T_{ij}$ is the probability to jump from node $j$ to $i$. If there are $C$ classes, we can define a $(l+u)*C$ label matrix $Y$, to represent the probability of a label belong to class $c$. The initialiation of unlabeled data points is not important.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Propagate $Y \leftarrow TY$&lt;/li&gt;
+&lt;li&gt;Row-normalize Y.&lt;/li&gt;
+&lt;li&gt;Reset labeled data's Y. Repeat 3 until Y converges.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In short, let the nearest label has larger weight, then calculate each label's new label, reset labeled data's label, repeat.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="label spreading" src="https://bebound.github.io/images/label_spreading.png"&gt;&lt;/p&gt;
+&lt;p&gt;Ref:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://mlg.eng.cam.ac.uk/zoubin/papers/CMU-CALD-02-107.pdf"&gt;Learning from Labeled and Unlabeled Data with Label Propagation&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://blog.csdn.net/zouxy09/article/details/49105265"&gt;标签传播算法（Label Propagation）及Python实现&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>mathjax</category><guid>https://bebound.github.io/posts/brief-introduction-of-label-propagation-algorithm/</guid><pubDate>Sun, 16 Jul 2017 15:46:04 GMT</pubDate></item></channel></rss>

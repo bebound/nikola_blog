@@ -24,7 +24,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/enable-c-extension-for-gensim-on-windows/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/brief-introduction-of-label-propagation-algorithm/" type="text/html">
 </head>
 <body class="theme-base-0d">
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -61,7 +61,45 @@ MathJax.Hub.Config({
     <div class="content container" id="content">
     
 <div class="post">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/enable-c-extension-for-gensim-on-windows/" class="u-url">Enable C Extension for gensim on Windows</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/brief-introduction-of-label-propagation-algorithm/" class="u-url">Brief Introduction of Label Propagation Algorithm</a></h1>
+        <div class="metadata">
+            <span class="post-date dateline"><time class="published dt-published" datetime="2017-07-16T23:46:04+08:00" title="2017-07-16 23:46">2017-07-16 23:46</time></span>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>As I said before, I'm working on a text classification project. I use <code>doc2vec</code> to convert text into vectors, then I use LPA to classify the vectors.</p>
+<p>LPA is a simple, effective semi-supervised algotithm. It can use the density of unlabeled data to find a hyperplane to split the data.</p>
+<p>Here are the main stop of the algorithm:</p>
+<ol>
+<li>Let $ (x_1,y1)...(x_l,y_l)$ be labeled data, $Y_L = {y_1...y_l} $ are the class labels. Let $(x_{l+1},y_{l+u})$ be unlabeled data where $Y_U = {y_{l+1}...y_{l+u}}$ are unobserved, useally $l \ll u$. Let $X={x_1...x_{l+u}}$ where $x_i\in R^D$. The problem is to estimate $Y_U$ for $X$ and $Y_L$.</li>
+<li>Calculate the similarity of the data points. The most simple metric is Euclidean distance. Use a parameter $\sigma$ to cotrol the weights.</li>
+</ol>
+<p>$$w_{ij}= exp(-\frac{d^2_{ij}}{\sigma^2})=exp(-\frac{\sum^D_{d=1}{(x^d_i-x^d_j})^2}{\sigma^2})$$</p>
+<p>Larger weight allow labels to travel through easier.</p>
+<ol>
+<li>Define a $(l+u)*(l+u)$ probabilistic transition matrix $T$.</li>
+</ol>
+<p>$$T_{ij}=P(j \rightarrow i)=\frac{w_{ij}}{\sum^{l+u}<em kj>{k=2}w</em>}$$</p>
+<p>$T_{ij}$ is the probability to jump from node $j$ to $i$. If there are $C$ classes, we can define a $(l+u)*C$ label matrix $Y$, to represent the probability of a label belong to class $c$. The initialiation of unlabeled data points is not important.</p>
+<ol>
+<li>Propagate $Y \leftarrow TY$</li>
+<li>Row-normalize Y.</li>
+<li>Reset labeled data's Y. Repeat 3 until Y converges.</li>
+</ol>
+<p>In short, let the nearest label has larger weight, then calculate each label's new label, reset labeled data's label, repeat.</p>
+<p><img alt="label spreading" src="images/label_spreading.png"></p>
+<p>Ref:</p>
+<ol>
+<li>
+<p><a href="http://mlg.eng.cam.ac.uk/zoubin/papers/CMU-CALD-02-107.pdf">Learning from Labeled and Unlabeled Data with Label Propagation</a></p>
+</li>
+<li>
+<p><a href="http://blog.csdn.net/zouxy09/article/details/49105265">标签传播算法（Label Propagation）及Python实现</a></p>
+</li>
+</ol>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/enable-c-extension-for-gensim-on-windows/" class="u-url">Enable C Extension for gensim on Windows</a></h1>
         <div class="metadata">
             <span class="post-date dateline"><time class="published dt-published" datetime="2017-06-10T03:40:32+08:00" title="2017-06-10 03:40">2017-06-10 03:40</time></span>
         </div>
@@ -127,7 +165,20 @@ MathJax.Hub.Config({
     </article>
 </div>
 
-               <script>var disqus_shortname="kkblog-1";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+               <script>var disqus_shortname="kkblog-1";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha256-ExtbCSBuYA7kq1Pz362ibde9nnsHYPt6JxuxYeZbU+c=" crossorigin="anonymous"></script><script>
+                renderMathInElement(document.body,
+                    {
+                        
+delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "\\[", right: "\\]", display: true},
+    {left: "$", right: "$", display: false},
+    {left: "\\(", right: "\\)", display: false}
+]
+
+                    }
+                );
+            </script>
 </div>
 
     
