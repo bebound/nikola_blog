@@ -22,11 +22,16 @@ $$w_{ij}= exp(-\frac{d^2_{ij}}{\sigma^2})=exp(-\frac{\sum^D_{d=1}{(x^d_i-x^d_j})
 
 Larger weight allow labels to travel through easier.
 
-2. Define a $(l+u)*(l+u)$ probabilistic transition matrix $T$.
+2. Define a $(l+u)*(l+u)$ probabilistic transition matrix $T$
 
-$$T_{ij}=P(j \rightarrow i)=\frac{w_{ij}}{\sum^{l+u}_{k=2}w_{kj}}$$
+<div>
+
+$$T_{ij}=P(j \rightarrow i)=\frac{w_{ij}}{\sum^{l+u}_{k=1}w_{kj}}$$
+
+</div>
 
 $T_{ij}$ is the probability to jump from node $j$ to $i$. If there are $C$ classes, we can define a $(l+u)*C$ label matrix $Y$, to represent the probability of a label belong to class $c$. The initialiation of unlabeled data points is not important.
+
 
 3. Propagate $Y \leftarrow TY$
 4. Row-normalize Y.
