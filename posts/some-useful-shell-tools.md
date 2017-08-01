@@ -1,11 +1,11 @@
-<!-- 
+<!--
 .. title: Some Useful Shell Tools
 .. slug: some-useful-shell-tools
 .. date: 2017-05-07 00:10:25 UTC+08:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
+.. tags:
+.. category:
+.. link:
+.. description:
 .. type: text
 -->
 
@@ -15,9 +15,9 @@ Here are some shell tools I use, which can boost your productivity.
 
 A zsh configuration framework. Provides auto completion, prompt theme and lots of modules to work with other useful tools. I extremely love the `agnoster` theme.
 
-![agnoster](/images/agnoster.png)
+![agnoster](/images/shell_agnoster.png)
 
- 
+
 ### [Fasd](https://github.com/clvv/fasd)
 
 Help you to navigate between folders and launch application.
@@ -40,10 +40,10 @@ A fast code search tool similar to `ack`.
 
 A great fuzzy finder, it can also integrate with vim by [fzf.vim](https://github.com/junegunn/fzf.vim)
 
-![fzf](/images/fzf.gif)
+![fzf](/images/shell_fzf.gif)
 
 ### [thefuck](https://github.com/nvbn/thefuck)
 
 Magnificent app which corrects your previous console command.
 
-![thefuck](/images/thefuck.gif)
+![thefuck](/images/shell_thefuck.gif)
