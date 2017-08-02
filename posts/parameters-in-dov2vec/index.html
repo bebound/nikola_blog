@@ -5,12 +5,12 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>KK's Blog · Brief Introduction of Label Propagation Algorithm </title>
+<title>KK's Blog · Parameters in dov2vec </title>
 <link href="../../assets/css/all.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700%7CAbril+Fatface">
 <meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://bebound.github.io/posts/brief-introduction-of-label-propagation-algorithm/">
+<link rel="canonical" href="https://bebound.github.io/posts/parameters-in-dov2vec/">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,15 +24,15 @@ MathJax.Hub.Config({
     }
 });
 </script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Kurt Lei">
-<link rel="prev" href="../enable-c-extension-for-gensim-on-windows/" title="Enable C Extension for gensim on Windows" type="text/html">
-<link rel="next" href="../parameters-in-dov2vec/" title="Parameters in dov2vec" type="text/html">
+<link rel="prev" href="../brief-introduction-of-label-propagation-algorithm/" title="Brief Introduction of Label Propagation Algorithm" type="text/html">
 <meta property="og:site_name" content="KK's Blog">
-<meta property="og:title" content="Brief Introduction of Label Propagation Algorithm">
-<meta property="og:url" content="https://bebound.github.io/posts/brief-introduction-of-label-propagation-algorithm/">
-<meta property="og:description" content="As I said before, I'm working on a text classification project. I use doc2vec to convert text into vectors, then I use LPA to classify the vectors.
-LPA is a simple, effective semi-supervised algotithm">
+<meta property="og:title" content="Parameters in dov2vec">
+<meta property="og:url" content="https://bebound.github.io/posts/parameters-in-dov2vec/">
+<meta property="og:description" content="Here are some parameter in gensim's doc2vec class.
+window
+window is the maximum distance between the predicted word and context words used for prediction within a document. It will look behind and ahe">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-07-16T23:46:04+08:00">
+<meta property="article:published_time" content="2017-08-03T00:02:17+08:00">
 <meta property="article:tag" content="mathjax">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
 </head>
@@ -69,51 +69,41 @@ LPA is a simple, effective semi-supervised algotithm">
     </div>
 
     <div class="content container" id="content">
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><h1 class="post-title p-name"><a href="." class="u-url">Brief Introduction of Label Propagation Algorithm</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><h1 class="post-title p-name"><a href="." class="u-url">Parameters in dov2vec</a></h1>
 
     <span class="post-date">
-      <time class="published dt-published" datetime="2017-07-16T23:46:04+08:00" itemprop="datePublished" title="2017-07-16 23:46">2017-07-16 23:46</time></span>
+      <time class="published dt-published" datetime="2017-08-03T00:02:17+08:00" itemprop="datePublished" title="2017-08-03 00:02">2017-08-03 00:02</time></span>
 
     
     
 
     <div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>As I said before, I'm working on a text classification project. I use <code>doc2vec</code> to convert text into vectors, then I use LPA to classify the vectors.</p>
-<p>LPA is a simple, effective semi-supervised algotithm. It can use the density of unlabeled data to find a hyperplane to split the data.</p>
-<p>Here are the main stop of the algorithm:</p>
-<ol>
-<li>Let $ (x_1,y1)...(x_l,y_l)$ be labeled data, $Y_L = {y_1...y_l} $ are the class labels. Let $(x_{l+1},y_{l+u})$ be unlabeled data where $Y_U = {y_{l+1}...y_{l+u}}$ are unobserved, useally $l \ll u$. Let $X={x_1...x_{l+u}}$ where $x_i\in R^D$. The problem is to estimate $Y_U$ for $X$ and $Y_L$.</li>
-<li>Calculate the similarity of the data points. The most simple metric is Euclidean distance. Use a parameter $\sigma$ to cotrol the weights.</li>
-</ol>
-<p>$$w_{ij}= exp(-\frac{d^2_{ij}}{\sigma^2})=exp(-\frac{\sum^D_{d=1}{(x^d_i-x^d_j})^2}{\sigma^2})$$</p>
-<p>Larger weight allow labels to travel through easier.</p>
-<ol>
-<li>Define a $(l+u)*(l+u)$ probabilistic transition matrix $T$</li>
-</ol>
-<div>
-
-$$T_{ij}=P(j \rightarrow i)=\frac{w_{ij}}{\sum^{l+u}_{k=1}w_{kj}}$$
-
-</div>
-
-<p>$T_{ij}$ is the probability to jump from node $j$ to $i$. If there are $C$ classes, we can define a $(l+u)*C$ label matrix $Y$, to represent the probability of a label belong to class $c$. The initialiation of unlabeled data points is not important.</p>
-<ol>
-<li>Propagate $Y \leftarrow TY$</li>
-<li>Row-normalize Y.</li>
-<li>Reset labeled data's Y. Repeat 3 until Y converges.</li>
-</ol>
-<p>In short, let the nearest label has larger weight, then calculate each label's new label, reset labeled data's label, repeat.</p>
-<p><img alt="label spreading" src="../../images/label_spreading.png"></p>
+<p>Here are some parameter in <code>gensim</code>'s <code>doc2vec</code> class.</p>
+<h4>window</h4>
+<p>window is the maximum distance between the predicted word and context words used for prediction within a document. It will look behind and ahead.</p>
+<p>In <code>skip-gram</code> model, if the window size is 2, the training samples will be this:(the blue word is the input word)</p>
+<p><img alt="window" src="../../images/doc2vec_window.png"></p>
+<h4>min_count</h4>
+<p>If the word appears less than this value, it will be skipped</p>
+<h4>sample</h4>
+<p>High frequency word like <code>the</code> is useless for training. <code>sample</code> is a threshold for deleting these higher-frequency words. The probability of keeping the word $w_i$ is:</p>
+<p>$$P(w_i) = (\sqrt{\frac{z(w_i)}{s}} + 1) \cdot \frac{s}{z(w_i)}$$</p>
+<p>where $z(w_i)$ is the frequency of the word and $s$ is the sample rate.</p>
+<p>This is the plot when <code>sample</code> is 1e-3.</p>
+<p><img alt="sample" src="../../images/doc2vec_sample.png"></p>
+<h4>negative</h4>
+<p>Usually, when training a neural network, for each training sample, all of the weights in the neural network need to be tweaked. For example, if the word pair is ('fox', 'quick'), then only the word quick's neurons should output 1, and all of the other word neurons should output 0.</p>
+<p>But it would takes a lot of time to do this when we have billions of training samples. So, instead of update all of the weight, we random choose a small number of "negative" words (default value is 5) to update the weight.(Update their wight to output 0).</p>
+<p>So when dealing with word pair ('fox','quick'), we update quick's weight to output 1, and other 5 random words' wight to output 1.</p>
+<p>The probability of selecting word $w_i$ is $P(w_i)$:</p>
+<p>$$P(w_i) = \frac{  {f(w_i)}^{3/4}  }{\sum_{j=0}^{n}\left(  {f(w_j)}^{3/4} \right) }$$</p>
+<p>$f(w_j)$ is the frequency of word $w_j$.</p>
 <p>Ref:</p>
-<ol>
-<li>
-<p><a href="http://mlg.eng.cam.ac.uk/zoubin/papers/CMU-CALD-02-107.pdf">Learning from Labeled and Unlabeled Data with Label Propagation</a></p>
-</li>
-<li>
-<p><a href="http://blog.csdn.net/zouxy09/article/details/49105265">标签传播算法（Label Propagation）及Python实现</a></p>
-</li>
-</ol>
+<ul>
+<li><a href="http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/">Word2Vec Tutorial - The Skip-Gram Model</a></li>
+<li><a href="http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/">Word2Vec Tutorial Part 2 - Negative Sampling</a></li>
+</ul>
 </div>
     </div>
     <aside class="postpromonav"><nav><p itemprop="keywords" class="tags">
@@ -122,16 +112,14 @@ $$T_{ij}=P(j \rightarrow i)=\frac{w_{ij}}{\sum^{l+u}_{k=1}w_{kj}}$$
             <div class="pager hidden-print pagination">
 
             <span class="previous pagination-item older">
-                <a href="../enable-c-extension-for-gensim-on-windows/" rel="prev" title="Enable C Extension for gensim on Windows">
+                <a href="../brief-introduction-of-label-propagation-algorithm/" rel="prev" title="Brief Introduction of Label Propagation Algorithm">
                 Previous post
                 </a>
             </span>
 
 
             <span class="next pagination-item newer">
-                <a href="../parameters-in-dov2vec/" rel="next" title="Parameters in dov2vec">
 Next post
-              </a>
             </span>
 
         </div>
@@ -140,9 +128,9 @@ Next post
                         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="kkblog-1",
-            disqus_url="https://bebound.github.io/posts/brief-introduction-of-label-propagation-algorithm/",
-        disqus_title="Brief Introduction of Label Propagation Algorithm",
-        disqus_identifier="cache/posts/brief-introduction-of-label-propagation-algorithm.html",
+            disqus_url="https://bebound.github.io/posts/parameters-in-dov2vec/",
+        disqus_title="Parameters in dov2vec",
+        disqus_identifier="cache/posts/parameters-in-dov2vec.html",
         disqus_config = function () {
             this.language = "en";
         };
