@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog</title><link>https://bebound.github.io/</link><description>KK's personal blog</description><atom:link href="https://bebound.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2017 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Wed, 02 Aug 2017 16:05:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Parameters in dov2vec</title><link>https://bebound.github.io/posts/parameters-in-dov2vec/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here are some parameter in &lt;code&gt;gensim&lt;/code&gt;'s &lt;code&gt;doc2vec&lt;/code&gt; class.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog</title><link>https://bebound.github.io/</link><description>KK's personal blog</description><atom:link href="https://bebound.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2017 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Sun, 10 Sep 2017 14:37:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Semi-supervised text classification using doc2vec and label spreading</title><link>https://bebound.github.io/posts/semi-supervised-text-classification-using-doc2vec-and-label-spreading/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here is a simple way to classify text without much human effort and get a impressive performance.&lt;/p&gt;
+&lt;p&gt;It can be divided into two steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Get train data by using keyword classificaton&lt;/li&gt;
+&lt;li&gt;Generate a more accurate classification model by using doc2vec and label spreading&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;Keyword-based Classification&lt;/h4&gt;
+&lt;p&gt;Keyword based classification is a simple but effective method. Extracting the target keyword is a monotonous work. I use this method to automatic extract keyword candicate.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Find some most common words to classify the text.&lt;/li&gt;
+&lt;li&gt;Use this equition to calculate the score of each word appears in the text.
+   $$ score(i) = \frac{count(i)}{all_count(i)^{0.3}}$$
+   which $all_count(i)$ is the word i's wordc ount in all corpus, and $count(i)$ is the word i's word count in positive corpus.&lt;/li&gt;
+&lt;li&gt;Check the top words, add it to the final keyword list. Repeat this process.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Finally, we can use the keywords to classify the text and get the train data. &lt;/p&gt;
+&lt;h4&gt;Classification by &lt;code&gt;doc2vec&lt;/code&gt; and Label Spreading&lt;/h4&gt;
+&lt;p&gt;Keyword-based classification sometimes produces the wrong result, as it can't using the symantic information in the text. Fortunately, Google has open sourced &lt;code&gt;word2vec&lt;/code&gt;, which can be used to produce word embedding. Furthermore, sentences can also be converted to vectors by using &lt;code&gt;doc2vec&lt;/code&gt;. Sentences which has closed meaning also have small vector distance.&lt;/p&gt;
+&lt;p&gt;So the problem is how to classify these vectors.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Using corpus to train the &lt;code&gt;doc2vec&lt;/code&gt; model.&lt;/li&gt;
+&lt;li&gt;Using &lt;code&gt;doc2vec&lt;/code&gt; model to convert sentence into vector.&lt;/li&gt;
+&lt;li&gt;Using label spreading algorithm to train a classify model to classify the vectors.&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>mathjax</category><guid>https://bebound.github.io/posts/semi-supervised-text-classification-using-doc2vec-and-label-spreading/</guid><pubDate>Sun, 10 Sep 2017 14:18:15 GMT</pubDate></item><item><title>Parameters in dov2vec</title><link>https://bebound.github.io/posts/parameters-in-dov2vec/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here are some parameter in &lt;code&gt;gensim&lt;/code&gt;'s &lt;code&gt;doc2vec&lt;/code&gt; class.&lt;/p&gt;
 &lt;h4&gt;window&lt;/h4&gt;
 &lt;p&gt;window is the maximum distance between the predicted word and context words used for prediction within a document. It will look behind and ahead.&lt;/p&gt;
 &lt;p&gt;In &lt;code&gt;skip-gram&lt;/code&gt; model, if the window size is 2, the training samples will be this:(the blue word is the input word)&lt;/p&gt;
