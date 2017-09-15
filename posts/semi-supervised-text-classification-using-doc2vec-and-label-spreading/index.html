@@ -98,7 +98,7 @@ Generate a more accur">
 </ol>
 <p>Finally, we can use the keywords to classify the text and get the train data. </p>
 <h4>Classification by <code>doc2vec</code> and Label Spreading</h4>
-<p>Keyword-based classification sometimes produces the wrong result, as it can't using the symantic information in the text. Fortunately, Google has open sourced <code>word2vec</code>, which can be used to produce word embedding. Furthermore, sentences can also be converted to vectors by using <code>doc2vec</code>. Sentences which has closed meaning also have small vector distance.</p>
+<p>Keyword-based classification sometimes produces the wrong result, as it can't using the symantic information in the text. Fortunately, Google has open sourced <code>word2vec</code>, which can be used to produce semantically meaningful word embeddings. Furthermore, sentences can also be converted to vectors by using <code>doc2vec</code>. Sentences which has closed meaning also have short vector distance.</p>
 <p>So the problem is how to classify these vectors.</p>
 <ol>
 <li>Using corpus to train the <code>doc2vec</code> model.</li>

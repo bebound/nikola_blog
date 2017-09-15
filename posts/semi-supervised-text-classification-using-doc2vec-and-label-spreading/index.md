@@ -30,7 +30,7 @@ Finally, we can use the keywords to classify the text and get the train data.
 
 ### Classification by `doc2vec` and Label Spreading
 
-Keyword-based classification sometimes produces the wrong result, as it can't using the symantic information in the text. Fortunately, Google has open sourced `word2vec`, which can be used to produce word embedding. Furthermore, sentences can also be converted to vectors by using `doc2vec`. Sentences which has closed meaning also have small vector distance.
+Keyword-based classification sometimes produces the wrong result, as it can't using the symantic information in the text. Fortunately, Google has open sourced `word2vec`, which can be used to produce semantically meaningful word embeddings. Furthermore, sentences can also be converted to vectors by using `doc2vec`. Sentences which has closed meaning also have short vector distance.
 
 So the problem is how to classify these vectors.
 
