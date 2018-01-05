@@ -24,13 +24,13 @@ If the word appears less than this value, it will be skipped
 ### sample
 High frequency word like `the` is useless for training. `sample` is a threshold for deleting these higher-frequency words. The probability of keeping the word $w_i$ is:
 
-$$P(w_i) = (\sqrt{\frac{z(w_i)}{s}} + 1) \cdot \frac{s}{z(w_i)}$$
+$$P(w_i) = (\sqrt{\frac{z(\omega_i)}{s}} + 1) \cdot \frac{s}{z(\omega_i)}$$
 
 where $z(w_i)$ is the frequency of the word and $s$ is the sample rate.
 
 This is the plot when `sample` is 1e-3.
 
-![sample](/images/doc2vec_sample.png)
+![negative-sample](/images/doc2vec_negative_sample.png)
 
 
 
@@ -41,11 +41,11 @@ But it would takes a lot of time to do this when we have billions of training sa
 
 So when dealing with word pair ('fox','quick'), we update quick's weight to output 1, and other 5 random words' wight to output 1.
 
-The probability of selecting word $w_i$ is $P(w_i)$:
+The probability of selecting word $\omega_i$ is $P(\omega_i)$:
 
-$$P(w_i) = \frac{  {f(w_i)}^{3/4}  }{\sum_{j=0}^{n}\left(  {f(w_j)}^{3/4} \right) }$$
+$$P(\omega_i) = \frac{  {f(\omega_i)}^{3/4}  }{\sum_{j=0}^{n}\left(  {f(\omega_j)}^{3/4} \right) }$$
 
-$f(w_j)$ is the frequency of word $w_j$.
+$f(\omega_j)$ is the frequency of word $\omega_j$.
 
 Ref:
 
