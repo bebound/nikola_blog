@@ -7,130 +7,134 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://bebound.github.io/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/2017/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/2018/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/archive.html</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/categories/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/categories/mathjax/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/galleries/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/galleries/demo/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/listings/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/listings/hello.py.html</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/about-nikola/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/bootstrap-demo/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/charts/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/creating-a-theme/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/dr-nikolas-vendetta/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/extending/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/handbook/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/internals/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/listings-demo/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/path-handlers/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/quickref/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/quickstart/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/slides-demo/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/social_buttons/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/pages/theming/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/posts/brief-introduction-of-label-propagation-algorithm/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/posts/enable-c-extension-for-gensim-on-windows/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://bebound.github.io/posts/lstm-and-gru/</loc>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/posts/models-and-architechtures-in-word2vec/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/posts/parameters-in-dov2vec/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/posts/semi-supervised-text-classification-using-doc2vec-and-label-spreading/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/posts/some-useful-shell-tools/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://bebound.github.io/posts/start/</loc>
-  <lastmod>2018-01-05T15:11:00Z</lastmod>
+  <lastmod>2018-04-22T15:30:00Z</lastmod>
  </url>
 </urlset>

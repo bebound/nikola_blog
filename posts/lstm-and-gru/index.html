@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>KK's Blog · LSTM and GRU </title>
+<link href="../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700%7CAbril+Fatface">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://bebound.github.io/posts/lstm-and-gru/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'left', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Kurt Lei">
+<link rel="prev" href="../models-and-architechtures-in-word2vec/" title="Models and Architechtures in Word2vec" type="text/html">
+<meta property="og:site_name" content="KK's Blog">
+<meta property="og:title" content="LSTM and GRU">
+<meta property="og:url" content="https://bebound.github.io/posts/lstm-and-gru/">
+<meta property="og:description" content="LSTM
+The avoid the problem of vanishing gradient and exploding gradient in vanilla RNN, LSTM was published, which can remember information for longer periods of time.
+Here is the structure of LSTM:
+
+T">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-04-22T23:27:45+08:00">
+<meta property="article:tag" content="mathjax">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+</head>
+<body class="theme-base-0d">
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+    <div class="sidebar">
+        <div class="container sidebar-sticky">
+            <div class="sidebar-about">
+              <h1>
+                <a href="https://bebound.github.io/">
+                      <h1 id="brand"><a href="https://bebound.github.io/" title="KK's Blog" rel="home">
+
+        <span id="blog-title">KK's Blog</span>
+    </a></h1>
+
+                </a>
+              </h1>
+                <p class="lead">KK's personal blog</p>
+
+            </div>
+                <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../archive.html">Archive</a>
+        <a class="sidebar-nav-item" href="../../categories/">Tags</a>
+        <a class="sidebar-nav-item" href="../../rss.xml">RSS feed</a>
+    
+    
+    </nav><footer id="footer"><span class="copyright">
+              Contents © 2018         <a href="mailto:bebound%20gm@il.com">Kurt Lei</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            </span>
+            
+            
+        </footer>
+</div>
+    </div>
+
+    <div class="content container" id="content">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><h1 class="post-title p-name"><a href="." class="u-url">LSTM and GRU</a></h1>
+
+    <span class="post-date">
+      <time class="published dt-published" datetime="2018-04-22T23:27:45+08:00" itemprop="datePublished" title="2018-04-22 23:27">2018-04-22 23:27</time></span>
+
+    
+    
+
+    <div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h3>LSTM</h3>
+<p>The avoid the problem of vanishing gradient and exploding gradient in vanilla RNN, LSTM was published, which can remember information for longer periods of time.</p>
+<p>Here is the structure of LSTM:</p>
+<p><img alt="LSTM" src="../../images/LSTM_LSTM.png"></p>
+<p>The calculate procedure are:</p>
+<div>
+
+$$
+\begin{aligned}
+f_t&amp;=\sigma(W_f\cdot[h_{t-1},x_t]+b_f)\\
+i_t&amp;=\sigma(W_i\cdot[h_{t-1},x_t]+b_i)\\
+o_t&amp;=\sigma(W_o\cdot[h_{t-1},x_t]+b_o)\\
+\tilde{C_t}&amp;=tanh(W_C\cdot[h_{t-1},x_t]+b_C)\\
+C_t&amp;=f_t\ast C_{t-1}+i_t\ast \tilde{C_t}\\
+h_t&amp;=o_t \ast tanh(C_t)
+\end{aligned}
+$$
+
+</div>
+
+<p>$ft$,$i_t$,$o_t$ are forget gate, input gate and output gate respectively. $\tilde{C_t}$ is the new memory content. $Ct$ is cell state. $ht$ is the output. </p>
+<p>Use $f_t$ and $i_t$ to update $C_t$, use $o_t$ to decide which part of hidden state should be outputted.</p>
+<h3>GRU</h3>
+<p><img alt="LSTM" src="../../images/LSTM_GRU.png"></p>
+<div>
+
+$$
+\begin{aligned}
+z_t&amp;=\sigma(W_z\cdot[h_{t-1},x_t])\\
+r_t&amp;=\sigma(W_r\cdot[h_{t-1},x_t])\\
+\tilde{h_t}&amp;=tanh(W\cdot[r_t \ast h_{t-1},x_t])\\
+h_t&amp;=(1-z_t)\ast h_{t-1}+z_t \ast \tilde{h_t}
+\end{aligned}
+$$
+
+</div>
+
+<p>$z_t$ is update gate, $r_t$ is reset gate, $\tilde{h_t}$ is candidate activation, $h_t$ is activation.</p>
+<p>Compare with LSTM, GRU merge cell state and hidden state to one hiddent state, and use $z_t$ to decide how to update the state rather than $f_t$ and $i_t$.</p>
+<p>Ref：
+- <a href="Understanding%20LSTM%20Networks">http://colah.github.io/posts/2015-08-Understanding-LSTMs/</a>
+- <a href="RNN,%20LSTM,%20GRU%20%E5%85%AC%E5%BC%8F%E6%80%BB%E7%BB%93">https://blog.csdn.net/zhangxb35/article/details/70060295</a></p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><p itemprop="keywords" class="tags">
+      </p>
+
+            <div class="pager hidden-print pagination">
+
+            <span class="previous pagination-item older">
+                <a href="../models-and-architechtures-in-word2vec/" rel="prev" title="Models and Architechtures in Word2vec">
+                Previous post
+                </a>
+            </span>
+
+
+            <span class="next pagination-item newer">
+Next post
+            </span>
+
+        </div>
+
+    </nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="kkblog-1",
+            disqus_url="https://bebound.github.io/posts/lstm-and-gru/",
+        disqus_title="LSTM and GRU",
+        disqus_identifier="cache/posts/lstm-and-gru.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha256-ExtbCSBuYA7kq1Pz362ibde9nnsHYPt6JxuxYeZbU+c=" crossorigin="anonymous"></script><script>
+                renderMathInElement(document.body,
+                    {
+                        
+delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "\\[", right: "\\]", display: true},
+    {left: "$", right: "$", display: false},
+    {left: "\\(", right: "\\)", display: false}
+]
+
+                    }
+                );
+            </script></article><script>var disqus_shortname="kkblog-1";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+
+    
+    
+        
+
+</body>
+</html>
