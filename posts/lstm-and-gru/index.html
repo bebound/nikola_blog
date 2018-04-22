@@ -101,7 +101,7 @@ $$
 
 </div>
 
-<p>$ft$,$i_t$,$o_t$ are forget gate, input gate and output gate respectively. $\tilde{C_t}$ is the new memory content. $Ct$ is cell state. $ht$ is the output. </p>
+<p>$f_t$,$i_t$,$o_t$ are forget gate, input gate and output gate respectively. $\tilde{C_t}$ is the new memory content. $Ct$ is cell state. $ht$ is the output. </p>
 <p>Use $f_t$ and $i_t$ to update $C_t$, use $o_t$ to decide which part of hidden state should be outputted.</p>
 <h3>GRU</h3>
 <p><img alt="LSTM" src="../../images/LSTM_GRU.png"></p>
@@ -120,9 +120,11 @@ $$
 
 <p>$z_t$ is update gate, $r_t$ is reset gate, $\tilde{h_t}$ is candidate activation, $h_t$ is activation.</p>
 <p>Compare with LSTM, GRU merge cell state and hidden state to one hiddent state, and use $z_t$ to decide how to update the state rather than $f_t$ and $i_t$.</p>
-<p>Ref：
-- <a href="Understanding%20LSTM%20Networks">http://colah.github.io/posts/2015-08-Understanding-LSTMs/</a>
-- <a href="RNN,%20LSTM,%20GRU%20%E5%85%AC%E5%BC%8F%E6%80%BB%E7%BB%93">https://blog.csdn.net/zhangxb35/article/details/70060295</a></p>
+<p>Ref：</p>
+<ul>
+<li><a href="Understanding%20LSTM%20Networks">http://colah.github.io/posts/2015-08-Understanding-LSTMs/</a></li>
+<li><a href="RNN,%20LSTM,%20GRU%20%E5%85%AC%E5%BC%8F%E6%80%BB%E7%BB%93">https://blog.csdn.net/zhangxb35/article/details/70060295</a></li>
+</ul>
 </div>
     </div>
     <aside class="postpromonav"><nav><p itemprop="keywords" class="tags">

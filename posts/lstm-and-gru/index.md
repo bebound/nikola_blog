@@ -34,7 +34,7 @@ $$
 
 </div>
 
-$ft$,$i_t$,$o_t$ are forget gate, input gate and output gate respectively. $\tilde{C_t}$ is the new memory content. $Ct$ is cell state. $ht$ is the output. 
+$f_t$,$i_t$,$o_t$ are forget gate, input gate and output gate respectively. $\tilde{C_t}$ is the new memory content. $Ct$ is cell state. $ht$ is the output. 
 
 Use $f_t$ and $i_t$ to update $C_t$, use $o_t$ to decide which part of hidden state should be outputted.
 
@@ -60,5 +60,6 @@ $z_t$ is update gate, $r_t$ is reset gate, $\tilde{h_t}$ is candidate activation
 Compare with LSTM, GRU merge cell state and hidden state to one hiddent state, and use $z_t$ to decide how to update the state rather than $f_t$ and $i_t$.
 
 Ref：
+
 - [http://colah.github.io/posts/2015-08-Understanding-LSTMs/](Understanding LSTM Networks)
 - [https://blog.csdn.net/zhangxb35/article/details/70060295](RNN, LSTM, GRU 公式总结)
