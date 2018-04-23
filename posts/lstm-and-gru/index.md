@@ -61,5 +61,5 @@ Compare with LSTM, GRU merge cell state and hidden state to one hiddent state, a
 
 Ref：
 
-- [http://colah.github.io/posts/2015-08-Understanding-LSTMs/](Understanding LSTM Networks)
-- [https://blog.csdn.net/zhangxb35/article/details/70060295](RNN, LSTM, GRU 公式总结)
+- [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+- [RNN, LSTM, GRU 公式总结](https://blog.csdn.net/zhangxb35/article/details/70060295)
