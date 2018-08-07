@@ -429,24 +429,24 @@ bugs, and Nikola will write UTF-8 output anyway.</p>
 option. The default configuration expects them to be placed in <tt class="docutils literal">posts</tt> but that can be
 changed (see below, the <tt class="docutils literal">POSTS</tt> and <tt class="docutils literal">PAGES</tt> options)</p>
 <p>This is how it works:</p>
-<pre class="code console"><a name="rest_code_c74a6653d5134fb1b749b8e066b6481a-1"></a><span class="gp">$</span> nikola new_post
-<a name="rest_code_c74a6653d5134fb1b749b8e066b6481a-2"></a><span class="go">Creating New Post</span>
-<a name="rest_code_c74a6653d5134fb1b749b8e066b6481a-3"></a><span class="go">-----------------</span>
-<a name="rest_code_c74a6653d5134fb1b749b8e066b6481a-4"></a>
-<a name="rest_code_c74a6653d5134fb1b749b8e066b6481a-5"></a><span class="go">Title: How to make money</span>
-<a name="rest_code_c74a6653d5134fb1b749b8e066b6481a-6"></a><span class="go">Scanning posts....done!</span>
-<a name="rest_code_c74a6653d5134fb1b749b8e066b6481a-7"></a><span class="go">INFO: new_post: Your post's text is at: posts/how-to-make-money.rst</span>
+<pre class="code console"><a name="rest_code_3b5032c150554b8cb5ad22fcf779929e-1"></a><span class="gp">$</span> nikola new_post
+<a name="rest_code_3b5032c150554b8cb5ad22fcf779929e-2"></a><span class="go">Creating New Post</span>
+<a name="rest_code_3b5032c150554b8cb5ad22fcf779929e-3"></a><span class="go">-----------------</span>
+<a name="rest_code_3b5032c150554b8cb5ad22fcf779929e-4"></a>
+<a name="rest_code_3b5032c150554b8cb5ad22fcf779929e-5"></a><span class="go">Title: How to make money</span>
+<a name="rest_code_3b5032c150554b8cb5ad22fcf779929e-6"></a><span class="go">Scanning posts....done!</span>
+<a name="rest_code_3b5032c150554b8cb5ad22fcf779929e-7"></a><span class="go">INFO: new_post: Your post's text is at: posts/how-to-make-money.rst</span>
 </pre>
 <p>The content of that file is as follows:</p>
-<pre class="code restructuredtext"><a name="rest_code_f47bf1f596004c49ba3786ae3e107295-1"></a><span class="cp">.. title: How to make money</span>
-<a name="rest_code_f47bf1f596004c49ba3786ae3e107295-2"></a><span class="cp">.. slug: how-to-make-money</span>
-<a name="rest_code_f47bf1f596004c49ba3786ae3e107295-3"></a><span class="cp">.. date: 2012-09-15 19:52:05 UTC</span>
-<a name="rest_code_f47bf1f596004c49ba3786ae3e107295-4"></a><span class="cp">.. tags:</span>
-<a name="rest_code_f47bf1f596004c49ba3786ae3e107295-5"></a><span class="cp">.. link:</span>
-<a name="rest_code_f47bf1f596004c49ba3786ae3e107295-6"></a><span class="cp">.. description:</span>
-<a name="rest_code_f47bf1f596004c49ba3786ae3e107295-7"></a><span class="cp">.. type: text</span>
-<a name="rest_code_f47bf1f596004c49ba3786ae3e107295-8"></a>
-<a name="rest_code_f47bf1f596004c49ba3786ae3e107295-9"></a>Write your post here.
+<pre class="code restructuredtext"><a name="rest_code_48058e579daf45a1bd552895ec9e1ec6-1"></a><span class="cp">.. title: How to make money</span>
+<a name="rest_code_48058e579daf45a1bd552895ec9e1ec6-2"></a><span class="cp">.. slug: how-to-make-money</span>
+<a name="rest_code_48058e579daf45a1bd552895ec9e1ec6-3"></a><span class="cp">.. date: 2012-09-15 19:52:05 UTC</span>
+<a name="rest_code_48058e579daf45a1bd552895ec9e1ec6-4"></a><span class="cp">.. tags:</span>
+<a name="rest_code_48058e579daf45a1bd552895ec9e1ec6-5"></a><span class="cp">.. link:</span>
+<a name="rest_code_48058e579daf45a1bd552895ec9e1ec6-6"></a><span class="cp">.. description:</span>
+<a name="rest_code_48058e579daf45a1bd552895ec9e1ec6-7"></a><span class="cp">.. type: text</span>
+<a name="rest_code_48058e579daf45a1bd552895ec9e1ec6-8"></a>
+<a name="rest_code_48058e579daf45a1bd552895ec9e1ec6-9"></a>Write your post here.
 </pre>
 <p>You can edit these files with your favorite text editor, and once you are happy
 with the contents, generate the pages using <tt class="docutils literal">nikola build</tt>.</p>
@@ -457,7 +457,7 @@ itself — see <cite>How does Nikola decide where posts should go?</cite></p>
 <h3><a class="toc-backref" href="#id17">Metadata fields</a></h3>
 <p>Nikola supports many metadata fields in posts. All of them are
 translatable and almost all are optional. The meta field format is:</p>
-<pre class="code text"><a name="rest_code_df3de2718f6846ffb1297f6970fa7c74-1"></a>.. name: value
+<pre class="code text"><a name="rest_code_0d68518b1c2e4c7b8f5400f93cba6ab5-1"></a>.. name: value
 </pre>
 <p>You can add your own metadata fields in the same manner. If you are not using
 reStructuredText, make sure the fields are in a HTML comment in output.</p>
@@ -538,7 +538,7 @@ Also, the post's source code will not be available.</p>
 <p class="first">Designate a preview or other representative image path relative to BASE_URL
 for use with Open Graph for posts. Adds the image when sharing on social
 media and many other uses.</p>
-<pre class="code restructuredtext"><a name="rest_code_d4aabc8ca8d74603adbb9149a281af92-1"></a><span class="cp">.. previewimage: /images/looks_great_on_facebook.png</span>
+<pre class="code restructuredtext"><a name="rest_code_7b86a1f1fd684cd2b2296cc60a134c8e-1"></a><span class="cp">.. previewimage: /images/looks_great_on_facebook.png</span>
 </pre>
 <p class="last">The image can be of any size and dimension (services will crop and adapt)
 but should less than 1 MB and be larger than 300x300 (ideally 600x600).</p>
@@ -551,7 +551,7 @@ but should less than 1 MB and be larger than 300x300 (ideally 600x600).</p>
 <p class="first">Change the template used to render this page/post specific page. That
 template needs to either be part of the theme, or be placed in a
 <tt class="docutils literal">templates/</tt> folder inside your site.</p>
-<div class="last"><pre class="code restructuredtext"><a name="rest_code_d59cc66227d7414491d5f392080dda8c-1"></a><span class="cp">.. template: story.tmpl</span>
+<div class="last"><pre class="code restructuredtext"><a name="rest_code_ce725f8b0fa546d993431ea92f166a50-1"></a><span class="cp">.. template: story.tmpl</span>
 </pre></div>
 </dd>
 </dl>
@@ -559,9 +559,9 @@ template needs to either be part of the theme, or be placed in a
 variable <tt class="docutils literal">ADDITIONAL_METADATA</tt> in your configuration.  For example, you can
 add the author metadata to all new posts by default, by adding the following
 to your configuration:</p>
-<pre class="code python"><a name="rest_code_bca23aae54fd418a9435d1a3e63ebb10-1"></a><span class="n">ADDITIONAL_METADATA</span> <span class="o">=</span> <span class="p">{</span>
-<a name="rest_code_bca23aae54fd418a9435d1a3e63ebb10-2"></a>    <span class="s1">'author'</span><span class="p">:</span> <span class="s1">'John Doe'</span>
-<a name="rest_code_bca23aae54fd418a9435d1a3e63ebb10-3"></a><span class="p">}</span>
+<pre class="code python"><a name="rest_code_2ca0fcf51174414a9e42ff5c8c25c1fc-1"></a><span class="n">ADDITIONAL_METADATA</span> <span class="o">=</span> <span class="p">{</span>
+<a name="rest_code_2ca0fcf51174414a9e42ff5c8c25c1fc-2"></a>    <span class="s1">'author'</span><span class="p">:</span> <span class="s1">'John Doe'</span>
+<a name="rest_code_2ca0fcf51174414a9e42ff5c8c25c1fc-3"></a><span class="p">}</span>
 </pre>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -571,18 +571,18 @@ The format of the meta files is the same as shown above (i.e. only
 the 7 base fields, in the order listed above), but without the
 explanations:</p>
 <blockquote>
-<pre class="code text"><a name="rest_code_2e195ac3fb2842adbad8953a8ba43227-1"></a>How to make money
-<a name="rest_code_2e195ac3fb2842adbad8953a8ba43227-2"></a>how-to-make-money
-<a name="rest_code_2e195ac3fb2842adbad8953a8ba43227-3"></a>2012-09-15 19:52:05 UTC
+<pre class="code text"><a name="rest_code_74dbe18fbaff4094ac1856e6e957180d-1"></a>How to make money
+<a name="rest_code_74dbe18fbaff4094ac1856e6e957180d-2"></a>how-to-make-money
+<a name="rest_code_74dbe18fbaff4094ac1856e6e957180d-3"></a>2012-09-15 19:52:05 UTC
 </pre>
 </blockquote>
 <p>However, starting with Nikola v7, you can now use <tt class="docutils literal">.meta</tt> files and put
 all metadata you want, complete with the explanations — they look just like
 the beginning of our reST files.</p>
 <blockquote>
-<pre class="code restructuredtext"><a name="rest_code_654cd65192d04c0596b4308232f1452c-1"></a><span class="cp">.. title: How to make money</span>
-<a name="rest_code_654cd65192d04c0596b4308232f1452c-2"></a><span class="cp">.. slug: how-to-make-money</span>
-<a name="rest_code_654cd65192d04c0596b4308232f1452c-3"></a><span class="cp">.. date: 2012-09-15 19:52:05 UTC</span>
+<pre class="code restructuredtext"><a name="rest_code_4a62dd44e6804e0997a89a27eac910f5-1"></a><span class="cp">.. title: How to make money</span>
+<a name="rest_code_4a62dd44e6804e0997a89a27eac910f5-2"></a><span class="cp">.. slug: how-to-make-money</span>
+<a name="rest_code_4a62dd44e6804e0997a89a27eac910f5-3"></a><span class="cp">.. date: 2012-09-15 19:52:05 UTC</span>
 </pre>
 </blockquote>
 <p class="last">Both file formats are supported; however, the new format is preferred, if
@@ -605,7 +605,7 @@ TRANSLATIONS_PATTERN variable in your configuration file.</p>
 so the German translation of <tt class="docutils literal">some_file.rst</tt> should be named
 <tt class="docutils literal">some_file.de.rst</tt>. This is because the TRANSLATIONS_PATTERN variable is by
 default set to:</p>
-<pre class="code python"><a name="rest_code_1fa3ca7d96d54b1f90731357c70fb2c2-1"></a><span class="n">TRANSLATIONS_PATTERN</span> <span class="o">=</span> <span class="s2">"{path}.{lang}.{ext}"</span>
+<pre class="code python"><a name="rest_code_bfb4b1fcb387494da033044d7f354831-1"></a><span class="n">TRANSLATIONS_PATTERN</span> <span class="o">=</span> <span class="s2">"{path}.{lang}.{ext}"</span>
 </pre>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -630,49 +630,49 @@ matches the given format) and the final post destination (the first one that
 matches a given file) is based on the <tt class="docutils literal">POSTS</tt> and <tt class="docutils literal">PAGES</tt> configuration
 options. The exact mechanism is explained above the config options in the
 <tt class="docutils literal">conf.py</tt> file, and also reproduced below:</p>
-<pre class="code python"><a name="rest_code_f51d1118d87646d4a961060074b4dc5f-1"></a><span class="c1"># POSTS and PAGES contains (wildcard, destination, template) tuples.</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-2"></a><span class="c1">#</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-3"></a><span class="c1"># The wildcard is used to generate a list of post source files</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-4"></a><span class="c1"># (whatever/thing.rst, for example).</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-5"></a><span class="c1">#</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-6"></a><span class="c1"># That fragment could have an associated metadata file (whatever/thing.meta),</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-7"></a><span class="c1"># and optionally translated files (example for Spanish, with code "es"):</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-8"></a><span class="c1">#     whatever/thing.es.rst and whatever/thing.es.meta</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-9"></a><span class="c1">#</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-10"></a><span class="c1">#     This assumes you use the default TRANSLATIONS_PATTERN.</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-11"></a><span class="c1">#</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-12"></a><span class="c1"># From those files, a set of HTML fragment files will be generated:</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-13"></a><span class="c1"># cache/whatever/thing.html (and maybe cache/whatever/thing.html.es)</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-14"></a><span class="c1">#</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-15"></a><span class="c1"># These files are combined with the template to produce rendered</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-16"></a><span class="c1"># pages, which will be placed at</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-17"></a><span class="c1"># output/TRANSLATIONS[lang]/destination/pagename.html</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-18"></a><span class="c1">#</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-19"></a><span class="c1"># where "pagename" is the "slug" specified in the metadata file.</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-20"></a><span class="c1"># The page might also be placed in /destination/pagename/index.html</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-21"></a><span class="c1"># if PRETTY_URLS are enabled.</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-22"></a><span class="c1">#</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-23"></a><span class="c1"># The difference between POSTS and PAGES is that POSTS are added</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-24"></a><span class="c1"># to feeds, indexes, tag lists and archives and are considered part</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-25"></a><span class="c1"># of a blog, while PAGES are just independent HTML pages.</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-26"></a><span class="c1">#</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-27"></a><span class="c1"># Finally, note that destination can be translated, i.e. you can</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-28"></a><span class="c1"># specify a different translation folder per language. Example:</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-29"></a><span class="c1">#     PAGES = (</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-30"></a><span class="c1">#         ("pages/*.rst", {"en": "pages", "de": "seiten"}, "story.tmpl"),</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-31"></a><span class="c1">#         ("pages/*.md", {"en": "pages", "de": "seiten"}, "story.tmpl"),</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-32"></a><span class="c1">#     )</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-33"></a>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-34"></a><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-35"></a>    <span class="p">(</span><span class="s2">"posts/*.rst"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-36"></a>    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-37"></a>    <span class="p">(</span><span class="s2">"posts/*.html"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-38"></a><span class="p">)</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-39"></a><span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-40"></a>    <span class="p">(</span><span class="s2">"pages/*.rst"</span><span class="p">,</span> <span class="s2">"pages"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-41"></a>    <span class="p">(</span><span class="s2">"pages/*.txt"</span><span class="p">,</span> <span class="s2">"pages"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-42"></a>    <span class="p">(</span><span class="s2">"pages/*.html"</span><span class="p">,</span> <span class="s2">"pages"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
-<a name="rest_code_f51d1118d87646d4a961060074b4dc5f-43"></a><span class="p">)</span>
+<pre class="code python"><a name="rest_code_127e1f40027f4253be1e9858ee711405-1"></a><span class="c1"># POSTS and PAGES contains (wildcard, destination, template) tuples.</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-2"></a><span class="c1">#</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-3"></a><span class="c1"># The wildcard is used to generate a list of post source files</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-4"></a><span class="c1"># (whatever/thing.rst, for example).</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-5"></a><span class="c1">#</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-6"></a><span class="c1"># That fragment could have an associated metadata file (whatever/thing.meta),</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-7"></a><span class="c1"># and optionally translated files (example for Spanish, with code "es"):</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-8"></a><span class="c1">#     whatever/thing.es.rst and whatever/thing.es.meta</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-9"></a><span class="c1">#</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-10"></a><span class="c1">#     This assumes you use the default TRANSLATIONS_PATTERN.</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-11"></a><span class="c1">#</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-12"></a><span class="c1"># From those files, a set of HTML fragment files will be generated:</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-13"></a><span class="c1"># cache/whatever/thing.html (and maybe cache/whatever/thing.html.es)</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-14"></a><span class="c1">#</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-15"></a><span class="c1"># These files are combined with the template to produce rendered</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-16"></a><span class="c1"># pages, which will be placed at</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-17"></a><span class="c1"># output/TRANSLATIONS[lang]/destination/pagename.html</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-18"></a><span class="c1">#</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-19"></a><span class="c1"># where "pagename" is the "slug" specified in the metadata file.</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-20"></a><span class="c1"># The page might also be placed in /destination/pagename/index.html</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-21"></a><span class="c1"># if PRETTY_URLS are enabled.</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-22"></a><span class="c1">#</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-23"></a><span class="c1"># The difference between POSTS and PAGES is that POSTS are added</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-24"></a><span class="c1"># to feeds, indexes, tag lists and archives and are considered part</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-25"></a><span class="c1"># of a blog, while PAGES are just independent HTML pages.</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-26"></a><span class="c1">#</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-27"></a><span class="c1"># Finally, note that destination can be translated, i.e. you can</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-28"></a><span class="c1"># specify a different translation folder per language. Example:</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-29"></a><span class="c1">#     PAGES = (</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-30"></a><span class="c1">#         ("pages/*.rst", {"en": "pages", "de": "seiten"}, "story.tmpl"),</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-31"></a><span class="c1">#         ("pages/*.md", {"en": "pages", "de": "seiten"}, "story.tmpl"),</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-32"></a><span class="c1">#     )</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-33"></a>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-34"></a><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-35"></a>    <span class="p">(</span><span class="s2">"posts/*.rst"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-36"></a>    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-37"></a>    <span class="p">(</span><span class="s2">"posts/*.html"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-38"></a><span class="p">)</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-39"></a><span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-40"></a>    <span class="p">(</span><span class="s2">"pages/*.rst"</span><span class="p">,</span> <span class="s2">"pages"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-41"></a>    <span class="p">(</span><span class="s2">"pages/*.txt"</span><span class="p">,</span> <span class="s2">"pages"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-42"></a>    <span class="p">(</span><span class="s2">"pages/*.html"</span><span class="p">,</span> <span class="s2">"pages"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+<a name="rest_code_127e1f40027f4253be1e9858ee711405-43"></a><span class="p">)</span>
 </pre>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -690,23 +690,23 @@ supplied) that ends with the extension of your desired markup format (as
 defined in <tt class="docutils literal">COMPILERS</tt> in <tt class="docutils literal">conf.py</tt>) as the directory that the new post will be
 written into.  If no such entry can be found, the post won’t be created.</p>
 <p>The <tt class="docutils literal">new_post</tt> command supports some options:</p>
-<pre class="code text"><a name="rest_code_1f17e4ce58374676a3cb42780e15b797-1"></a>$ nikola help new_post
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-2"></a>Purpose: create a new blog post or site page
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-3"></a>Usage:   nikola new_post [options] [path]
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-4"></a>
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-5"></a>Options:
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-6"></a>  -p, --page                Create a page instead of a blog post. (see also: `nikola new_page`)
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-7"></a>  -t ARG, --title=ARG       Title for the post.
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-8"></a>  -a ARG, --author=ARG      Author of the post.
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-9"></a>  --tags=ARG                Comma-separated tags for the post.
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-10"></a>  -1                        Create the post with embedded metadata (single file format)
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-11"></a>  -2                        Create the post with separate metadata (two file format)
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-12"></a>  -e                        Open the post (and meta file, if any) in $EDITOR after creation.
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-13"></a>  -f ARG, --format=ARG      Markup format for the post (use --available-formats for list)
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-14"></a>  -F, --available-formats   List all available input formats
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-15"></a>  -s                        Schedule the post based on recurrence rule
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-16"></a>  -i ARG, --import=ARG      Import an existing file instead of creating a placeholder
-<a name="rest_code_1f17e4ce58374676a3cb42780e15b797-17"></a>  -d, --date-path           Create post with date path (eg. year/month/day, see NEW_POST_DATE_PATH_FORMAT in config)
+<pre class="code text"><a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-1"></a>$ nikola help new_post
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-2"></a>Purpose: create a new blog post or site page
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-3"></a>Usage:   nikola new_post [options] [path]
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-4"></a>
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-5"></a>Options:
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-6"></a>  -p, --page                Create a page instead of a blog post. (see also: `nikola new_page`)
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-7"></a>  -t ARG, --title=ARG       Title for the post.
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-8"></a>  -a ARG, --author=ARG      Author of the post.
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-9"></a>  --tags=ARG                Comma-separated tags for the post.
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-10"></a>  -1                        Create the post with embedded metadata (single file format)
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-11"></a>  -2                        Create the post with separate metadata (two file format)
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-12"></a>  -e                        Open the post (and meta file, if any) in $EDITOR after creation.
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-13"></a>  -f ARG, --format=ARG      Markup format for the post (use --available-formats for list)
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-14"></a>  -F, --available-formats   List all available input formats
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-15"></a>  -s                        Schedule the post based on recurrence rule
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-16"></a>  -i ARG, --import=ARG      Import an existing file instead of creating a placeholder
+<a name="rest_code_4f2a6d6a1a214ed0a0ea51a1701e4727-17"></a>  -d, --date-path           Create post with date path (eg. year/month/day, see NEW_POST_DATE_PATH_FORMAT in config)
 </pre>
 <p>The optional <tt class="docutils literal">path</tt> parameter tells Nikola exactly where to put it instead of guessing from your config.
 So, if you do <tt class="docutils literal">nikola new_post posts/random/foo.txt</tt> you will have a post in that path, with
@@ -715,13 +715,13 @@ will append the file name for you (generated from title).</p>
 <p>The <tt class="docutils literal"><span class="pre">-d,</span> <span class="pre">--date-path</span></tt> option automates creation of <tt class="docutils literal">year/month/day</tt> or
 similar directory structures. It can be enabled on a per-post basis, or you can
 use it for every post if you set <tt class="docutils literal">NEW_POST_DATE_PATH = True</tt> in conf.py.</p>
-<pre class="code python"><a name="rest_code_6b5afc56ab7f46f1b28b4f1b3805684a-1"></a><span class="c1"># Use date-based path when creating posts?</span>
-<a name="rest_code_6b5afc56ab7f46f1b28b4f1b3805684a-2"></a><span class="c1"># Can be enabled on a per-post basis with `nikola new_post -d`.</span>
-<a name="rest_code_6b5afc56ab7f46f1b28b4f1b3805684a-3"></a><span class="c1"># NEW_POST_DATE_PATH = False</span>
-<a name="rest_code_6b5afc56ab7f46f1b28b4f1b3805684a-4"></a>
-<a name="rest_code_6b5afc56ab7f46f1b28b4f1b3805684a-5"></a><span class="c1"># What format to use when creating posts with date paths?</span>
-<a name="rest_code_6b5afc56ab7f46f1b28b4f1b3805684a-6"></a><span class="c1"># Default is '%Y/%m/%d', other possibilities include '%Y' or '%Y/%m'.</span>
-<a name="rest_code_6b5afc56ab7f46f1b28b4f1b3805684a-7"></a><span class="c1"># NEW_POST_DATE_PATH_FORMAT = '%Y/%m/%d'</span>
+<pre class="code python"><a name="rest_code_cadcc1c7ff184971a0bc62766095fccc-1"></a><span class="c1"># Use date-based path when creating posts?</span>
+<a name="rest_code_cadcc1c7ff184971a0bc62766095fccc-2"></a><span class="c1"># Can be enabled on a per-post basis with `nikola new_post -d`.</span>
+<a name="rest_code_cadcc1c7ff184971a0bc62766095fccc-3"></a><span class="c1"># NEW_POST_DATE_PATH = False</span>
+<a name="rest_code_cadcc1c7ff184971a0bc62766095fccc-4"></a>
+<a name="rest_code_cadcc1c7ff184971a0bc62766095fccc-5"></a><span class="c1"># What format to use when creating posts with date paths?</span>
+<a name="rest_code_cadcc1c7ff184971a0bc62766095fccc-6"></a><span class="c1"># Default is '%Y/%m/%d', other possibilities include '%Y' or '%Y/%m'.</span>
+<a name="rest_code_cadcc1c7ff184971a0bc62766095fccc-7"></a><span class="c1"># NEW_POST_DATE_PATH_FORMAT = '%Y/%m/%d'</span>
 </pre>
 </div>
 <div class="section" id="teasers">
@@ -730,10 +730,10 @@ use it for every post if you set <tt class="docutils literal">NEW_POST_DATE_PATH
 index page or in RSS feeds, but to display instead only the beginning of them.</p>
 <p>If it's the case, you only need to add a "magical comment" in your post.</p>
 <p>In reStructuredText:</p>
-<pre class="code restructuredtext"><a name="rest_code_200590e9fb144620ae8df65a4068e19e-1"></a><span class="cp">.. TEASER_END</span>
+<pre class="code restructuredtext"><a name="rest_code_bb7b61bf183948e3837467542848d409-1"></a><span class="cp">.. TEASER_END</span>
 </pre>
 <p>In Markdown (or basically, the resulting HTML of any format):</p>
-<pre class="code html"><a name="rest_code_2ec43626598d46a2befc931ff995f373-1"></a><span class="c">&lt;!-- TEASER_END --&gt;</span>
+<pre class="code html"><a name="rest_code_6878b4d28bea4a0dbae306c48c59cac0-1"></a><span class="c">&lt;!-- TEASER_END --&gt;</span>
 </pre>
 <p>By default all your RSS feeds will be shortened (they'll contain only teasers)
 whereas your index page will still show complete posts. You can change
@@ -742,22 +742,22 @@ page should display the whole contents or only teasers. <tt class="docutils lite
 works the same way for your Atom and RSS feeds.</p>
 <p>By default, teasers will include a "read more" link at the end. If you want to
 change that text, you can use a custom teaser:</p>
-<pre class="code restructuredtext"><a name="rest_code_038ddd457bcd492ba19fe23e5a5764d0-1"></a><span class="cp">.. TEASER_END: click to read the rest of the article</span>
+<pre class="code restructuredtext"><a name="rest_code_fa2d0a2e216841e7a9e574b88121d017-1"></a><span class="cp">.. TEASER_END: click to read the rest of the article</span>
 </pre>
 <p>You can override the default value for <tt class="docutils literal">TEASER_END</tt> in <tt class="docutils literal">conf.py</tt> — for
 example, the following example will work for <tt class="docutils literal">.. more</tt>, and will be
 compatible with both WordPress and Nikola posts:</p>
-<pre class="code python"><a name="rest_code_2b566033f9ea4c41a9e1566b620c07de-1"></a><span class="kn">import</span> <span class="nn">re</span>
-<a name="rest_code_2b566033f9ea4c41a9e1566b620c07de-2"></a><span class="n">TEASER_REGEXP</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">'&lt;!--\s*(more|TEASER_END)(:(.+))?\s*--&gt;'</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_970bae3e24a04609884ea6704e4bde50-1"></a><span class="kn">import</span> <span class="nn">re</span>
+<a name="rest_code_970bae3e24a04609884ea6704e4bde50-2"></a><span class="n">TEASER_REGEXP</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">'&lt;!--\s*(more|TEASER_END)(:(.+))?\s*--&gt;'</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
 </pre>
 <p>Or you can completely customize the link using the <tt class="docutils literal">READ_MORE_LINK</tt> option.</p>
-<pre class="code python"><a name="rest_code_6a6c7173a12645cbbc7ef4bf2b5bac4a-1"></a><span class="c1"># A HTML fragment with the Read more... link.</span>
-<a name="rest_code_6a6c7173a12645cbbc7ef4bf2b5bac4a-2"></a><span class="c1"># The following tags exist and are replaced for you:</span>
-<a name="rest_code_6a6c7173a12645cbbc7ef4bf2b5bac4a-3"></a><span class="c1"># {link}        A link to the full post page.</span>
-<a name="rest_code_6a6c7173a12645cbbc7ef4bf2b5bac4a-4"></a><span class="c1"># {read_more}   The string “Read more” in the current language.</span>
-<a name="rest_code_6a6c7173a12645cbbc7ef4bf2b5bac4a-5"></a><span class="c1"># {{            A literal { (U+007B LEFT CURLY BRACKET)</span>
-<a name="rest_code_6a6c7173a12645cbbc7ef4bf2b5bac4a-6"></a><span class="c1"># }}            A literal } (U+007D RIGHT CURLY BRACKET)</span>
-<a name="rest_code_6a6c7173a12645cbbc7ef4bf2b5bac4a-7"></a><span class="c1"># READ_MORE_LINK = '&lt;p class="more"&gt;&lt;a href="{link}"&gt;{read_more}…&lt;/a&gt;&lt;/p&gt;'</span>
+<pre class="code python"><a name="rest_code_263d4fbdadd94f7293f9a3f2f28c35bb-1"></a><span class="c1"># A HTML fragment with the Read more... link.</span>
+<a name="rest_code_263d4fbdadd94f7293f9a3f2f28c35bb-2"></a><span class="c1"># The following tags exist and are replaced for you:</span>
+<a name="rest_code_263d4fbdadd94f7293f9a3f2f28c35bb-3"></a><span class="c1"># {link}        A link to the full post page.</span>
+<a name="rest_code_263d4fbdadd94f7293f9a3f2f28c35bb-4"></a><span class="c1"># {read_more}   The string “Read more” in the current language.</span>
+<a name="rest_code_263d4fbdadd94f7293f9a3f2f28c35bb-5"></a><span class="c1"># {{            A literal { (U+007B LEFT CURLY BRACKET)</span>
+<a name="rest_code_263d4fbdadd94f7293f9a3f2f28c35bb-6"></a><span class="c1"># }}            A literal } (U+007D RIGHT CURLY BRACKET)</span>
+<a name="rest_code_263d4fbdadd94f7293f9a3f2f28c35bb-7"></a><span class="c1"># READ_MORE_LINK = '&lt;p class="more"&gt;&lt;a href="{link}"&gt;{read_more}…&lt;/a&gt;&lt;/p&gt;'</span>
 </pre>
 </div>
 <div class="section" id="drafts">
@@ -795,7 +795,7 @@ requires that the <tt class="docutils literal">FUTURE_IS_NOW</tt> setting is set
 <p>For example, if you would like to schedule your posts to be on every
 Monday, Wednesday and Friday at 7am, add the following
 <tt class="docutils literal">SCHEDULE_RULE</tt> to your configuration:</p>
-<pre class="code python"><a name="rest_code_8404eb1272304093ac236cf0278d086d-1"></a><span class="n">SCHEDULE_RULE</span> <span class="o">=</span> <span class="s1">'RRULE:FREQ=WEEKLY;BYDAY=MO,WE,FR;BYHOUR=7;BYMINUTE=0;BYSECOND=0'</span>
+<pre class="code python"><a name="rest_code_6dc9c34f27a64f4aadfe959c008019d3-1"></a><span class="n">SCHEDULE_RULE</span> <span class="o">=</span> <span class="s1">'RRULE:FREQ=WEEKLY;BYDAY=MO,WE,FR;BYHOUR=7;BYMINUTE=0;BYSECOND=0'</span>
 </pre>
 <p>For more details on how to specify a recurrence rule, look at the
 <a class="reference external" href="http://www.kanzaki.com/docs/ical/rrule.html">iCal specification</a>.
@@ -806,15 +806,15 @@ generated iCal (<tt class="docutils literal">.ics</tt>) file (which is a human-r
 or at least posts for the rest of the week, you would run the
 <tt class="docutils literal">new_post</tt> command with the <tt class="docutils literal"><span class="pre">--schedule</span></tt> flag, as many times as
 you want:</p>
-<pre class="code console"><a name="rest_code_b84ed3c1b2914049b8578aae0544c86c-1"></a><span class="gp">$</span> nikola new_post --schedule
-<a name="rest_code_b84ed3c1b2914049b8578aae0544c86c-2"></a><span class="gp">#</span> Creates a new post to be posted on Monday, 7am.
-<a name="rest_code_b84ed3c1b2914049b8578aae0544c86c-3"></a><span class="gp">$</span> nikola new_post -s
-<a name="rest_code_b84ed3c1b2914049b8578aae0544c86c-4"></a><span class="gp">#</span> Creates a new post to be posted on Wednesday, 7am.
-<a name="rest_code_b84ed3c1b2914049b8578aae0544c86c-5"></a><span class="gp">$</span> nikola new_post -s
-<a name="rest_code_b84ed3c1b2914049b8578aae0544c86c-6"></a><span class="gp">#</span> Creates a new post to be posted on Friday, 7am.
-<a name="rest_code_b84ed3c1b2914049b8578aae0544c86c-7"></a><span class="go">.</span>
-<a name="rest_code_b84ed3c1b2914049b8578aae0544c86c-8"></a><span class="go">.</span>
-<a name="rest_code_b84ed3c1b2914049b8578aae0544c86c-9"></a><span class="go">.</span>
+<pre class="code console"><a name="rest_code_07a61217f0ca4f4ba84770fd6e3e6574-1"></a><span class="gp">$</span> nikola new_post --schedule
+<a name="rest_code_07a61217f0ca4f4ba84770fd6e3e6574-2"></a><span class="gp">#</span> Creates a new post to be posted on Monday, 7am.
+<a name="rest_code_07a61217f0ca4f4ba84770fd6e3e6574-3"></a><span class="gp">$</span> nikola new_post -s
+<a name="rest_code_07a61217f0ca4f4ba84770fd6e3e6574-4"></a><span class="gp">#</span> Creates a new post to be posted on Wednesday, 7am.
+<a name="rest_code_07a61217f0ca4f4ba84770fd6e3e6574-5"></a><span class="gp">$</span> nikola new_post -s
+<a name="rest_code_07a61217f0ca4f4ba84770fd6e3e6574-6"></a><span class="gp">#</span> Creates a new post to be posted on Friday, 7am.
+<a name="rest_code_07a61217f0ca4f4ba84770fd6e3e6574-7"></a><span class="go">.</span>
+<a name="rest_code_07a61217f0ca4f4ba84770fd6e3e6574-8"></a><span class="go">.</span>
+<a name="rest_code_07a61217f0ca4f4ba84770fd6e3e6574-9"></a><span class="go">.</span>
 </pre>
 <p>All these posts get queued up according to your schedule, but note
 that you will anyway need to build and deploy your site for the posts
@@ -902,9 +902,9 @@ lead to rebuilding all index pages, which might be a problem for larger blogs
 <h4><a class="toc-backref" href="#id32">Tags</a></h4>
 <p>Tags are the smallest and most basic of the taxonomy items. A post can have multiple tags, specified using the <tt class="docutils literal">tags</tt> metadata entry (comma-separated). You should provide many tags to help your readers, and perhaps search engines, find content on your site.</p>
 <p>Please note that tags are case-sensitive and that you cannot have two tags that differ only in case/punctuation (eg. using <tt class="docutils literal">nikola</tt> in one post and <tt class="docutils literal">Nikola</tt> in another will lead to a crash):</p>
-<pre class="code text"><a name="rest_code_8ca3cefeb64548e2a4aa57e88ca5ea94-1"></a>ERROR: Nikola: You have tags that are too similar: Nikola and nikola
-<a name="rest_code_8ca3cefeb64548e2a4aa57e88ca5ea94-2"></a>ERROR: Nikola: Tag Nikola is used in: posts/second-post.rst
-<a name="rest_code_8ca3cefeb64548e2a4aa57e88ca5ea94-3"></a>ERROR: Nikola: Tag nikola is used in: posts/1.rst
+<pre class="code text"><a name="rest_code_3e624637540a495cac25011d053bc25b-1"></a>ERROR: Nikola: You have tags that are too similar: Nikola and nikola
+<a name="rest_code_3e624637540a495cac25011d053bc25b-2"></a>ERROR: Nikola: Tag Nikola is used in: posts/second-post.rst
+<a name="rest_code_3e624637540a495cac25011d053bc25b-3"></a>ERROR: Nikola: Tag nikola is used in: posts/1.rst
 </pre>
 <p>Nikola uses some tags to mark a post as “special” — those are <tt class="docutils literal">draft</tt>, <tt class="docutils literal">private</tt>, <tt class="docutils literal">mathjax</tt> (for math support).</p>
 <p>You can also generate a tag cloud with the <a class="reference external" href="https://plugins.getnikola.com/#tx3_tag_cloud">tx3_tag_cloud</a> plugin.</p>
@@ -919,9 +919,9 @@ lead to rebuilding all index pages, which might be a problem for larger blogs
 <ul>
 <li>
 <p class="first">through the directory structure (first directory is the section name, eg. <tt class="docutils literal"><span class="pre">/code/my-project/</span></tt> is in the <cite>code</cite> category) — your POSTS should have those directories as the second element, eg.</p>
-<pre class="code python"><a name="rest_code_33e7fdc35e644d43a12dc4add22916d9-1"></a><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
-<a name="rest_code_33e7fdc35e644d43a12dc4add22916d9-2"></a>    <span class="p">(</span><span class="s1">'posts/code/*.rst'</span><span class="p">,</span> <span class="s1">'code'</span><span class="p">,</span> <span class="s1">'posts'</span><span class="p">),</span>
-<a name="rest_code_33e7fdc35e644d43a12dc4add22916d9-3"></a><span class="p">)</span>
+<pre class="code python"><a name="rest_code_9faee13ef8444cfea18bede138afd939-1"></a><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
+<a name="rest_code_9faee13ef8444cfea18bede138afd939-2"></a>    <span class="p">(</span><span class="s1">'posts/code/*.rst'</span><span class="p">,</span> <span class="s1">'code'</span><span class="p">,</span> <span class="s1">'posts'</span><span class="p">),</span>
+<a name="rest_code_9faee13ef8444cfea18bede138afd939-3"></a><span class="p">)</span>
 </pre>
 </li>
 <li>
@@ -1033,7 +1033,7 @@ properly.</li>
 <tt class="docutils literal">POSTS</tt> and <tt class="docutils literal">PAGES</tt>.</p>
 <p>You can use Python-Markdown extensions by setting the <tt class="docutils literal">MARKDOWN_EXTENSIONS</tt>
 config option:</p>
-<pre class="code python"><a name="rest_code_6385d2bbd4ab44bb80ce25efe3d03ade-1"></a><span class="n">MARKDOWN_EXTENSIONS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'fenced_code'</span><span class="p">,</span> <span class="s1">'codehilite'</span><span class="p">,</span> <span class="s1">'extra'</span><span class="p">]</span>
+<pre class="code python"><a name="rest_code_688edbda959841e8a34399503d7999de-1"></a><span class="n">MARKDOWN_EXTENSIONS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'fenced_code'</span><span class="p">,</span> <span class="s1">'codehilite'</span><span class="p">,</span> <span class="s1">'extra'</span><span class="p">]</span>
 </pre>
 <p>Nikola comes with some Markdown Extensions built-in and enabled by default,
 namely a gist directive, a podcast directive, and <tt class="docutils literal">~~strikethrough~~</tt> support.</p>
@@ -1115,7 +1115,7 @@ For some shortcodes there are alternative docutils directives (example, you can 
 <dt>doc</dt>
 <dd>
 <p class="first">Will link to a document in the page, see <a class="reference external" href="#doc">Doc directive for details</a>. Example:</p>
-<div class="last"><pre class="code restructuredtext"><a name="rest_code_deb5e38ffdc543acbea12cc001e3a95d-1"></a>Take a look at {{% doc %}}my other post <creating-a-theme>{{% /doc %}} about theme creating.
+<div class="last"><pre class="code restructuredtext"><a name="rest_code_6c3f55c5681f4e1e9ead695400e4ed2c-1"></a>Take a look at {{% doc %}}my other post <creating-a-theme>{{% /doc %}} about theme creating.
 </creating-a-theme></pre></div>
 </dd>
 <dt>post-list</dt>
@@ -1210,7 +1210,7 @@ put things you want to make available to your templates.</p>
 site. You can use JSON, YAML or TOML files (with the appropriate file
 extensions: json/js, yaml/yml, toml/tml) that decode to Python dictionaries.
 For example, if you create <tt class="docutils literal">data/foo.json</tt> containing this:</p>
-<pre class="code json"><a name="rest_code_48e3478599b744bd8389f0bf2a6c4bff-1"></a><span class="p">{</span><span class="nt">"bar"</span><span class="p">:</span> <span class="s2">"baz"</span><span class="p">}</span>
+<pre class="code json"><a name="rest_code_bf59864c54db4aa094ad9b06bd1afc56-1"></a><span class="p">{</span><span class="nt">"bar"</span><span class="p">:</span> <span class="s2">"baz"</span><span class="p">}</span>
 </pre>
 <p>Then your templates can use things like <tt class="docutils literal"><span class="pre">${data['foo']['bar']}</span></tt> and
 it will be replaced by "baz".</p>
@@ -1230,15 +1230,15 @@ shortcodes. (<tt class="docutils literal">global_data</tt> works everywhere.)</p
 <h2><a class="toc-backref" href="#id51">Redirections</a></h2>
 <p>If you need a page to be available in more than one place, you can define redirections
 in your <tt class="docutils literal">conf.py</tt>:</p>
-<pre class="code python"><a name="rest_code_c8204a1f7567478aafe3e084df0873f7-1"></a><span class="c1"># A list of redirection tuples, [("foo/from.html", "/bar/to.html")].</span>
-<a name="rest_code_c8204a1f7567478aafe3e084df0873f7-2"></a><span class="c1">#</span>
-<a name="rest_code_c8204a1f7567478aafe3e084df0873f7-3"></a><span class="c1"># A HTML file will be created in output/foo/from.html that redirects</span>
-<a name="rest_code_c8204a1f7567478aafe3e084df0873f7-4"></a><span class="c1"># to the "/bar/to.html" URL. notice that the "from" side MUST be a</span>
-<a name="rest_code_c8204a1f7567478aafe3e084df0873f7-5"></a><span class="c1"># relative URL.</span>
-<a name="rest_code_c8204a1f7567478aafe3e084df0873f7-6"></a><span class="c1">#</span>
-<a name="rest_code_c8204a1f7567478aafe3e084df0873f7-7"></a><span class="c1"># If you don't need any of these, just set to []</span>
-<a name="rest_code_c8204a1f7567478aafe3e084df0873f7-8"></a>
-<a name="rest_code_c8204a1f7567478aafe3e084df0873f7-9"></a><span class="n">REDIRECTIONS</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">"index.html"</span><span class="p">,</span> <span class="s2">"/weblog/index.html"</span><span class="p">)]</span>
+<pre class="code python"><a name="rest_code_ebb93ca4302d4f549fe42ff45504c312-1"></a><span class="c1"># A list of redirection tuples, [("foo/from.html", "/bar/to.html")].</span>
+<a name="rest_code_ebb93ca4302d4f549fe42ff45504c312-2"></a><span class="c1">#</span>
+<a name="rest_code_ebb93ca4302d4f549fe42ff45504c312-3"></a><span class="c1"># A HTML file will be created in output/foo/from.html that redirects</span>
+<a name="rest_code_ebb93ca4302d4f549fe42ff45504c312-4"></a><span class="c1"># to the "/bar/to.html" URL. notice that the "from" side MUST be a</span>
+<a name="rest_code_ebb93ca4302d4f549fe42ff45504c312-5"></a><span class="c1"># relative URL.</span>
+<a name="rest_code_ebb93ca4302d4f549fe42ff45504c312-6"></a><span class="c1">#</span>
+<a name="rest_code_ebb93ca4302d4f549fe42ff45504c312-7"></a><span class="c1"># If you don't need any of these, just set to []</span>
+<a name="rest_code_ebb93ca4302d4f549fe42ff45504c312-8"></a>
+<a name="rest_code_ebb93ca4302d4f549fe42ff45504c312-9"></a><span class="n">REDIRECTIONS</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">"index.html"</span><span class="p">,</span> <span class="s2">"/weblog/index.html"</span><span class="p">)]</span>
 </pre>
 <p>It's better if you can do these using your web server's configuration, but if
 you can't, this will work.</p>
@@ -1251,12 +1251,12 @@ still should not be terribly hard to grasp.</p>
 <p>The default <tt class="docutils literal">conf.py</tt> you get with Nikola should be fairly complete, and is quite
 commented.</p>
 <p>You surely want to edit these options:</p>
-<pre class="code python"><a name="rest_code_c7b486eafbd346a3965d7d94700a9928-1"></a><span class="c1"># Data about this site</span>
-<a name="rest_code_c7b486eafbd346a3965d7d94700a9928-2"></a><span class="n">BLOG_AUTHOR</span> <span class="o">=</span> <span class="s2">"Your Name"</span>  <span class="c1"># (translatable)</span>
-<a name="rest_code_c7b486eafbd346a3965d7d94700a9928-3"></a><span class="n">BLOG_TITLE</span> <span class="o">=</span> <span class="s2">"Demo Site"</span>  <span class="c1"># (translatable)</span>
-<a name="rest_code_c7b486eafbd346a3965d7d94700a9928-4"></a><span class="n">SITE_URL</span> <span class="o">=</span> <span class="s2">"https://getnikola.com/"</span>
-<a name="rest_code_c7b486eafbd346a3965d7d94700a9928-5"></a><span class="n">BLOG_EMAIL</span> <span class="o">=</span> <span class="s2">"joe@demo.site"</span>
-<a name="rest_code_c7b486eafbd346a3965d7d94700a9928-6"></a><span class="n">BLOG_DESCRIPTION</span> <span class="o">=</span> <span class="s2">"This is a demo site for Nikola."</span>  <span class="c1"># (translatable)</span>
+<pre class="code python"><a name="rest_code_69807d507bb441238afe17995adf7b2e-1"></a><span class="c1"># Data about this site</span>
+<a name="rest_code_69807d507bb441238afe17995adf7b2e-2"></a><span class="n">BLOG_AUTHOR</span> <span class="o">=</span> <span class="s2">"Your Name"</span>  <span class="c1"># (translatable)</span>
+<a name="rest_code_69807d507bb441238afe17995adf7b2e-3"></a><span class="n">BLOG_TITLE</span> <span class="o">=</span> <span class="s2">"Demo Site"</span>  <span class="c1"># (translatable)</span>
+<a name="rest_code_69807d507bb441238afe17995adf7b2e-4"></a><span class="n">SITE_URL</span> <span class="o">=</span> <span class="s2">"https://getnikola.com/"</span>
+<a name="rest_code_69807d507bb441238afe17995adf7b2e-5"></a><span class="n">BLOG_EMAIL</span> <span class="o">=</span> <span class="s2">"joe@demo.site"</span>
+<a name="rest_code_69807d507bb441238afe17995adf7b2e-6"></a><span class="n">BLOG_DESCRIPTION</span> <span class="o">=</span> <span class="s2">"This is a demo site for Nikola."</span>  <span class="c1"># (translatable)</span>
 </pre>
 <p>Some options are marked with a (translatable) comment above or right next to
 them.  For those options, two types of values can be provided:</p>
@@ -1308,15 +1308,15 @@ tuples which are one of:</p>
 <li>A (((url, text), (url, text), (url, text)), title) tuple, describing a submenu / sublist.</li>
 </ol>
 <p>Example:</p>
-<pre class="code python"><a name="rest_code_d246906c48854ce296c0f649f592bf8d-1"></a><span class="n">NAVIGATION_LINKS</span> <span class="o">=</span> <span class="p">{</span>
-<a name="rest_code_d246906c48854ce296c0f649f592bf8d-2"></a>    <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="p">(</span>
-<a name="rest_code_d246906c48854ce296c0f649f592bf8d-3"></a>        <span class="p">(</span><span class="s1">'/archive.html'</span><span class="p">,</span> <span class="s1">'Archives'</span><span class="p">),</span>
-<a name="rest_code_d246906c48854ce296c0f649f592bf8d-4"></a>        <span class="p">(</span><span class="s1">'/categories/index.html'</span><span class="p">,</span> <span class="s1">'Tags'</span><span class="p">),</span>
-<a name="rest_code_d246906c48854ce296c0f649f592bf8d-5"></a>        <span class="p">(</span><span class="s1">'/rss.xml'</span><span class="p">,</span> <span class="s1">'RSS'</span><span class="p">),</span>
-<a name="rest_code_d246906c48854ce296c0f649f592bf8d-6"></a>        <span class="p">(((</span><span class="s1">'/foo'</span><span class="p">,</span> <span class="s1">'FOO'</span><span class="p">),</span>
-<a name="rest_code_d246906c48854ce296c0f649f592bf8d-7"></a>          <span class="p">(</span><span class="s1">'/bar'</span><span class="p">,</span> <span class="s1">'BAR'</span><span class="p">)),</span> <span class="s1">'BAZ'</span><span class="p">),</span>
-<a name="rest_code_d246906c48854ce296c0f649f592bf8d-8"></a>    <span class="p">),</span>
-<a name="rest_code_d246906c48854ce296c0f649f592bf8d-9"></a><span class="p">}</span>
+<pre class="code python"><a name="rest_code_414bdf4ee350445daed75f8e3297190a-1"></a><span class="n">NAVIGATION_LINKS</span> <span class="o">=</span> <span class="p">{</span>
+<a name="rest_code_414bdf4ee350445daed75f8e3297190a-2"></a>    <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="p">(</span>
+<a name="rest_code_414bdf4ee350445daed75f8e3297190a-3"></a>        <span class="p">(</span><span class="s1">'/archive.html'</span><span class="p">,</span> <span class="s1">'Archives'</span><span class="p">),</span>
+<a name="rest_code_414bdf4ee350445daed75f8e3297190a-4"></a>        <span class="p">(</span><span class="s1">'/categories/index.html'</span><span class="p">,</span> <span class="s1">'Tags'</span><span class="p">),</span>
+<a name="rest_code_414bdf4ee350445daed75f8e3297190a-5"></a>        <span class="p">(</span><span class="s1">'/rss.xml'</span><span class="p">,</span> <span class="s1">'RSS'</span><span class="p">),</span>
+<a name="rest_code_414bdf4ee350445daed75f8e3297190a-6"></a>        <span class="p">(((</span><span class="s1">'/foo'</span><span class="p">,</span> <span class="s1">'FOO'</span><span class="p">),</span>
+<a name="rest_code_414bdf4ee350445daed75f8e3297190a-7"></a>          <span class="p">(</span><span class="s1">'/bar'</span><span class="p">,</span> <span class="s1">'BAR'</span><span class="p">)),</span> <span class="s1">'BAZ'</span><span class="p">),</span>
+<a name="rest_code_414bdf4ee350445daed75f8e3297190a-8"></a>    <span class="p">),</span>
+<a name="rest_code_414bdf4ee350445daed75f8e3297190a-9"></a><span class="p">}</span>
 </pre>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -1369,28 +1369,28 @@ really put anything there. See <cite>social_buttons.html</cite> for more details
 </dl>
 <p>In order to use fancy dates, your theme must support them.  The built-in Bootstrap family supports it, but other themes might not by default.</p>
 <p>For Mako:</p>
-<pre class="code html"><a name="rest_code_2d5363bd0d384e9f800c4cfad6b91152-1"></a><span class="c">&lt;!-- required scripts -- best handled with bundles --&gt;</span>
-<a name="rest_code_2d5363bd0d384e9f800c4cfad6b91152-2"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/moment-with-locales.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_2d5363bd0d384e9f800c4cfad6b91152-3"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/fancydates.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_2d5363bd0d384e9f800c4cfad6b91152-4"></a>
-<a name="rest_code_2d5363bd0d384e9f800c4cfad6b91152-5"></a><span class="c">&lt;!-- fancy dates code --&gt;</span>
-<a name="rest_code_2d5363bd0d384e9f800c4cfad6b91152-6"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_2d5363bd0d384e9f800c4cfad6b91152-7"></a><span class="nx">moment</span><span class="p">.</span><span class="nx">locale</span><span class="p">(</span><span class="s2">"${momentjs_locales[lang]}"</span><span class="p">);</span>
-<a name="rest_code_2d5363bd0d384e9f800c4cfad6b91152-8"></a><span class="nx">fancydates</span><span class="p">(</span><span class="nx">$</span><span class="p">{</span><span class="nx">date_fanciness</span><span class="p">},</span> <span class="nx">$</span><span class="p">{</span><span class="nx">js_date_format</span><span class="p">});</span>
-<a name="rest_code_2d5363bd0d384e9f800c4cfad6b91152-9"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_2d5363bd0d384e9f800c4cfad6b91152-10"></a><span class="c">&lt;!-- end fancy dates code --&gt;</span>
+<pre class="code html"><a name="rest_code_7b5389eb02c24378b6edb71650da7904-1"></a><span class="c">&lt;!-- required scripts -- best handled with bundles --&gt;</span>
+<a name="rest_code_7b5389eb02c24378b6edb71650da7904-2"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/moment-with-locales.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a name="rest_code_7b5389eb02c24378b6edb71650da7904-3"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/fancydates.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a name="rest_code_7b5389eb02c24378b6edb71650da7904-4"></a>
+<a name="rest_code_7b5389eb02c24378b6edb71650da7904-5"></a><span class="c">&lt;!-- fancy dates code --&gt;</span>
+<a name="rest_code_7b5389eb02c24378b6edb71650da7904-6"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a name="rest_code_7b5389eb02c24378b6edb71650da7904-7"></a><span class="nx">moment</span><span class="p">.</span><span class="nx">locale</span><span class="p">(</span><span class="s2">"${momentjs_locales[lang]}"</span><span class="p">);</span>
+<a name="rest_code_7b5389eb02c24378b6edb71650da7904-8"></a><span class="nx">fancydates</span><span class="p">(</span><span class="nx">$</span><span class="p">{</span><span class="nx">date_fanciness</span><span class="p">},</span> <span class="nx">$</span><span class="p">{</span><span class="nx">js_date_format</span><span class="p">});</span>
+<a name="rest_code_7b5389eb02c24378b6edb71650da7904-9"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a name="rest_code_7b5389eb02c24378b6edb71650da7904-10"></a><span class="c">&lt;!-- end fancy dates code --&gt;</span>
 </pre>
 <p>For Jinja2:</p>
-<pre class="code html"><a name="rest_code_c0b0ffc0e61345928cb8e5218e2c9d57-1"></a><span class="c">&lt;!-- required scripts -- best handled with bundles --&gt;</span>
-<a name="rest_code_c0b0ffc0e61345928cb8e5218e2c9d57-2"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/moment-with-locales.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_c0b0ffc0e61345928cb8e5218e2c9d57-3"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/fancydates.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_c0b0ffc0e61345928cb8e5218e2c9d57-4"></a>
-<a name="rest_code_c0b0ffc0e61345928cb8e5218e2c9d57-5"></a><span class="c">&lt;!-- fancy dates code --&gt;</span>
-<a name="rest_code_c0b0ffc0e61345928cb8e5218e2c9d57-6"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_c0b0ffc0e61345928cb8e5218e2c9d57-7"></a><span class="nx">moment</span><span class="p">.</span><span class="nx">locale</span><span class="p">(</span><span class="s2">"{{ momentjs_locales[lang] }}"</span><span class="p">);</span>
-<a name="rest_code_c0b0ffc0e61345928cb8e5218e2c9d57-8"></a><span class="nx">fancydates</span><span class="p">({{</span> <span class="nx">date_fanciness</span> <span class="p">}},</span> <span class="p">{{</span> <span class="nx">js_date_format</span> <span class="p">}});</span>
-<a name="rest_code_c0b0ffc0e61345928cb8e5218e2c9d57-9"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a name="rest_code_c0b0ffc0e61345928cb8e5218e2c9d57-10"></a><span class="c">&lt;!-- end fancy dates code --&gt;</span>
+<pre class="code html"><a name="rest_code_014b804a136449379dccbcdbb3194cc4-1"></a><span class="c">&lt;!-- required scripts -- best handled with bundles --&gt;</span>
+<a name="rest_code_014b804a136449379dccbcdbb3194cc4-2"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/moment-with-locales.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a name="rest_code_014b804a136449379dccbcdbb3194cc4-3"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/assets/js/fancydates.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a name="rest_code_014b804a136449379dccbcdbb3194cc4-4"></a>
+<a name="rest_code_014b804a136449379dccbcdbb3194cc4-5"></a><span class="c">&lt;!-- fancy dates code --&gt;</span>
+<a name="rest_code_014b804a136449379dccbcdbb3194cc4-6"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a name="rest_code_014b804a136449379dccbcdbb3194cc4-7"></a><span class="nx">moment</span><span class="p">.</span><span class="nx">locale</span><span class="p">(</span><span class="s2">"{{ momentjs_locales[lang] }}"</span><span class="p">);</span>
+<a name="rest_code_014b804a136449379dccbcdbb3194cc4-8"></a><span class="nx">fancydates</span><span class="p">({{</span> <span class="nx">date_fanciness</span> <span class="p">}},</span> <span class="p">{{</span> <span class="nx">js_date_format</span> <span class="p">}});</span>
+<a name="rest_code_014b804a136449379dccbcdbb3194cc4-9"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a name="rest_code_014b804a136449379dccbcdbb3194cc4-10"></a><span class="c">&lt;!-- end fancy dates code --&gt;</span>
 </pre>
 </div>
 <div class="section" id="adding-files">
@@ -1406,11 +1406,11 @@ Maybe someday Nikola will just wipe <tt class="docutils literal">output/</tt> (w
 </div>
 <p>If you want to copy more than one folder of static files into <tt class="docutils literal">output</tt> you can
 change the FILES_FOLDERS option:</p>
-<pre class="code python"><a name="rest_code_3506f96f142d4061a713c4a5bbc18c90-1"></a><span class="c1"># One or more folders containing files to be copied as-is into the output.</span>
-<a name="rest_code_3506f96f142d4061a713c4a5bbc18c90-2"></a><span class="c1"># The format is a dictionary of "source" "relative destination".</span>
-<a name="rest_code_3506f96f142d4061a713c4a5bbc18c90-3"></a><span class="c1"># Default is:</span>
-<a name="rest_code_3506f96f142d4061a713c4a5bbc18c90-4"></a><span class="c1"># FILES_FOLDERS = {'files': '' }</span>
-<a name="rest_code_3506f96f142d4061a713c4a5bbc18c90-5"></a><span class="c1"># Which means copy 'files' into 'output'</span>
+<pre class="code python"><a name="rest_code_623f93b1a6e3401a90a19124b7ee3d20-1"></a><span class="c1"># One or more folders containing files to be copied as-is into the output.</span>
+<a name="rest_code_623f93b1a6e3401a90a19124b7ee3d20-2"></a><span class="c1"># The format is a dictionary of "source" "relative destination".</span>
+<a name="rest_code_623f93b1a6e3401a90a19124b7ee3d20-3"></a><span class="c1"># Default is:</span>
+<a name="rest_code_623f93b1a6e3401a90a19124b7ee3d20-4"></a><span class="c1"># FILES_FOLDERS = {'files': '' }</span>
+<a name="rest_code_623f93b1a6e3401a90a19124b7ee3d20-5"></a><span class="c1"># Which means copy 'files' into 'output'</span>
 </pre>
 </div>
 <div class="section" id="custom-themes">
@@ -1428,18 +1428,18 @@ directories listed in the <tt class="docutils literal">EXTRA_THEMES_DIRS</tt> co
 the <a class="reference external" href="https://themes.getnikola.com/">Themes Index</a>.
 Nikola has a built-in theme download/install mechanism to install those themes
 — the <tt class="docutils literal">theme</tt> command:</p>
-<pre class="code console"><a name="rest_code_4c29c36e93104195a8b7fe85f920ae71-1"></a><span class="gp">$</span> nikola theme -l
-<a name="rest_code_4c29c36e93104195a8b7fe85f920ae71-2"></a><span class="go">Themes:</span>
-<a name="rest_code_4c29c36e93104195a8b7fe85f920ae71-3"></a><span class="go">-------</span>
-<a name="rest_code_4c29c36e93104195a8b7fe85f920ae71-4"></a><span class="go">blogtxt</span>
-<a name="rest_code_4c29c36e93104195a8b7fe85f920ae71-5"></a><span class="go">bootstrap3-gradients</span>
-<a name="rest_code_4c29c36e93104195a8b7fe85f920ae71-6"></a><span class="go">⋮</span>
-<a name="rest_code_4c29c36e93104195a8b7fe85f920ae71-7"></a><span class="go">⋮</span>
-<a name="rest_code_4c29c36e93104195a8b7fe85f920ae71-8"></a>
-<a name="rest_code_4c29c36e93104195a8b7fe85f920ae71-9"></a><span class="gp">$</span> nikola theme -i blogtxt
-<a name="rest_code_4c29c36e93104195a8b7fe85f920ae71-10"></a><span class="go">[2013-10-12T16:46:13Z] NOTICE: theme: Downloading:</span>
-<a name="rest_code_4c29c36e93104195a8b7fe85f920ae71-11"></a><span class="go">https://themes.getnikola.com/v6/blogtxt.zip</span>
-<a name="rest_code_4c29c36e93104195a8b7fe85f920ae71-12"></a><span class="go">[2013-10-12T16:46:15Z] NOTICE: theme: Extracting: blogtxt into themes</span>
+<pre class="code console"><a name="rest_code_c279de5d5a774e75ae46c14bab6c4619-1"></a><span class="gp">$</span> nikola theme -l
+<a name="rest_code_c279de5d5a774e75ae46c14bab6c4619-2"></a><span class="go">Themes:</span>
+<a name="rest_code_c279de5d5a774e75ae46c14bab6c4619-3"></a><span class="go">-------</span>
+<a name="rest_code_c279de5d5a774e75ae46c14bab6c4619-4"></a><span class="go">blogtxt</span>
+<a name="rest_code_c279de5d5a774e75ae46c14bab6c4619-5"></a><span class="go">bootstrap3-gradients</span>
+<a name="rest_code_c279de5d5a774e75ae46c14bab6c4619-6"></a><span class="go">⋮</span>
+<a name="rest_code_c279de5d5a774e75ae46c14bab6c4619-7"></a><span class="go">⋮</span>
+<a name="rest_code_c279de5d5a774e75ae46c14bab6c4619-8"></a>
+<a name="rest_code_c279de5d5a774e75ae46c14bab6c4619-9"></a><span class="gp">$</span> nikola theme -i blogtxt
+<a name="rest_code_c279de5d5a774e75ae46c14bab6c4619-10"></a><span class="go">[2013-10-12T16:46:13Z] NOTICE: theme: Downloading:</span>
+<a name="rest_code_c279de5d5a774e75ae46c14bab6c4619-11"></a><span class="go">https://themes.getnikola.com/v6/blogtxt.zip</span>
+<a name="rest_code_c279de5d5a774e75ae46c14bab6c4619-12"></a><span class="go">[2013-10-12T16:46:15Z] NOTICE: theme: Extracting: blogtxt into themes</span>
 </pre>
 <p>And there you are, you now have themes/blogtxt installed. It's very
 rudimentary, but it should work in most cases.</p>
@@ -1448,14 +1448,14 @@ request in the  <a class="reference external" href="https://github.com/getnikola
 <p>One other option is to tweak an existing theme using a different color scheme,
 typography and CSS in general. Nikola provides a <tt class="docutils literal">bootswatch_theme</tt> option
 to create a custom theme by downloading free CSS files from <a class="reference external" href="http://bootswatch.com">http://bootswatch.com</a>:</p>
-<pre class="code console"><a name="rest_code_f7382fd610cb4d11b59d967617f89409-1"></a><span class="gp">$</span> nikola bootswatch_theme -n custom_theme -s flatly -p bootstrap3
-<a name="rest_code_f7382fd610cb4d11b59d967617f89409-2"></a><span class="go">[2013-10-12T16:46:58Z] NOTICE: bootswatch_theme: Creating 'custom_theme' theme</span>
-<a name="rest_code_f7382fd610cb4d11b59d967617f89409-3"></a><span class="go">from 'flatly' and 'bootstrap3'</span>
-<a name="rest_code_f7382fd610cb4d11b59d967617f89409-4"></a><span class="go">[2013-10-12T16:46:58Z] NOTICE: bootswatch_theme: Downloading:</span>
-<a name="rest_code_f7382fd610cb4d11b59d967617f89409-5"></a><span class="go">http://bootswatch.com//flatly/bootstrap.min.css</span>
-<a name="rest_code_f7382fd610cb4d11b59d967617f89409-6"></a><span class="go">[2013-10-12T16:46:58Z] NOTICE: bootswatch_theme: Downloading:</span>
-<a name="rest_code_f7382fd610cb4d11b59d967617f89409-7"></a><span class="go">http://bootswatch.com//flatly/bootstrap.css</span>
-<a name="rest_code_f7382fd610cb4d11b59d967617f89409-8"></a><span class="go">[2013-10-12T16:46:59Z] NOTICE: bootswatch_theme: Theme created. Change the THEME setting to "custom_theme" to use it.</span>
+<pre class="code console"><a name="rest_code_2bd09b0bffdd437f81b26a33d3cdb92d-1"></a><span class="gp">$</span> nikola bootswatch_theme -n custom_theme -s flatly -p bootstrap3
+<a name="rest_code_2bd09b0bffdd437f81b26a33d3cdb92d-2"></a><span class="go">[2013-10-12T16:46:58Z] NOTICE: bootswatch_theme: Creating 'custom_theme' theme</span>
+<a name="rest_code_2bd09b0bffdd437f81b26a33d3cdb92d-3"></a><span class="go">from 'flatly' and 'bootstrap3'</span>
+<a name="rest_code_2bd09b0bffdd437f81b26a33d3cdb92d-4"></a><span class="go">[2013-10-12T16:46:58Z] NOTICE: bootswatch_theme: Downloading:</span>
+<a name="rest_code_2bd09b0bffdd437f81b26a33d3cdb92d-5"></a><span class="go">http://bootswatch.com//flatly/bootstrap.min.css</span>
+<a name="rest_code_2bd09b0bffdd437f81b26a33d3cdb92d-6"></a><span class="go">[2013-10-12T16:46:58Z] NOTICE: bootswatch_theme: Downloading:</span>
+<a name="rest_code_2bd09b0bffdd437f81b26a33d3cdb92d-7"></a><span class="go">http://bootswatch.com//flatly/bootstrap.css</span>
+<a name="rest_code_2bd09b0bffdd437f81b26a33d3cdb92d-8"></a><span class="go">[2013-10-12T16:46:59Z] NOTICE: bootswatch_theme: Theme created. Change the THEME setting to "custom_theme" to use it.</span>
 </pre>
 <p>You can even try what different swatches do on an existing site using
 their handy <a class="reference external" href="http://news.bootswatch.com/post/29555952123/a-bookmarklet-for-bootswatch">bootswatchlet</a></p>
@@ -1471,11 +1471,11 @@ put them in the <tt class="docutils literal">DEPLOY_COMMANDS</tt> option, and ru
 you want to run (eg. <tt class="docutils literal">nikola deploy default</tt>, multiple presets are allowed).</p>
 <p>One caveat is that if any command has a % in it, you should double them.</p>
 <p>Here is an example, from my own site's deployment script:</p>
-<pre class="code python"><a name="rest_code_bf9a00c3590f45d0b80957f9670b33e0-1"></a><span class="n">DEPLOY_COMMANDS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'default'</span><span class="p">:</span> <span class="p">[</span>
-<a name="rest_code_bf9a00c3590f45d0b80957f9670b33e0-2"></a>    <span class="s1">'rsync -rav --delete output/ ralsina@lateral.netmanagers.com.ar:/srv/www/lateral'</span><span class="p">,</span>
-<a name="rest_code_bf9a00c3590f45d0b80957f9670b33e0-3"></a>    <span class="s1">'rdiff-backup output ~/blog-backup'</span><span class="p">,</span>
-<a name="rest_code_bf9a00c3590f45d0b80957f9670b33e0-4"></a>    <span class="s2">"links -dump 'http://www.twingly.com/ping2?url=lateral.netmanagers.com.ar'"</span><span class="p">,</span>
-<a name="rest_code_bf9a00c3590f45d0b80957f9670b33e0-5"></a><span class="p">]}</span>
+<pre class="code python"><a name="rest_code_69561f3fb38c4c0592a406ba6172901d-1"></a><span class="n">DEPLOY_COMMANDS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'default'</span><span class="p">:</span> <span class="p">[</span>
+<a name="rest_code_69561f3fb38c4c0592a406ba6172901d-2"></a>    <span class="s1">'rsync -rav --delete output/ ralsina@lateral.netmanagers.com.ar:/srv/www/lateral'</span><span class="p">,</span>
+<a name="rest_code_69561f3fb38c4c0592a406ba6172901d-3"></a>    <span class="s1">'rdiff-backup output ~/blog-backup'</span><span class="p">,</span>
+<a name="rest_code_69561f3fb38c4c0592a406ba6172901d-4"></a>    <span class="s2">"links -dump 'http://www.twingly.com/ping2?url=lateral.netmanagers.com.ar'"</span><span class="p">,</span>
+<a name="rest_code_69561f3fb38c4c0592a406ba6172901d-5"></a><span class="p">]}</span>
 </pre>
 <p>Other interesting ideas are using
 <a class="reference external" href="http://toroid.org/ams/git-website-howto">git as a deployment mechanism</a> (or any other VCS
@@ -1494,8 +1494,8 @@ sure you have <tt class="docutils literal">nikola</tt> and <tt class="docutils l
 </li>
 <li>
 <p class="first">Initialize a git repository in your Nikola source directory by running:</p>
-<pre class="code text"><a name="rest_code_c26666f76eaa4093867a2b61a57cb153-1"></a>git init .
-<a name="rest_code_c26666f76eaa4093867a2b61a57cb153-2"></a>git remote add origin git@github.com:user/repository.git
+<pre class="code text"><a name="rest_code_abc09f5c4c954c0ea5029495ac8281d3-1"></a>git init .
+<a name="rest_code_abc09f5c4c954c0ea5029495ac8281d3-2"></a>git remote add origin git@github.com:user/repository.git
 </pre>
 </li>
 <li>
@@ -1518,10 +1518,10 @@ automatically committed to and pushed. We recommend setting it to
 </li>
 <li>
 <p class="first">Create a <tt class="docutils literal">.gitignore</tt> file. We recommend adding at least the following entries:</p>
-<pre class="code text"><a name="rest_code_9c98ad2c62e94756a2c03290d2e9e090-1"></a>cache
-<a name="rest_code_9c98ad2c62e94756a2c03290d2e9e090-2"></a>.doit.db
-<a name="rest_code_9c98ad2c62e94756a2c03290d2e9e090-3"></a>__pycache__
-<a name="rest_code_9c98ad2c62e94756a2c03290d2e9e090-4"></a>output
+<pre class="code text"><a name="rest_code_d1f6b2bb14e04e8da61726cbde384797-1"></a>cache
+<a name="rest_code_d1f6b2bb14e04e8da61726cbde384797-2"></a>.doit.db
+<a name="rest_code_d1f6b2bb14e04e8da61726cbde384797-3"></a>__pycache__
+<a name="rest_code_d1f6b2bb14e04e8da61726cbde384797-4"></a>output
 </pre>
 </li>
 <li>
@@ -1601,7 +1601,7 @@ them with you if you need to.</li>
 <li>It's damn nice.</li>
 </ol>
 <p>You can disable comments for a post by adding a "nocomments" metadata field to it:</p>
-<pre class="code restructuredtext"><a name="rest_code_5b48dd6ca5e446129af4387ff43b6c35-1"></a><span class="cp">.. nocomments: True</span>
+<pre class="code restructuredtext"><a name="rest_code_ee47ecb0cb1a4e0b8db216e5c7027a77-1"></a><span class="cp">.. nocomments: True</span>
 </pre>
 <div class="admonition admonition-disqus-support">
 <p class="first admonition-title">DISQUS Support</p>
@@ -1613,14 +1613,14 @@ but it's probably more trouble than it's worth.</p>
 <p class="first admonition-title">Moot Support</p>
 <p>Moot doesn't support comment counts on index pages, and it requires adding
 this to your <tt class="docutils literal">conf.py</tt>:</p>
-<div class="last"><pre class="code python"><a name="rest_code_c6c56a4db07c41e0ba74875b413b25ed-1"></a><span class="n">BODY_END</span> <span class="o">=</span> <span class="s2">"""</span>
-<a name="rest_code_c6c56a4db07c41e0ba74875b413b25ed-2"></a><span class="s2">&lt;script src="//cdn.moot.it/1/moot.min.js"&gt;&lt;/script&gt;</span>
-<a name="rest_code_c6c56a4db07c41e0ba74875b413b25ed-3"></a><span class="s2">"""</span>
-<a name="rest_code_c6c56a4db07c41e0ba74875b413b25ed-4"></a><span class="n">EXTRA_HEAD_DATA</span> <span class="o">=</span> <span class="s2">"""</span>
-<a name="rest_code_c6c56a4db07c41e0ba74875b413b25ed-5"></a><span class="s2">&lt;link rel="stylesheet" type="text/css" href="//cdn.moot.it/1/moot.css"&gt;</span>
-<a name="rest_code_c6c56a4db07c41e0ba74875b413b25ed-6"></a><span class="s2">&lt;meta name="viewport" content="width=device-width"&gt;</span>
-<a name="rest_code_c6c56a4db07c41e0ba74875b413b25ed-7"></a><span class="s2">&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;</span>
-<a name="rest_code_c6c56a4db07c41e0ba74875b413b25ed-8"></a><span class="s2">"""</span>
+<div class="last"><pre class="code python"><a name="rest_code_56c64a63d6d94980958b1fcaee6d8f92-1"></a><span class="n">BODY_END</span> <span class="o">=</span> <span class="s2">"""</span>
+<a name="rest_code_56c64a63d6d94980958b1fcaee6d8f92-2"></a><span class="s2">&lt;script src="//cdn.moot.it/1/moot.min.js"&gt;&lt;/script&gt;</span>
+<a name="rest_code_56c64a63d6d94980958b1fcaee6d8f92-3"></a><span class="s2">"""</span>
+<a name="rest_code_56c64a63d6d94980958b1fcaee6d8f92-4"></a><span class="n">EXTRA_HEAD_DATA</span> <span class="o">=</span> <span class="s2">"""</span>
+<a name="rest_code_56c64a63d6d94980958b1fcaee6d8f92-5"></a><span class="s2">&lt;link rel="stylesheet" type="text/css" href="//cdn.moot.it/1/moot.css"&gt;</span>
+<a name="rest_code_56c64a63d6d94980958b1fcaee6d8f92-6"></a><span class="s2">&lt;meta name="viewport" content="width=device-width"&gt;</span>
+<a name="rest_code_56c64a63d6d94980958b1fcaee6d8f92-7"></a><span class="s2">&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;</span>
+<a name="rest_code_56c64a63d6d94980958b1fcaee6d8f92-8"></a><span class="s2">"""</span>
 </pre></div>
 </div>
 <div class="admonition admonition-facebook-support">
@@ -1656,34 +1656,34 @@ then be copied directly to the corresponding path in the <tt class="docutils lit
 can reference it from whatever page you like, most easily using the <tt class="docutils literal">thumbnail</tt>
 reST extension. If you don't want thumbnails, just use the <tt class="docutils literal">files</tt> folder instead.</p>
 <p>The <tt class="docutils literal">conf.py</tt> options affecting images and gallery pages are these:</p>
-<pre class="code python"><a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-1"></a><span class="c1"># One or more folders containing galleries. The format is a dictionary of</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-2"></a><span class="c1"># {"source": "relative_destination"}, where galleries are looked for in</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-3"></a><span class="c1"># "source/" and the results will be located in</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-4"></a><span class="c1"># "OUTPUT_PATH/relative_destination/gallery_name"</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-5"></a><span class="c1"># Default is:</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-6"></a><span class="n">GALLERY_FOLDERS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"galleries"</span><span class="p">:</span> <span class="s2">"galleries"</span><span class="p">}</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-7"></a><span class="c1"># More gallery options:</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-8"></a><span class="n">THUMBNAIL_SIZE</span> <span class="o">=</span> <span class="mi">180</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-9"></a><span class="n">MAX_IMAGE_SIZE</span> <span class="o">=</span> <span class="mi">1280</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-10"></a><span class="n">USE_FILENAME_AS_TITLE</span> <span class="o">=</span> <span class="bp">True</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-11"></a><span class="n">EXTRA_IMAGE_EXTENSIONS</span> <span class="o">=</span> <span class="p">[]</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-12"></a>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-13"></a><span class="c1"># If set to False, it will sort by filename instead. Defaults to True</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-14"></a><span class="n">GALLERY_SORT_BY_DATE</span> <span class="o">=</span> <span class="bp">True</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-15"></a>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-16"></a><span class="c1"># Folders containing images to be used in normal posts or pages.</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-17"></a><span class="c1"># IMAGE_FOLDERS is a dictionary of the form {"source": "destination"},</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-18"></a><span class="c1"># where "source" is the folder containing the images to be published, and</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-19"></a><span class="c1"># "destination" is the folder under OUTPUT_PATH containing the images copied</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-20"></a><span class="c1"># to the site. Thumbnail images will be created there as well.</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-21"></a><span class="n">IMAGE_FOLDERS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'images'</span><span class="p">:</span> <span class="s1">'images'</span><span class="p">}</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-22"></a>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-23"></a><span class="c1"># Images will be scaled down according to IMAGE_THUMBNAIL_SIZE and MAX_IMAGE_SIZE</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-24"></a><span class="c1"># options, but will have to be referenced manually to be visible on the site</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-25"></a><span class="c1"># (the thumbnail has ``.thumbnail`` added before the file extension by default,</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-26"></a><span class="c1"># but a different naming template can be configured with IMAGE_THUMBNAIL_FORMAT).</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-27"></a><span class="n">IMAGE_THUMBNAIL_SIZE</span> <span class="o">=</span> <span class="mi">400</span>
-<a name="rest_code_23df3eb4b6e84ab5ab539dca7086e7ee-28"></a><span class="n">IMAGE_THUMBNAIL_FORMAT</span> <span class="o">=</span> <span class="s1">'{name}.thumbnail{ext}'</span>
+<pre class="code python"><a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-1"></a><span class="c1"># One or more folders containing galleries. The format is a dictionary of</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-2"></a><span class="c1"># {"source": "relative_destination"}, where galleries are looked for in</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-3"></a><span class="c1"># "source/" and the results will be located in</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-4"></a><span class="c1"># "OUTPUT_PATH/relative_destination/gallery_name"</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-5"></a><span class="c1"># Default is:</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-6"></a><span class="n">GALLERY_FOLDERS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"galleries"</span><span class="p">:</span> <span class="s2">"galleries"</span><span class="p">}</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-7"></a><span class="c1"># More gallery options:</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-8"></a><span class="n">THUMBNAIL_SIZE</span> <span class="o">=</span> <span class="mi">180</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-9"></a><span class="n">MAX_IMAGE_SIZE</span> <span class="o">=</span> <span class="mi">1280</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-10"></a><span class="n">USE_FILENAME_AS_TITLE</span> <span class="o">=</span> <span class="bp">True</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-11"></a><span class="n">EXTRA_IMAGE_EXTENSIONS</span> <span class="o">=</span> <span class="p">[]</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-12"></a>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-13"></a><span class="c1"># If set to False, it will sort by filename instead. Defaults to True</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-14"></a><span class="n">GALLERY_SORT_BY_DATE</span> <span class="o">=</span> <span class="bp">True</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-15"></a>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-16"></a><span class="c1"># Folders containing images to be used in normal posts or pages.</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-17"></a><span class="c1"># IMAGE_FOLDERS is a dictionary of the form {"source": "destination"},</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-18"></a><span class="c1"># where "source" is the folder containing the images to be published, and</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-19"></a><span class="c1"># "destination" is the folder under OUTPUT_PATH containing the images copied</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-20"></a><span class="c1"># to the site. Thumbnail images will be created there as well.</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-21"></a><span class="n">IMAGE_FOLDERS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'images'</span><span class="p">:</span> <span class="s1">'images'</span><span class="p">}</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-22"></a>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-23"></a><span class="c1"># Images will be scaled down according to IMAGE_THUMBNAIL_SIZE and MAX_IMAGE_SIZE</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-24"></a><span class="c1"># options, but will have to be referenced manually to be visible on the site</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-25"></a><span class="c1"># (the thumbnail has ``.thumbnail`` added before the file extension by default,</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-26"></a><span class="c1"># but a different naming template can be configured with IMAGE_THUMBNAIL_FORMAT).</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-27"></a><span class="n">IMAGE_THUMBNAIL_SIZE</span> <span class="o">=</span> <span class="mi">400</span>
+<a name="rest_code_bacadafb2eaa4870a9f6e71bac49a6df-28"></a><span class="n">IMAGE_THUMBNAIL_FORMAT</span> <span class="o">=</span> <span class="s1">'{name}.thumbnail{ext}'</span>
 </pre>
 <p>If you add a reST file in <tt class="docutils literal">galleries/gallery_name/index.txt</tt> its contents will be
 converted to HTML and inserted above the images in the gallery page. The
@@ -1699,10 +1699,10 @@ Tesla pictures taken from <a class="reference external" href="http://kerryr.net/
 <h3><a class="toc-backref" href="#id64">Embedding Images</a></h3>
 <p>Assuming that you have your pictures stored in a folder called <tt class="docutils literal">images</tt> (as configured above),
 you can embed the same in your posts with the following reST directive:</p>
-<pre class="code rest"><a name="rest_code_f7456fd378604587955e6664105cf4df-1"></a><span class="p">..</span><span class="ow">image</span><span class="p">::</span> /images/tesla.jpg
+<pre class="code rest"><a name="rest_code_7d9397fd366a4636a68e51361a899c64-1"></a><span class="p">..</span><span class="ow">image</span><span class="p">::</span> /images/tesla.jpg
 </pre>
 <p>Which is equivalent to the following HTML code:</p>
-<pre class="code html"><a name="rest_code_3e12dcf6ac8346b882ecbc93c7eef089-1"></a><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"/images/tesla.jpg"</span><span class="p">&gt;</span>
+<pre class="code html"><a name="rest_code_6e7a9da0d86d4ad68b9ec2a5617945a6-1"></a><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"/images/tesla.jpg"</span><span class="p">&gt;</span>
 </pre>
 <p>Please take note of the leading forward-slash <tt class="docutils literal">/</tt> which refers to the root
 output directory. (Make sure to use this even if you’re not deploying to
@@ -1781,12 +1781,12 @@ listed there.</p>
 or change them in arbitrary ways. For example, you may want to compress all CSS
 and JS files using yui-compressor.</p>
 <p>To do that, you can use the provided helper adding this in your <tt class="docutils literal">conf.py</tt>:</p>
-<pre class="code python"><a name="rest_code_0e75bd43f9c341159e978406e704daa7-1"></a><span class="kn">from</span> <span class="nn">nikola</span> <span class="kn">import</span> <span class="n">filters</span>
-<a name="rest_code_0e75bd43f9c341159e978406e704daa7-2"></a>
-<a name="rest_code_0e75bd43f9c341159e978406e704daa7-3"></a><span class="n">FILTERS</span> <span class="o">=</span> <span class="p">{</span>
-<a name="rest_code_0e75bd43f9c341159e978406e704daa7-4"></a>  <span class="s2">".css"</span><span class="p">:</span> <span class="p">[</span><span class="n">filters</span><span class="o">.</span><span class="n">yui_compressor</span><span class="p">],</span>
-<a name="rest_code_0e75bd43f9c341159e978406e704daa7-5"></a>  <span class="s2">".js"</span><span class="p">:</span> <span class="p">[</span><span class="n">filters</span><span class="o">.</span><span class="n">yui_compressor</span><span class="p">],</span>
-<a name="rest_code_0e75bd43f9c341159e978406e704daa7-6"></a><span class="p">}</span>
+<pre class="code python"><a name="rest_code_8fe085c357874afface3c322f3ab6cc3-1"></a><span class="kn">from</span> <span class="nn">nikola</span> <span class="kn">import</span> <span class="n">filters</span>
+<a name="rest_code_8fe085c357874afface3c322f3ab6cc3-2"></a>
+<a name="rest_code_8fe085c357874afface3c322f3ab6cc3-3"></a><span class="n">FILTERS</span> <span class="o">=</span> <span class="p">{</span>
+<a name="rest_code_8fe085c357874afface3c322f3ab6cc3-4"></a>  <span class="s2">".css"</span><span class="p">:</span> <span class="p">[</span><span class="n">filters</span><span class="o">.</span><span class="n">yui_compressor</span><span class="p">],</span>
+<a name="rest_code_8fe085c357874afface3c322f3ab6cc3-5"></a>  <span class="s2">".js"</span><span class="p">:</span> <span class="p">[</span><span class="n">filters</span><span class="o">.</span><span class="n">yui_compressor</span><span class="p">],</span>
+<a name="rest_code_8fe085c357874afface3c322f3ab6cc3-6"></a><span class="p">}</span>
 </pre>
 <p>Where <tt class="docutils literal">filters.yui_compressor</tt> is a helper function provided by Nikola. You can
 replace that with strings describing command lines, or arbitrary python functions.</p>
@@ -1799,20 +1799,20 @@ me and I will add it to the filters library so that more people use it.</p>
 and you can use arbitrary Python functions as filters, too.</p>
 <p>If your program doesn't run in-place, then you can use Nikola's <tt class="docutils literal">runinplace</tt> function (from the <tt class="docutils literal">filters</tt> module).
 For example, this is how the yui_compressor filter is implemented:</p>
-<pre class="code python"><a name="rest_code_a0e5cbff011a45048191d35c67cccf0a-1"></a><span class="kn">from</span> <span class="nn">nikola.filters</span> <span class="kn">import</span> <span class="n">runinplace</span>
-<a name="rest_code_a0e5cbff011a45048191d35c67cccf0a-2"></a><span class="k">def</span> <span class="nf">yui_compressor</span><span class="p">(</span><span class="n">infile</span><span class="p">):</span>
-<a name="rest_code_a0e5cbff011a45048191d35c67cccf0a-3"></a>    <span class="k">return</span> <span class="n">runinplace</span><span class="p">(</span><span class="sa">r</span><span class="s1">'yui-compressor --nomunge %1 -o %2'</span><span class="p">,</span> <span class="n">infile</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_34d1a7f145bd451c91b4c4bb82e49f37-1"></a><span class="kn">from</span> <span class="nn">nikola.filters</span> <span class="kn">import</span> <span class="n">runinplace</span>
+<a name="rest_code_34d1a7f145bd451c91b4c4bb82e49f37-2"></a><span class="k">def</span> <span class="nf">yui_compressor</span><span class="p">(</span><span class="n">infile</span><span class="p">):</span>
+<a name="rest_code_34d1a7f145bd451c91b4c4bb82e49f37-3"></a>    <span class="k">return</span> <span class="n">runinplace</span><span class="p">(</span><span class="sa">r</span><span class="s1">'yui-compressor --nomunge %1 -o %2'</span><span class="p">,</span> <span class="n">infile</span><span class="p">)</span>
 </pre>
 <p>You can turn any function into a filter using <tt class="docutils literal">apply_to_text_file</tt> (for
 text files to be read in UTF-8) and <tt class="docutils literal">apply_to_binary_file</tt> (for files to
 be read in binary mode).</p>
 <p>As a silly example, this would make everything uppercase and totally break
 your website:</p>
-<div class="last"><pre class="code python"><a name="rest_code_24ccef8b585140e29e63ff8fafd266ed-1"></a><span class="kn">import</span> <span class="nn">string</span>
-<a name="rest_code_24ccef8b585140e29e63ff8fafd266ed-2"></a><span class="kn">from</span> <span class="nn">nikola.filters</span> <span class="kn">import</span> <span class="n">apply_to_text_file</span>
-<a name="rest_code_24ccef8b585140e29e63ff8fafd266ed-3"></a><span class="n">FILTERS</span> <span class="o">=</span> <span class="p">{</span>
-<a name="rest_code_24ccef8b585140e29e63ff8fafd266ed-4"></a>  <span class="s2">".html"</span><span class="p">:</span> <span class="p">[</span><span class="n">apply_to_text_file</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">upper</span><span class="p">)]</span>
-<a name="rest_code_24ccef8b585140e29e63ff8fafd266ed-5"></a><span class="p">}</span>
+<div class="last"><pre class="code python"><a name="rest_code_da863fca8f054d8482cb9ad0a525713e-1"></a><span class="kn">import</span> <span class="nn">string</span>
+<a name="rest_code_da863fca8f054d8482cb9ad0a525713e-2"></a><span class="kn">from</span> <span class="nn">nikola.filters</span> <span class="kn">import</span> <span class="n">apply_to_text_file</span>
+<a name="rest_code_da863fca8f054d8482cb9ad0a525713e-3"></a><span class="n">FILTERS</span> <span class="o">=</span> <span class="p">{</span>
+<a name="rest_code_da863fca8f054d8482cb9ad0a525713e-4"></a>  <span class="s2">".html"</span><span class="p">:</span> <span class="p">[</span><span class="n">apply_to_text_file</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">upper</span><span class="p">)]</span>
+<a name="rest_code_da863fca8f054d8482cb9ad0a525713e-5"></a><span class="p">}</span>
 </pre></div>
 </div>
 <dl class="docutils">
@@ -1867,7 +1867,7 @@ quotes. Usually not needed.</dd>
 <dd>Minify XML files. Suitable for Nikola’s sitemaps and Atom feeds.</dd>
 </dl>
 <p>You can apply filters to specific posts or pages by using the <tt class="docutils literal">filters</tt> metadata field:</p>
-<pre class="code restructuredtext"><a name="rest_code_48388a02f81343e4b695c1f06cdf4154-1"></a><span class="cp">.. filters: filters.html_tidy_nowrap, "sed s/foo/bar"</span>
+<pre class="code restructuredtext"><a name="rest_code_3703abbe601444739f0d5eb4f6a4fd14-1"></a><span class="cp">.. filters: filters.html_tidy_nowrap, "sed s/foo/bar"</span>
 </pre>
 </div>
 <div class="section" id="optimizing-your-website">
@@ -1882,12 +1882,12 @@ it's probably a good idea to use more than one.</p>
 </li>
 <li>
 <p class="first">Enable compression in Apache:</p>
-<pre class="code apache"><a name="rest_code_c6ecd1d770694a8c8bbeab0c06926027-1"></a><span class="nb">AddOutputFilterByType</span> DEFLATE text/html text/plain text/xml text/css text/javascript
+<pre class="code apache"><a name="rest_code_ef10070c93a942409c48c223dfe69573-1"></a><span class="nb">AddOutputFilterByType</span> DEFLATE text/html text/plain text/xml text/css text/javascript
 </pre>
 </li>
 <li>
 <p class="first">If even after you did the previous step the CSS files are not sent compressed:</p>
-<pre class="code apache"><a name="rest_code_65d354de3cee433cafa1155a1ade2b60-1"></a><span class="nb">AddType</span> text/css .css
+<pre class="code apache"><a name="rest_code_25d3ee8cb4d84b96aee5462862aecb94-1"></a><span class="nb">AddType</span> text/css .css
 </pre>
 </li>
 <li>
@@ -1916,30 +1916,30 @@ directives of reStructuredText and the usual LaTeX delimiters
 <p>We <strong>DO NOT</strong> support the old, deprecated and error-prone <tt class="docutils literal">$inline$</tt>
 delimiters by default. If you want to use them, please add them manually,
 like this:</p>
-<pre class="code python"><a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-1"></a><span class="n">MATHJAX_CONFIG</span> <span class="o">=</span> <span class="s2">"""</span>
-<a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-2"></a><span class="s2">&lt;script type="text/x-mathjax-config"&gt;</span>
-<a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-3"></a><span class="s2">MathJax.Hub.Config({</span>
-<a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-4"></a><span class="s2">    tex2jax: {</span>
-<a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-5"></a><span class="s2">        inlineMath: [ ['$','$'], ["</span><span class="se">\\</span><span class="s2">\(","</span><span class="se">\\</span><span class="s2">\)"] ],</span>
-<a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-6"></a><span class="s2">        displayMath: [ ['$$','$$'], ["</span><span class="se">\\</span><span class="s2">\[","</span><span class="se">\\</span><span class="s2">\]"] ],</span>
-<a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-7"></a><span class="s2">        processEscapes: true</span>
-<a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-8"></a><span class="s2">    },</span>
-<a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-9"></a><span class="s2">    displayAlign: 'left', // Change this to 'center' to center equations.</span>
-<a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-10"></a><span class="s2">    "HTML-CSS": {</span>
-<a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-11"></a><span class="s2">        styles: {'.MathJax_Display': {"margin": 0}}</span>
-<a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-12"></a><span class="s2">    }</span>
-<a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-13"></a><span class="s2">});</span>
-<a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-14"></a><span class="s2">&lt;/script&gt;</span>
-<a name="rest_code_70dacb2b06784132bc40e4e3b35f5f07-15"></a><span class="s2">"""</span>
+<pre class="code python"><a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-1"></a><span class="n">MATHJAX_CONFIG</span> <span class="o">=</span> <span class="s2">"""</span>
+<a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-2"></a><span class="s2">&lt;script type="text/x-mathjax-config"&gt;</span>
+<a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-3"></a><span class="s2">MathJax.Hub.Config({</span>
+<a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-4"></a><span class="s2">    tex2jax: {</span>
+<a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-5"></a><span class="s2">        inlineMath: [ ['$','$'], ["</span><span class="se">\\</span><span class="s2">\(","</span><span class="se">\\</span><span class="s2">\)"] ],</span>
+<a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-6"></a><span class="s2">        displayMath: [ ['$$','$$'], ["</span><span class="se">\\</span><span class="s2">\[","</span><span class="se">\\</span><span class="s2">\]"] ],</span>
+<a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-7"></a><span class="s2">        processEscapes: true</span>
+<a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-8"></a><span class="s2">    },</span>
+<a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-9"></a><span class="s2">    displayAlign: 'left', // Change this to 'center' to center equations.</span>
+<a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-10"></a><span class="s2">    "HTML-CSS": {</span>
+<a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-11"></a><span class="s2">        styles: {'.MathJax_Display': {"margin": 0}}</span>
+<a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-12"></a><span class="s2">    }</span>
+<a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-13"></a><span class="s2">});</span>
+<a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-14"></a><span class="s2">&lt;/script&gt;</span>
+<a name="rest_code_4d093fa3053e4d16aa74eb7e97c76e5d-15"></a><span class="s2">"""</span>
 </pre>
 <p>Inline mathematics are produced using the reST <cite>math</cite> <strong>role</strong> or the LaTeX
 backslash-parentheses delimiters:</p>
 <p>Euler’s formula: <span class="math">\(e^{ix} = \cos x + i\sin x\)</span></p>
 <p>In reST:</p>
-<pre class="code restructuredtext"><a name="rest_code_cd4cc79031aa4120bdc04c4ff5af74e5-1"></a>Euler’s formula: <span class="na">:math:</span><span class="nv">`e^{ix} = \cos x + i\sin x`</span>
+<pre class="code restructuredtext"><a name="rest_code_ca1e011ae2d34c74b5a399c5ff5fc355-1"></a>Euler’s formula: <span class="na">:math:</span><span class="nv">`e^{ix} = \cos x + i\sin x`</span>
 </pre>
 <p>In HTML and other input formats:</p>
-<pre class="code text"><a name="rest_code_a636ff42a9e94ed89e5cc2cdbde74c3c-1"></a>Euler’s formula: \(e^{ix} = \cos x + i\sin x\)
+<pre class="code text"><a name="rest_code_011b96c840494dc4b1bbcd108da51e5a-1"></a>Euler’s formula: \(e^{ix} = \cos x + i\sin x\)
 </pre>
 <p>Note that some input formats (including Markdown) require using <strong>double
 backslashes</strong> in the delimiters (<tt class="docutils literal"><span class="pre">\\(inline</span> <span class="pre">math\\)</span></tt>). Please check your
@@ -1952,12 +1952,12 @@ LaTeX backslash-brackets delimiters:</p>
 \end{equation*}
 </div>
 <p>In reST:</p>
-<pre class="code restructuredtext"><a name="rest_code_2bdf21781f034861803786900d1136a5-1"></a><span class="p">..</span> <span class="ow">math</span><span class="p">::</span>
-<a name="rest_code_2bdf21781f034861803786900d1136a5-2"></a>
-<a name="rest_code_2bdf21781f034861803786900d1136a5-3"></a>   \int \frac{dx}{1+ax}=\frac{1}{a}\ln(1+ax)+C
+<pre class="code restructuredtext"><a name="rest_code_edffe662e3fb48568a8c5228027c636b-1"></a><span class="p">..</span> <span class="ow">math</span><span class="p">::</span>
+<a name="rest_code_edffe662e3fb48568a8c5228027c636b-2"></a>
+<a name="rest_code_edffe662e3fb48568a8c5228027c636b-3"></a>   \int \frac{dx}{1+ax}=\frac{1}{a}\ln(1+ax)+C
 </pre>
 <p>In HTML and other input formats:</p>
-<pre class="code text"><a name="rest_code_c58f7eae85b741658addb6e8cbedb2b2-1"></a>\[\int \frac{dx}{1+ax}=\frac{1}{a}\ln(1+ax)+C\]
+<pre class="code text"><a name="rest_code_8a3be56f042a4d67b6902efed138d680-1"></a>\[\int \frac{dx}{1+ax}=\frac{1}{a}\ln(1+ax)+C\]
 </pre>
 <p>Note that some input formats (including Markdown) require using <strong>double
 backslashes</strong> in the delimiters (<tt class="docutils literal"><span class="pre">\\[display</span> <span class="pre">math\\]</span></tt>). Please check your
@@ -1977,9 +1977,9 @@ instead of the post location (eg. <tt class="docutils literal">posts/</tt> direc
 <h3><a class="toc-backref" href="#id74">Media</a></h3>
 <p>This directive lets you embed media from a variety of sites automatically by just passing the
 URL of the page.  For example here are two random videos:</p>
-<pre class="code restructuredtext"><a name="rest_code_b567731d0598462ab981f3a79cb89628-1"></a><span class="p">..</span> <span class="ow">media</span><span class="p">::</span> http://vimeo.com/72425090
-<a name="rest_code_b567731d0598462ab981f3a79cb89628-2"></a>
-<a name="rest_code_b567731d0598462ab981f3a79cb89628-3"></a><span class="p">..</span> <span class="ow">media</span><span class="p">::</span> http://www.youtube.com/watch?v=wyRpAat5oz0
+<pre class="code restructuredtext"><a name="rest_code_1681e98ed0ad487caec7909928a3979d-1"></a><span class="p">..</span> <span class="ow">media</span><span class="p">::</span> http://vimeo.com/72425090
+<a name="rest_code_1681e98ed0ad487caec7909928a3979d-2"></a>
+<a name="rest_code_1681e98ed0ad487caec7909928a3979d-3"></a><span class="p">..</span> <span class="ow">media</span><span class="p">::</span> http://www.youtube.com/watch?v=wyRpAat5oz0
 </pre>
 <p>It supports Instagram, Flickr, Github gists, Funny or Die, and dozens more, thanks to <a class="reference external" href="https://github.com/coleifer/micawber">Micawber</a></p>
 </div>
@@ -1989,12 +1989,12 @@ URL of the page.  For example here are two random videos:</p>
 URL of the video is <a class="reference external" href="http://www.youtube.com/watch?v=8N_tupPBtWQ">http://www.youtube.com/watch?v=8N_tupPBtWQ</a> what you need is
 <strong>8N_tupPBtWQ</strong></p>
 <p>Once you have that, all you need to do is:</p>
-<pre class="code restructuredtext"><a name="rest_code_0f4d0f99245c4f44a6d86b37d73e66ab-1"></a><span class="p">..</span> <span class="ow">youtube</span><span class="p">::</span> 8N_tupPBtWQ
+<pre class="code restructuredtext"><a name="rest_code_828844ec535e4ea3a6275e5fc14b5759-1"></a><span class="p">..</span> <span class="ow">youtube</span><span class="p">::</span> 8N_tupPBtWQ
 </pre>
 <p>Supported options: <tt class="docutils literal">height</tt>, <tt class="docutils literal">width</tt>, <tt class="docutils literal">align</tt> (one of <tt class="docutils literal">left</tt>,
 <tt class="docutils literal">center</tt>, <tt class="docutils literal">right</tt>) — all are optional. Example:</p>
-<pre class="code restructuredtext"><a name="rest_code_de2f63b6bb8449dbba720b22e4375072-1"></a><span class="p">..</span> <span class="ow">youtube</span><span class="p">::</span> 8N_tupPBtWQ
-<a name="rest_code_de2f63b6bb8449dbba720b22e4375072-2"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
+<pre class="code restructuredtext"><a name="rest_code_29d5f086cb304f8cac0a3d270ed96dd5-1"></a><span class="p">..</span> <span class="ow">youtube</span><span class="p">::</span> 8N_tupPBtWQ
+<a name="rest_code_29d5f086cb304f8cac0a3d270ed96dd5-2"></a>   <span class="nc">:align:</span> <span class="nf">center</span>
 </pre>
 </div>
 <div class="section" id="vimeo">
@@ -2002,14 +2002,14 @@ URL of the video is <a class="reference external" href="http://www.youtube.com/w
 <p>To link to a Vimeo video, you need the id of the video. For example, if the
 URL of the video is <a class="reference external" href="http://www.vimeo.com/20241459">http://www.vimeo.com/20241459</a> then the id is <strong>20241459</strong></p>
 <p>Once you have that, all you need to do is:</p>
-<pre class="code restructuredtext"><a name="rest_code_8e33dc3a75e24f2eaa209a67446f49f0-1"></a><span class="p">..</span> <span class="ow">vimeo</span><span class="p">::</span> 20241459
+<pre class="code restructuredtext"><a name="rest_code_eea2012163484d1eb7d3a1d66200e767-1"></a><span class="p">..</span> <span class="ow">vimeo</span><span class="p">::</span> 20241459
 </pre>
 <p>If you have internet connectivity when generating your site, the height and width of
 the embedded player will be set to the native height and width of the video.
 You can override this if you wish:</p>
-<pre class="code restructuredtext"><a name="rest_code_5873928b6ad94071917ee463cc4d5689-1"></a><span class="p">..</span> <span class="ow">vimeo</span><span class="p">::</span> 20241459
-<a name="rest_code_5873928b6ad94071917ee463cc4d5689-2"></a>   <span class="nc">:height:</span> <span class="nf">240</span>
-<a name="rest_code_5873928b6ad94071917ee463cc4d5689-3"></a>   <span class="nc">:width:</span> <span class="nf">320</span>
+<pre class="code restructuredtext"><a name="rest_code_f4ae2657a1a443b0b7f1816dd29cba17-1"></a><span class="p">..</span> <span class="ow">vimeo</span><span class="p">::</span> 20241459
+<a name="rest_code_f4ae2657a1a443b0b7f1816dd29cba17-2"></a>   <span class="nc">:height:</span> <span class="nf">240</span>
+<a name="rest_code_f4ae2657a1a443b0b7f1816dd29cba17-3"></a>   <span class="nc">:width:</span> <span class="nf">320</span>
 </pre>
 <p>Supported options: <tt class="docutils literal">height</tt>, <tt class="docutils literal">width</tt>, <tt class="docutils literal">align</tt> (one of <tt class="docutils literal">left</tt>,
 <tt class="docutils literal">center</tt>, <tt class="docutils literal">right</tt>) — all are optional.</p>
@@ -2019,10 +2019,10 @@ You can override this if you wish:</p>
 <p>This directive lets you share music from <a class="reference external" href="http://soundcloud.com">http://soundcloud.com</a> You first need to get the
 ID for the piece, which you can find in the "share" link. For example, if the
 WordPress code starts like this:</p>
-<pre class="code text"><a name="rest_code_add4cc8d5ab745b0b80b008276e59a32-1"></a>[soundcloud url="http://api.soundcloud.com/tracks/78131362" …/]
+<pre class="code text"><a name="rest_code_437809eb6a834c0f9aa32b842e2d65c4-1"></a>[soundcloud url="http://api.soundcloud.com/tracks/78131362" …/]
 </pre>
 <p>The ID is 78131362 and you can embed the audio with this:</p>
-<pre class="code restructuredtext"><a name="rest_code_5044ce3bceb246b5a1faed876dc216e7-1"></a><span class="p">..</span> <span class="ow">soundcloud</span><span class="p">::</span> 78131362
+<pre class="code restructuredtext"><a name="rest_code_c94b417bf9c54bdc889a0c3063bf389b-1"></a><span class="p">..</span> <span class="ow">soundcloud</span><span class="p">::</span> 78131362
 </pre>
 <p>You can also embed playlists, via the <cite>soundcloud_playlist</cite> directive which works the same way.</p>
 <blockquote>
@@ -2039,10 +2039,10 @@ WordPress code starts like this:</p>
 <p>The <tt class="docutils literal">code</tt> directive has been included in docutils since version 0.9 and now
 replaces Nikola's <tt class="docutils literal"><span class="pre">code-block</span></tt> directive. To ease the transition, two aliases
 for <tt class="docutils literal">code</tt> directive are provided: <tt class="docutils literal"><span class="pre">code-block</span></tt> and <tt class="docutils literal">sourcecode</tt>:</p>
-<pre class="code restructuredtext"><a name="rest_code_d0ce5185448c493498c49cf52209becf-1"></a><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
-<a name="rest_code_d0ce5185448c493498c49cf52209becf-2"></a>   <span class="nc">:number-lines:</span>
-<a name="rest_code_d0ce5185448c493498c49cf52209becf-3"></a>
-<a name="rest_code_d0ce5185448c493498c49cf52209becf-4"></a>   print("Our virtues and our failings are inseparable")
+<pre class="code restructuredtext"><a name="rest_code_e8322a62d2b242b5b18850d6d14dd570-1"></a><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
+<a name="rest_code_e8322a62d2b242b5b18850d6d14dd570-2"></a>   <span class="nc">:number-lines:</span>
+<a name="rest_code_e8322a62d2b242b5b18850d6d14dd570-3"></a>
+<a name="rest_code_e8322a62d2b242b5b18850d6d14dd570-4"></a>   print("Our virtues and our failings are inseparable")
 </pre>
 </div>
 <div class="section" id="listing">
@@ -2050,7 +2050,7 @@ for <tt class="docutils literal">code</tt> directive are provided: <tt class="do
 <p>To use this, you have to put your source code files inside <tt class="docutils literal">listings</tt> or whatever folders
 your <tt class="docutils literal">LISTINGS_FOLDERS</tt> variable is set to fetch files from. Assuming you have a <tt class="docutils literal">foo.py</tt>
 inside one of these folders:</p>
-<pre class="code restructuredtext"><a name="rest_code_30eeab8934db4c60bc0ca8968de4b50b-1"></a><span class="p">..</span> <span class="ow">listing</span><span class="p">::</span> foo.py python
+<pre class="code restructuredtext"><a name="rest_code_628c5463ec3a46af8bdb7546e48a09f1-1"></a><span class="p">..</span> <span class="ow">listing</span><span class="p">::</span> foo.py python
 </pre>
 <p>Will include the source code from <tt class="docutils literal">foo.py</tt>, highlight its syntax in python mode,
 and also create a <tt class="docutils literal">listings/foo.py.html</tt> page (or in another directory, depending on
@@ -2078,7 +2078,7 @@ and <tt class="docutils literal"><span class="pre">end-before</span></tt>, respe
 <div class="section" id="gist">
 <h3><a class="toc-backref" href="#id80">Gist</a></h3>
 <p>You can easily embed GitHub gists with this directive, like this:</p>
-<pre class="code restructuredtext"><a name="rest_code_51a6c8228ad3482aafb7705c7da01fb4-1"></a><span class="p">..</span> <span class="ow">gist</span><span class="p">::</span> 2395294
+<pre class="code restructuredtext"><a name="rest_code_4d5d5bcde3594e7183d15b2d379c46be-1"></a><span class="p">..</span> <span class="ow">gist</span><span class="p">::</span> 2395294
 </pre>
 <p>Producing this:</p>
 <script src="https://gist.github.com/2395294.js"></script><noscript>
@@ -2121,7 +2121,7 @@ int main()
 <h3><a class="toc-backref" href="#id81">Thumbnails</a></h3>
 <p>To include an image placed in the <tt class="docutils literal">images</tt> folder (or other folders defined in <tt class="docutils literal">IMAGE_FOLDERS</tt>), use the
 <tt class="docutils literal">thumbnail</tt> directive, like this:</p>
-<pre class="code restructuredtext"><a name="rest_code_b574d6588441456e9d800e75235581ae-1"></a><span class="p">..</span> <span class="ow">thumbnail</span><span class="p">::</span> /images/tesla.jpg
+<pre class="code restructuredtext"><a name="rest_code_03c4362fc84c4527ac88be6a15074930-1"></a><span class="p">..</span> <span class="ow">thumbnail</span><span class="p">::</span> /images/tesla.jpg
 </pre>
 <p>The small thumbnail will be placed in the page, and it will be linked to the bigger
 version of the image when clicked, using
@@ -2131,25 +2131,25 @@ directive are supported (except <tt class="docutils literal">target</tt>). If a 
 thumbnail will mimic the behavior of the
 <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure">figure</a>
 directive instead:</p>
-<pre class="code restructuredtext"><a name="rest_code_0745d6c608d54f82af8b3d1ca8069a5c-1"></a><span class="p">..</span> <span class="ow">thumbnail</span><span class="p">::</span> /images/tesla.jpg
-<a name="rest_code_0745d6c608d54f82af8b3d1ca8069a5c-2"></a>
-<a name="rest_code_0745d6c608d54f82af8b3d1ca8069a5c-3"></a>   Nikola Tesla, the man that invented the 20th century.
+<pre class="code restructuredtext"><a name="rest_code_55062af721a54f4cb11fe575f8482c6f-1"></a><span class="p">..</span> <span class="ow">thumbnail</span><span class="p">::</span> /images/tesla.jpg
+<a name="rest_code_55062af721a54f4cb11fe575f8482c6f-2"></a>
+<a name="rest_code_55062af721a54f4cb11fe575f8482c6f-3"></a>   Nikola Tesla, the man that invented the 20th century.
 </pre>
 <p>If you want to include a thumbnail in a non-reST post, you need to produce at
 least this basic HTML:</p>
-<pre class="code html"><a name="rest_code_0a00e27bab254b07b6dbc39e67a6d449-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"image-reference"</span> <span class="na">href</span><span class="o">=</span><span class="s">"images/tesla.jpg"</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/tesla.thumbnail.jpg"</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<pre class="code html"><a name="rest_code_63244cf14a454af9a677d9ec59fd3890-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"image-reference"</span> <span class="na">href</span><span class="o">=</span><span class="s">"images/tesla.jpg"</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/tesla.thumbnail.jpg"</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </pre>
 </div>
 <div class="section" id="slideshows">
 <h3><a class="toc-backref" href="#id82">Slideshows</a></h3>
 <p>To create an image slideshow, you can use the <tt class="docutils literal">slides</tt> directive. For example:</p>
-<pre class="code restructuredtext"><a name="rest_code_bd5d2d78fa394d25a2d4f321896c66d2-1"></a><span class="p">..</span> <span class="ow">slides</span><span class="p">::</span>
-<a name="rest_code_bd5d2d78fa394d25a2d4f321896c66d2-2"></a>
-<a name="rest_code_bd5d2d78fa394d25a2d4f321896c66d2-3"></a>   /galleries/demo/tesla_conducts_lg.jpg
-<a name="rest_code_bd5d2d78fa394d25a2d4f321896c66d2-4"></a>   /galleries/demo/tesla_lightning2_lg.jpg
-<a name="rest_code_bd5d2d78fa394d25a2d4f321896c66d2-5"></a>   /galleries/demo/tesla4_lg.jpg
-<a name="rest_code_bd5d2d78fa394d25a2d4f321896c66d2-6"></a>   /galleries/demo/tesla_lightning1_lg.jpg
-<a name="rest_code_bd5d2d78fa394d25a2d4f321896c66d2-7"></a>   /galleries/demo/tesla_tower1_lg.jpg
+<pre class="code restructuredtext"><a name="rest_code_c53ff79d6a4e4b96b632b65b43c78acb-1"></a><span class="p">..</span> <span class="ow">slides</span><span class="p">::</span>
+<a name="rest_code_c53ff79d6a4e4b96b632b65b43c78acb-2"></a>
+<a name="rest_code_c53ff79d6a4e4b96b632b65b43c78acb-3"></a>   /galleries/demo/tesla_conducts_lg.jpg
+<a name="rest_code_c53ff79d6a4e4b96b632b65b43c78acb-4"></a>   /galleries/demo/tesla_lightning2_lg.jpg
+<a name="rest_code_c53ff79d6a4e4b96b632b65b43c78acb-5"></a>   /galleries/demo/tesla4_lg.jpg
+<a name="rest_code_c53ff79d6a4e4b96b632b65b43c78acb-6"></a>   /galleries/demo/tesla_lightning1_lg.jpg
+<a name="rest_code_c53ff79d6a4e4b96b632b65b43c78acb-7"></a>   /galleries/demo/tesla_tower1_lg.jpg
 </pre>
 </div>
 <div class="section" id="chart">
@@ -2157,14 +2157,14 @@ least this basic HTML:</p>
 <p>This directive is a thin wrapper around <a class="reference external" href="http://pygal.org/">Pygal</a> and will produce charts
 as SVG files embedded directly in your pages.</p>
 <p>Here's an example of how it works:</p>
-<pre class="code restructuredtext"><a name="rest_code_ecd13ced699146b1ab9a86c773de1312-1"></a><span class="p">..</span> <span class="ow">chart</span><span class="p">::</span> Bar
-<a name="rest_code_ecd13ced699146b1ab9a86c773de1312-2"></a>   <span class="nc">:title:</span> <span class="nf">'Browser usage evolution (in %)'</span>
-<a name="rest_code_ecd13ced699146b1ab9a86c773de1312-3"></a>   <span class="nc">:x_labels:</span> <span class="nf">["2002", "2003", "2004", "2005", "2006", "2007"]</span>
-<a name="rest_code_ecd13ced699146b1ab9a86c773de1312-4"></a>
-<a name="rest_code_ecd13ced699146b1ab9a86c773de1312-5"></a>   'Firefox', [None, None, 0, 16.6, 25, 31]
-<a name="rest_code_ecd13ced699146b1ab9a86c773de1312-6"></a>   'Chrome',  [None, None, None, None, None, None]
-<a name="rest_code_ecd13ced699146b1ab9a86c773de1312-7"></a>   'IE',      [85.8, 84.6, 84.7, 74.5, 66, 58.6]
-<a name="rest_code_ecd13ced699146b1ab9a86c773de1312-8"></a>   'Others',  [14.2, 15.4, 15.3, 8.9, 9, 10.4]
+<pre class="code restructuredtext"><a name="rest_code_dda25789899e49bbb62347eadc0b376f-1"></a><span class="p">..</span> <span class="ow">chart</span><span class="p">::</span> Bar
+<a name="rest_code_dda25789899e49bbb62347eadc0b376f-2"></a>   <span class="nc">:title:</span> <span class="nf">'Browser usage evolution (in %)'</span>
+<a name="rest_code_dda25789899e49bbb62347eadc0b376f-3"></a>   <span class="nc">:x_labels:</span> <span class="nf">["2002", "2003", "2004", "2005", "2006", "2007"]</span>
+<a name="rest_code_dda25789899e49bbb62347eadc0b376f-4"></a>
+<a name="rest_code_dda25789899e49bbb62347eadc0b376f-5"></a>   'Firefox', [None, None, 0, 16.6, 25, 31]
+<a name="rest_code_dda25789899e49bbb62347eadc0b376f-6"></a>   'Chrome',  [None, None, None, None, None, None]
+<a name="rest_code_dda25789899e49bbb62347eadc0b376f-7"></a>   'IE',      [85.8, 84.6, 84.7, 74.5, 66, 58.6]
+<a name="rest_code_dda25789899e49bbb62347eadc0b376f-8"></a>   'Others',  [14.2, 15.4, 15.3, 8.9, 9, 10.4]
 </pre>
 <p>The argument passed next to the directive (Bar in that example) is the type of chart, and can be one of
 Line, StackedLine, Bar, StackedBar, HorizontalBar, XY, DateY, Pie, Radar, Dot, Funnel, Gauge, Pyramid. For
@@ -2178,13 +2178,13 @@ a list of values, one series per line.</p>
 <h3><a class="toc-backref" href="#id84">Doc</a></h3>
 <p>This role is useful to make links to other post or page inside the same site.</p>
 <p>Here's an example:</p>
-<pre class="code restructuredtext"><a name="rest_code_3c153e47019044b5af3c27320ca190e0-1"></a>Take a look at <span class="na">:doc:</span><span class="nv">`my other post &lt;creating-a-theme&gt;`</span> about theme creating.
+<pre class="code restructuredtext"><a name="rest_code_b39aced2028341679e899ef905b4d6a4-1"></a>Take a look at <span class="na">:doc:</span><span class="nv">`my other post &lt;creating-a-theme&gt;`</span> about theme creating.
 </pre>
 <p>In this case we are giving the portion of text we want to link. So, the result will be:</p>
 <blockquote>
 Take a look at <a class="reference external" href="../creating-a-theme/">my other post</a> about theme creating.</blockquote>
 <p>If we want to use the post's title as the link's text, just do:</p>
-<pre class="code restructuredtext"><a name="rest_code_861f47c5b4a64e6990664d6b985dc1e7-1"></a>Take a look at <span class="na">:doc:</span><span class="nv">`creating-a-theme`</span> to know how to do it.
+<pre class="code restructuredtext"><a name="rest_code_2ea7d44df433412098e4806eb54aac1f-1"></a>Take a look at <span class="na">:doc:</span><span class="nv">`creating-a-theme`</span> to know how to do it.
 </pre>
 <p>and it will produce:</p>
 <blockquote>
@@ -2203,18 +2203,18 @@ cases, use <tt class="docutils literal">nikola build <span class="pre">-a</span>
 <p>This directive can be used to generate a list of posts. You could use it, for
 example, to make a list of the latest 5 blog posts, or a list of all blog posts
 with the tag <tt class="docutils literal">nikola</tt>:</p>
-<pre class="code restructuredtext"><a name="rest_code_21bcd1f7350247998361eb633fbd581d-1"></a>Here are my 5 latest and greatest blog posts:
-<a name="rest_code_21bcd1f7350247998361eb633fbd581d-2"></a>
-<a name="rest_code_21bcd1f7350247998361eb633fbd581d-3"></a><span class="p">..</span> <span class="ow">post-list</span><span class="p">::</span>
-<a name="rest_code_21bcd1f7350247998361eb633fbd581d-4"></a>   <span class="nc">:stop:</span> <span class="nf">5</span>
-<a name="rest_code_21bcd1f7350247998361eb633fbd581d-5"></a>
-<a name="rest_code_21bcd1f7350247998361eb633fbd581d-6"></a>These are all my posts about Nikola:
-<a name="rest_code_21bcd1f7350247998361eb633fbd581d-7"></a>
-<a name="rest_code_21bcd1f7350247998361eb633fbd581d-8"></a><span class="p">..</span> <span class="ow">post-list</span><span class="p">::</span>
-<a name="rest_code_21bcd1f7350247998361eb633fbd581d-9"></a>   <span class="nc">:tags:</span> <span class="nf">nikola</span>
+<pre class="code restructuredtext"><a name="rest_code_9f0bee7b25354d45ba8241198c67359e-1"></a>Here are my 5 latest and greatest blog posts:
+<a name="rest_code_9f0bee7b25354d45ba8241198c67359e-2"></a>
+<a name="rest_code_9f0bee7b25354d45ba8241198c67359e-3"></a><span class="p">..</span> <span class="ow">post-list</span><span class="p">::</span>
+<a name="rest_code_9f0bee7b25354d45ba8241198c67359e-4"></a>   <span class="nc">:stop:</span> <span class="nf">5</span>
+<a name="rest_code_9f0bee7b25354d45ba8241198c67359e-5"></a>
+<a name="rest_code_9f0bee7b25354d45ba8241198c67359e-6"></a>These are all my posts about Nikola:
+<a name="rest_code_9f0bee7b25354d45ba8241198c67359e-7"></a>
+<a name="rest_code_9f0bee7b25354d45ba8241198c67359e-8"></a><span class="p">..</span> <span class="ow">post-list</span><span class="p">::</span>
+<a name="rest_code_9f0bee7b25354d45ba8241198c67359e-9"></a>   <span class="nc">:tags:</span> <span class="nf">nikola</span>
 </pre>
 <p>Using shortcode syntax (for other compilers):</p>
-<pre class="code text"><a name="rest_code_ea2afee2906146b0b03fd44e2d433931-1"></a>{{% post-list stop=5 %}}{{% /post-list %}}
+<pre class="code text"><a name="rest_code_63d06f4a401544e4b0f7815149d403e5-1"></a>{{% post-list stop=5 %}}{{% /post-list %}}
 </pre>
 <p>The following options are recognized:</p>
 <ul class="simple">
@@ -2449,7 +2449,7 @@ WordPress before dumping.</p>
 <h3><a class="toc-backref" href="#id87">Importing to a custom location or into an existing site</a></h3>
 <p>It is possible to either import into a location you desire or into an already existing Nikola site.
 To do so you can specify a location after the dump:</p>
-<pre class="code console"><a name="rest_code_bd7178ea79914eed97a77a1cc33c31c3-1"></a><span class="gp">$</span> nikola import_wordpress mysite.wordpress.2012-12-20.xml -o import_location
+<pre class="code console"><a name="rest_code_ea1eee568325475f94434f11d643d94c-1"></a><span class="gp">$</span> nikola import_wordpress mysite.wordpress.2012-12-20.xml -o import_location
 </pre>
 <p>With this command Nikola will import into the folder <tt class="docutils literal">import_location</tt>.</p>
 <p>If the folder already exists Nikola will not overwrite an existing <tt class="docutils literal">conf.py</tt>.
@@ -2472,13 +2472,13 @@ To do so, please visit <a class="reference external" href="https://cards-dev.twi
 <p>You can specify the card type by using the <cite>card</cite> parameter in TWITTER_CARD.</p>
 <p>To enable and configure your use of Twitter Cards, please modify the
 corresponding lines in your <tt class="docutils literal">conf.py</tt>:</p>
-<pre class="code python"><a name="rest_code_ccb7739edadc482ba3fdf7601cfe7371-1"></a><span class="n">TWITTER_CARD</span> <span class="o">=</span> <span class="p">{</span>
-<a name="rest_code_ccb7739edadc482ba3fdf7601cfe7371-2"></a>    <span class="s1">'use_twitter_cards'</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>  <span class="c1"># enable Twitter Cards</span>
-<a name="rest_code_ccb7739edadc482ba3fdf7601cfe7371-3"></a>    <span class="s1">'card'</span><span class="p">:</span> <span class="s1">'summary'</span><span class="p">,</span>          <span class="c1"># Card type, you can also use 'summary_large_image',</span>
-<a name="rest_code_ccb7739edadc482ba3fdf7601cfe7371-4"></a>                                <span class="c1"># see https://dev.twitter.com/cards/types</span>
-<a name="rest_code_ccb7739edadc482ba3fdf7601cfe7371-5"></a>    <span class="s1">'site'</span><span class="p">:</span> <span class="s1">'@website'</span><span class="p">,</span>         <span class="c1"># twitter nick for the website</span>
-<a name="rest_code_ccb7739edadc482ba3fdf7601cfe7371-6"></a>    <span class="s1">'creator'</span><span class="p">:</span> <span class="s1">'@username'</span><span class="p">,</span>     <span class="c1"># Username for the content creator / author.</span>
-<a name="rest_code_ccb7739edadc482ba3fdf7601cfe7371-7"></a><span class="p">}</span>
+<pre class="code python"><a name="rest_code_aa14633ac20e4ad08df1523dd1d0950e-1"></a><span class="n">TWITTER_CARD</span> <span class="o">=</span> <span class="p">{</span>
+<a name="rest_code_aa14633ac20e4ad08df1523dd1d0950e-2"></a>    <span class="s1">'use_twitter_cards'</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>  <span class="c1"># enable Twitter Cards</span>
+<a name="rest_code_aa14633ac20e4ad08df1523dd1d0950e-3"></a>    <span class="s1">'card'</span><span class="p">:</span> <span class="s1">'summary'</span><span class="p">,</span>          <span class="c1"># Card type, you can also use 'summary_large_image',</span>
+<a name="rest_code_aa14633ac20e4ad08df1523dd1d0950e-4"></a>                                <span class="c1"># see https://dev.twitter.com/cards/types</span>
+<a name="rest_code_aa14633ac20e4ad08df1523dd1d0950e-5"></a>    <span class="s1">'site'</span><span class="p">:</span> <span class="s1">'@website'</span><span class="p">,</span>         <span class="c1"># twitter nick for the website</span>
+<a name="rest_code_aa14633ac20e4ad08df1523dd1d0950e-6"></a>    <span class="s1">'creator'</span><span class="p">:</span> <span class="s1">'@username'</span><span class="p">,</span>     <span class="c1"># Username for the content creator / author.</span>
+<a name="rest_code_aa14633ac20e4ad08df1523dd1d0950e-7"></a><span class="p">}</span>
 </pre>
 </div>
 <div class="section" id="custom-plugins">
@@ -2492,50 +2492,50 @@ directories listed in the <tt class="docutils literal">EXTRA_PLUGINS_DIRS</tt> c
 <p>If you want extra plugins, there is also the <a class="reference external" href="https://plugins.getnikola.com/">Plugins Index</a>.</p>
 <p>Similarly to themes, there is a nice, built-in command to manage them —
 <tt class="docutils literal">plugin</tt>:</p>
-<pre class="code console"><a name="rest_code_f347e3b3c1524d7197f15c987a78e305-1"></a><span class="gp">$</span> nikola plugin -l
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-2"></a><span class="go">Plugins:</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-3"></a><span class="go">--------</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-4"></a><span class="go">helloworld</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-5"></a><span class="go">tags</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-6"></a><span class="go">⋮</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-7"></a><span class="go">⋮</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-8"></a>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-9"></a><span class="gp">$</span> nikola plugin --install helloworld
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-10"></a><span class="go">[2013-10-12T16:51:56Z] NOTICE: install_plugin: Downloading: https://plugins.getnikola.com/v6/helloworld.zip</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-11"></a><span class="go">[2013-10-12T16:51:58Z] NOTICE: install_plugin: Extracting: helloworld into plugins</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-12"></a><span class="go">plugins/helloworld/requirements.txt</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-13"></a><span class="go">[2013-10-12T16:51:58Z] NOTICE: install_plugin: This plugin has Python dependencies.</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-14"></a><span class="go">[2013-10-12T16:51:58Z] NOTICE: install_plugin: Installing dependencies with pip...</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-15"></a><span class="go">⋮</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-16"></a><span class="go">⋮</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-17"></a><span class="go">[2013-10-12T16:51:59Z] NOTICE: install_plugin: Dependency installation succeeded.</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-18"></a><span class="go">[2013-10-12T16:51:59Z] NOTICE: install_plugin: This plugin has a sample config file.</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-19"></a><span class="go">Contents of the conf.py.sample file:</span>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-20"></a>
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-21"></a><span class="gp">    #</span> Should the Hello World plugin say “BYE” instead?
-<a name="rest_code_f347e3b3c1524d7197f15c987a78e305-22"></a><span class="go">    BYE_WORLD = False</span>
+<pre class="code console"><a name="rest_code_901db3974c854dfd84995351beb8705b-1"></a><span class="gp">$</span> nikola plugin -l
+<a name="rest_code_901db3974c854dfd84995351beb8705b-2"></a><span class="go">Plugins:</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-3"></a><span class="go">--------</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-4"></a><span class="go">helloworld</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-5"></a><span class="go">tags</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-6"></a><span class="go">⋮</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-7"></a><span class="go">⋮</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-8"></a>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-9"></a><span class="gp">$</span> nikola plugin --install helloworld
+<a name="rest_code_901db3974c854dfd84995351beb8705b-10"></a><span class="go">[2013-10-12T16:51:56Z] NOTICE: install_plugin: Downloading: https://plugins.getnikola.com/v6/helloworld.zip</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-11"></a><span class="go">[2013-10-12T16:51:58Z] NOTICE: install_plugin: Extracting: helloworld into plugins</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-12"></a><span class="go">plugins/helloworld/requirements.txt</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-13"></a><span class="go">[2013-10-12T16:51:58Z] NOTICE: install_plugin: This plugin has Python dependencies.</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-14"></a><span class="go">[2013-10-12T16:51:58Z] NOTICE: install_plugin: Installing dependencies with pip...</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-15"></a><span class="go">⋮</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-16"></a><span class="go">⋮</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-17"></a><span class="go">[2013-10-12T16:51:59Z] NOTICE: install_plugin: Dependency installation succeeded.</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-18"></a><span class="go">[2013-10-12T16:51:59Z] NOTICE: install_plugin: This plugin has a sample config file.</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-19"></a><span class="go">Contents of the conf.py.sample file:</span>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-20"></a>
+<a name="rest_code_901db3974c854dfd84995351beb8705b-21"></a><span class="gp">    #</span> Should the Hello World plugin say “BYE” instead?
+<a name="rest_code_901db3974c854dfd84995351beb8705b-22"></a><span class="go">    BYE_WORLD = False</span>
 </pre>
 <p>Then you also can uninstall your plugins:</p>
-<pre class="code console"><a name="rest_code_63c4892364284da4bd83baf1e05aca56-1"></a><span class="gp">$</span> nikola plugin --uninstall tags
-<a name="rest_code_63c4892364284da4bd83baf1e05aca56-2"></a><span class="go">[2014-04-15T08:59:24Z] WARNING: plugin: About to uninstall plugin: tags</span>
-<a name="rest_code_63c4892364284da4bd83baf1e05aca56-3"></a><span class="go">[2014-04-15T08:59:24Z] WARNING: plugin: This will delete /home/ralsina/foo/plugins/tags</span>
-<a name="rest_code_63c4892364284da4bd83baf1e05aca56-4"></a><span class="go">Are you sure? [y/n] y</span>
-<a name="rest_code_63c4892364284da4bd83baf1e05aca56-5"></a><span class="go">[2014-04-15T08:59:26Z] WARNING: plugin: Removing /home/ralsina/foo/plugins/tags</span>
+<pre class="code console"><a name="rest_code_f063c4206fba45208e34d230933df7f7-1"></a><span class="gp">$</span> nikola plugin --uninstall tags
+<a name="rest_code_f063c4206fba45208e34d230933df7f7-2"></a><span class="go">[2014-04-15T08:59:24Z] WARNING: plugin: About to uninstall plugin: tags</span>
+<a name="rest_code_f063c4206fba45208e34d230933df7f7-3"></a><span class="go">[2014-04-15T08:59:24Z] WARNING: plugin: This will delete /home/ralsina/foo/plugins/tags</span>
+<a name="rest_code_f063c4206fba45208e34d230933df7f7-4"></a><span class="go">Are you sure? [y/n] y</span>
+<a name="rest_code_f063c4206fba45208e34d230933df7f7-5"></a><span class="go">[2014-04-15T08:59:26Z] WARNING: plugin: Removing /home/ralsina/foo/plugins/tags</span>
 </pre>
 <p>And upgrade them:</p>
-<pre class="code console"><a name="rest_code_fcb51cb643ae42df8586c9f9667a3085-1"></a><span class="gp">$</span> nikola plugin --upgrade
-<a name="rest_code_fcb51cb643ae42df8586c9f9667a3085-2"></a><span class="go">[2014-04-15T09:00:18Z] WARNING: plugin: This is not very smart, it just reinstalls some plugins and hopes for the best</span>
-<a name="rest_code_fcb51cb643ae42df8586c9f9667a3085-3"></a><span class="go">Will upgrade 1 plugins: graphviz</span>
-<a name="rest_code_fcb51cb643ae42df8586c9f9667a3085-4"></a><span class="go">Upgrading graphviz</span>
-<a name="rest_code_fcb51cb643ae42df8586c9f9667a3085-5"></a><span class="go">[2014-04-15T09:00:20Z] INFO: plugin: Downloading: https://plugins.getnikola.com/v7/graphviz.zip</span>
-<a name="rest_code_fcb51cb643ae42df8586c9f9667a3085-6"></a><span class="go">[2014-04-15T09:00:20Z] INFO: plugin: Extracting: graphviz into /home/ralsina/.nikola/plugins/</span>
-<a name="rest_code_fcb51cb643ae42df8586c9f9667a3085-7"></a><span class="go">[2014-04-15T09:00:20Z] NOTICE: plugin: This plugin has third-party dependencies you need to install manually.</span>
-<a name="rest_code_fcb51cb643ae42df8586c9f9667a3085-8"></a><span class="go">Contents of the requirements-nonpy.txt file:</span>
-<a name="rest_code_fcb51cb643ae42df8586c9f9667a3085-9"></a>
-<a name="rest_code_fcb51cb643ae42df8586c9f9667a3085-10"></a><span class="go">    Graphviz</span>
-<a name="rest_code_fcb51cb643ae42df8586c9f9667a3085-11"></a><span class="go">        http://www.graphviz.org/</span>
-<a name="rest_code_fcb51cb643ae42df8586c9f9667a3085-12"></a>
-<a name="rest_code_fcb51cb643ae42df8586c9f9667a3085-13"></a><span class="go">You have to install those yourself or through a package manager.</span>
+<pre class="code console"><a name="rest_code_3bd36dda979d480888a7fe5537850611-1"></a><span class="gp">$</span> nikola plugin --upgrade
+<a name="rest_code_3bd36dda979d480888a7fe5537850611-2"></a><span class="go">[2014-04-15T09:00:18Z] WARNING: plugin: This is not very smart, it just reinstalls some plugins and hopes for the best</span>
+<a name="rest_code_3bd36dda979d480888a7fe5537850611-3"></a><span class="go">Will upgrade 1 plugins: graphviz</span>
+<a name="rest_code_3bd36dda979d480888a7fe5537850611-4"></a><span class="go">Upgrading graphviz</span>
+<a name="rest_code_3bd36dda979d480888a7fe5537850611-5"></a><span class="go">[2014-04-15T09:00:20Z] INFO: plugin: Downloading: https://plugins.getnikola.com/v7/graphviz.zip</span>
+<a name="rest_code_3bd36dda979d480888a7fe5537850611-6"></a><span class="go">[2014-04-15T09:00:20Z] INFO: plugin: Extracting: graphviz into /home/ralsina/.nikola/plugins/</span>
+<a name="rest_code_3bd36dda979d480888a7fe5537850611-7"></a><span class="go">[2014-04-15T09:00:20Z] NOTICE: plugin: This plugin has third-party dependencies you need to install manually.</span>
+<a name="rest_code_3bd36dda979d480888a7fe5537850611-8"></a><span class="go">Contents of the requirements-nonpy.txt file:</span>
+<a name="rest_code_3bd36dda979d480888a7fe5537850611-9"></a>
+<a name="rest_code_3bd36dda979d480888a7fe5537850611-10"></a><span class="go">    Graphviz</span>
+<a name="rest_code_3bd36dda979d480888a7fe5537850611-11"></a><span class="go">        http://www.graphviz.org/</span>
+<a name="rest_code_3bd36dda979d480888a7fe5537850611-12"></a>
+<a name="rest_code_3bd36dda979d480888a7fe5537850611-13"></a><span class="go">You have to install those yourself or through a package manager.</span>
 </pre>
 <p>You can also share plugins you created with the community!  Visit the
 <a class="reference external" href="https://github.com/getnikola/plugins">GitHub repository</a> to find out more.</p>
@@ -2558,8 +2558,8 @@ with <tt class="docutils literal">nikola build <span class="pre">-v</span> 2</tt
 so that you don't have to type the full commands.</p>
 <p>To enable this, you can use the <tt class="docutils literal">nikola tabcompletion</tt> command like this,
 depending on your shell:</p>
-<pre class="code console"><a name="rest_code_3daf7b0aaef145e18221d6a9daa66baa-1"></a><span class="gp">$</span> nikola tabcompletion --shell bash --hardcode-tasks &gt; _nikola_bash
-<a name="rest_code_3daf7b0aaef145e18221d6a9daa66baa-2"></a><span class="gp">$</span> nikola tabcompletion --shell zsh --hardcode-tasks &gt; _nikola_zsh
+<pre class="code console"><a name="rest_code_72c7e1fdfb6246879e1006ae3def30fc-1"></a><span class="gp">$</span> nikola tabcompletion --shell bash --hardcode-tasks &gt; _nikola_bash
+<a name="rest_code_72c7e1fdfb6246879e1006ae3def30fc-2"></a><span class="gp">$</span> nikola tabcompletion --shell zsh --hardcode-tasks &gt; _nikola_zsh
 </pre>
 <p>The <tt class="docutils literal"><span class="pre">--hardcode-tasks</span></tt> adds tasks to the completion and may need updating periodically.</p>
 <p>Please refer to your shell’s documentation for help on how to use those files.</p>

@@ -20,7 +20,7 @@ I search this on Internet and found that gensim has rewrite some part of the cod
 
 I tried to install mingw and add it into the path, but it's not working.
 
-Finally, I tried to install [Visual C++ Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools) and it works.
+Finally, I tried to install [Visual C++ Build Tools](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017) and it works.
 
 If this output a none `-1` digit, then it's fine.
 ```python3
