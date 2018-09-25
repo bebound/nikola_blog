@@ -2,7 +2,6 @@
 {% import 'base_helper.tmpl' as base with context %}
 {% import 'base_header.tmpl' as header with context %}
 {% import 'base_footer.tmpl' as footer with context %}
-{% import 'annotation_helper.tmpl' as annotations with context %}
 {{ set_locale(lang) }}
 {{ base.html_headstart() }}
 {% block extra_head %}
@@ -13,7 +12,7 @@
 <body class="{{ hyde_subtheme }}">
     <a href="#content" class="sr-only sr-only-focusable">{{ messages("Skip to main content") }}</a>
 
-    <div class="sidebar">
+    <div class="hsidebar">
         <div class="container sidebar-sticky">
             <div class="sidebar-about">
               <h1>
