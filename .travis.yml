@@ -1,6 +1,7 @@
 language: python
 cache: apt
 sudo: false
+dist: bionic
 addons:
   apt:
     packages:
@@ -27,9 +28,8 @@ before_install:
 - git branch master FETCH_HEAD
 install:
 - pip install 'Nikola[extras]'
-- sudo add-apt-repository ppa:kelleyk/emacs -y
-- sudo apt-get update
-- sudo apt-get install emacs26
+- sudo apt-get install emacs
+- emacs --version
 script:
 - nikola build && nikola github_deploy -m 'Nikola auto deploy [ci skip]'
 notifications:
