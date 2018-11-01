@@ -1,7 +1,6 @@
 language: python
 cache: apt
 sudo: false
-dist: bionic
 addons:
   apt:
     packages:
