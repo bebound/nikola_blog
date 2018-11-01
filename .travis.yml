@@ -30,6 +30,7 @@ install:
 - sudo add-apt-repository ppa:kelleyk/emacs -y
 - sudo apt-get update
 - sudo apt-cache search emacs
+- sudo apt-get install emacs25
 - emacs --version
 script:
 - nikola build && nikola github_deploy -m 'Nikola auto deploy [ci skip]'
