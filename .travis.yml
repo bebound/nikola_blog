@@ -29,7 +29,7 @@ before_install:
 - git branch master FETCH_HEAD
 install:
 - pip install 'Nikola[extras]'
-- sudo apt-get install emacs27
+- sudo apt-get install emacs26
 script:
 - nikola build && nikola github_deploy -m 'Nikola auto deploy [ci skip]'
 notifications:
