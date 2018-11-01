@@ -11,7 +11,7 @@ branches:
 python:
 - 3.6
 before_install:
-- sudo add-apt-repository ppa:kelleyk/emacs
+- sudo add-apt-repository ppa:kelleyk/emacs -y
 - sudo apt-get update
 - openssl aes-256-cbc -K $encrypted_a5c638e4bedc_key -iv $encrypted_a5c638e4bedc_iv
   -in travis.enc -out travis -d
