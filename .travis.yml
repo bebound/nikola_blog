@@ -27,6 +27,8 @@ before_install:
 - git remote add origin git@github.com:bebound/bebound.github.io
 - git fetch origin master
 - git branch master FETCH_HEAD
+- git clone https://github.com/hniksic/emacs-htmlize
+- ls
 install:
 - pip install 'Nikola[extras]'
 - sudo apt-get remove emacs
