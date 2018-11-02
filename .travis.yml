@@ -27,7 +27,7 @@ before_install:
 - git remote add origin git@github.com:bebound/bebound.github.io
 - git fetch origin master
 - git branch master FETCH_HEAD
-- git clone https://github.com/hniksic/emacs-htmlize ~
+- git clone https://github.com/hniksic/emacs-htmlize ~/emacs-htmlize
 - ls
 - mkdir -p ~/.emacs.d/elpa/27.0/develop
 install:
