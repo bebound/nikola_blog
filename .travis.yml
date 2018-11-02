@@ -29,6 +29,7 @@ before_install:
 - git branch master FETCH_HEAD
 - git clone https://github.com/hniksic/emacs-htmlize
 - ls
+- mkdir -p ~/.emacs.d/elpa/27.0/develop
 install:
 - pip install 'Nikola[extras]'
 - sudo apt-get remove emacs
