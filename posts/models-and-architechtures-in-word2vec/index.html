@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html prefix="
-" lang="en">
+og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" vocab="http://ogp.me/ns" lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +26,19 @@ MathJax.Hub.Config({
 </script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Kurt Lei">
 <link rel="prev" href="../semi-supervised-text-classification-using-doc2vec-and-label-spreading/" title="Semi-supervised text classification using doc2vec and label spreading" type="text/html">
 <link rel="next" href="../lstm-and-gru/" title="LSTM and GRU" type="text/html">
+<meta property="og:site_name" content="KK's Blog">
+<meta property="og:title" content="Models and Architechtures in Word2vec">
+<meta property="og:url" content="https://bebound.github.io/posts/models-and-architechtures-in-word2vec/">
+<meta property="og:description" content="Models
+CBOW (Continuous Bag of Words)
+Use the context to predict the probability of current word.
+
+
+Context words' vectors are $\upsilon_{c-n} ... \upsilon_{c+m}$ ($m$ is the window size)
+Context vect">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-01-05T21:57:17+08:00">
+<meta property="article:tag" content="mathjax">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
 </head>
 <body class="theme-base-0d">
