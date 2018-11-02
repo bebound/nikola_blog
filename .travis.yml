@@ -31,7 +31,7 @@ before_install:
 - ls
 - mkdir -p ~/.emacs.d/elpa/27.0/develop
 install:
-- pip install 'Nikola[extras]'
+- pip install 'Nikola[extras]'==7.8.15
 - sudo apt-get remove emacs
 - sudo apt autoremove
 - sudo apt-get install emacs25
