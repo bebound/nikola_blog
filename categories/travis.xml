@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog (Posts about travis)</title><link>https://bebound.github.io/</link><description></description><atom:link href="https://bebound.github.io/categories/travis.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Sat, 03 Nov 2018 13:16:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Deploy Nikola OrgMode on Travis</title><link>https://bebound.github.io/posts/deploy-nikola-orgmode-on-travis/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;p&gt;
+Recently, I enjoy using &lt;code&gt;=Spacemacs=&lt;/code&gt;, so I decided to switch to org file from Markdown for writing blog. After several attempts, I managed to let Travis convert org file to HTML. Here are the steps.
+&lt;/p&gt;
+
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;Install orgmode plugin&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;p&gt;
+First you need to install orgmode plugin on your computer following the official guide: &lt;a href="https://plugins.getnikola.com/v8/orgmode/"&gt;Nikola orgmode plugin&lt;/a&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2" class="outline-2"&gt;
+&lt;h2 id="sec-2"&gt;Edit &lt;code&gt;=conf.el=&lt;/code&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-2"&gt;
+&lt;p&gt;
+&lt;code&gt;=OrgMode=&lt;/code&gt; will convert to HTML to display on Nikola. Orgmode plugin will call Emacs to do this job. When I run &lt;code&gt;=nikola build=&lt;/code&gt;, it shows this message: &lt;code&gt;=Please install htmlize from https://github.com/hniksic/emacs-htmlize=&lt;/code&gt;. I'm using &lt;code&gt;=Spacemacs=&lt;/code&gt;, the &lt;code&gt;=htmlize=&lt;/code&gt; package is already downloaded if the &lt;code&gt;=org=&lt;/code&gt; layer is enabled. I just need to add htmlize folder to load-path. So here is the code:
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;(setq dir "~/.emacs.d/elpa/27.0/develop/")
+(if(file-directory-p dir)
+    (let ((default-directory dir))
+      (normal-top-level-add-subdirs-to-load-path)))
+(require 'htmlize)
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+This package is also needed on Travis, the similar approach is required.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-3" class="outline-2"&gt;
+&lt;h2 id="sec-3"&gt;Modify &lt;code&gt;=.travis.yml=&lt;/code&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-3"&gt;
+&lt;p&gt;
+Travis is using ubuntu 14.04, and the default Emacs version is 24, and the orgmode version is below 8.0, which not match the requirements. The easiest solution is to update Emacs to 25. So in the &lt;code&gt;=before_install=&lt;/code&gt; section, add these code:
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;- sudo add-apt-repository ppa:kelleyk/emacs -y
+- sudo apt-get update
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+In the &lt;code&gt;=install=&lt;/code&gt; section, add these code:
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;- sudo apt-get remove emacs
+- sudo apt autoremove
+- sudo apt-get install emacs25
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+The default emacs doesn't contains &lt;code&gt;=htmlize=&lt;/code&gt; package. So add &lt;code&gt;=git clone https://github.com/hniksic/emacs-htmlize ~/emacs-htmlize=&lt;/code&gt; into &lt;code&gt;=before_install=&lt;/code&gt; section.
+&lt;/p&gt;
+
+&lt;p&gt;
+Finally, modify &lt;code&gt;=conf.el=&lt;/code&gt; for Travis Emacs, add GitHub repo to &lt;code&gt;=load-path=&lt;/code&gt;: &lt;code&gt;=(add-to-list 'load-path "~/emacs-htmlize/")=&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+Voila, the org file should show up.
+&lt;/p&gt;
+
+&lt;p&gt;
+The full &lt;code&gt;=.travis.yml=&lt;/code&gt; is below:
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;language: python
+cache: apt
+sudo: false
+addons:
+  apt:
+    packages:
+    - language-pack-en-base
+branches:
+  only:
+  - src
+python:
+- 3.6
+before_install:
+- sudo add-apt-repository ppa:kelleyk/emacs -y
+- sudo apt-get update
+- openssl aes-256-cbc -K $encrypted_a5c638e4bedc_key -iv $encrypted_a5c638e4bedc_iv
+  -in travis.enc -out travis -d
+- git config --global user.name 'bebound'
+- git config --global user.email 'bebound@gmail.com'
+- git config --global push.default 'simple'
+- pip install --upgrade pip wheel
+- echo -e 'Host github.com\n    StrictHostKeyChecking no' &amp;gt;&amp;gt; ~/.ssh/config
+- eval "$(ssh-agent -s)"
+- chmod 600 travis
+- ssh-add travis
+- git remote rm origin
+- git remote add origin git@github.com:bebound/bebound.github.io
+- git fetch origin master
+- git branch master FETCH_HEAD
+- git clone https://github.com/hniksic/emacs-htmlize ~/emacs-htmlize
+install:
+- pip install 'Nikola[extras]'==7.8.15
+- sudo apt-get remove emacs
+- sudo apt autoremove
+- sudo apt-get install emacs25
+script:
+- nikola build &amp;amp;&amp;amp; nikola github_deploy -m 'Nikola auto deploy [ci skip]'
+notifications:
+  email:
+    on_success: change
+    on_failure: always
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+And here is the &lt;code&gt;=conf.el=&lt;/code&gt;:
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;(setq dir "~/.emacs.d/elpa/27.0/develop/")
+(if(file-directory-p dir)
+    (let ((default-directory dir))
+      (normal-top-level-add-subdirs-to-load-path)))
+(add-to-list 'load-path "~/emacs-htmlize/")
+(require 'htmlize)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>nikola</category><category>travis</category><guid>https://bebound.github.io/posts/deploy-nikola-orgmode-on-travis/</guid><pubDate>Sat, 03 Nov 2018 12:20:45 GMT</pubDate></item></channel></rss>

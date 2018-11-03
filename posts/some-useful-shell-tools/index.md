@@ -2,7 +2,7 @@
 .. title: Some Useful Shell Tools
 .. slug: some-useful-shell-tools
 .. date: 2017-05-07 00:10:25 UTC+08:00
-.. tags:
+.. tags: shell
 .. category:
 .. link:
 .. description:

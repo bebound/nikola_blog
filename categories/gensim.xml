@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog (Posts about gensim)</title><link>https://bebound.github.io/</link><description></description><atom:link href="https://bebound.github.io/categories/gensim.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Sat, 03 Nov 2018 13:16:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Enable C Extension for gensim on Windows</title><link>https://bebound.github.io/posts/enable-c-extension-for-gensim-on-windows/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;For these days, I’m working on some text classification works, and I use &lt;code&gt;gensim&lt;/code&gt;’s &lt;code&gt;doc2vec&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;When using gensim, it shows this warning message:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;C extension not loaded for Word2Vec, training will be slow.
+&lt;/pre&gt;
+
+
+&lt;p&gt;I search this on Internet and found that gensim has rewrite some part of the code using &lt;code&gt;cython&lt;/code&gt; rather than &lt;code&gt;numpy&lt;/code&gt; to get better performance. A compiler is required to enable this feature.&lt;/p&gt;
+&lt;p&gt;I tried to install mingw and add it into the path, but it's not working.&lt;/p&gt;
+&lt;p&gt;Finally, I tried to install &lt;a href="https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017"&gt;Visual C++ Build Tools&lt;/a&gt; and it works.&lt;/p&gt;
+&lt;p&gt;If this output a none &lt;code&gt;-1&lt;/code&gt; digit, then it's fine.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;gensim.models&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;word2vec&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;word2vec&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;FAST_VERSION&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><category>gensim</category><category>windows</category><guid>https://bebound.github.io/posts/enable-c-extension-for-gensim-on-windows/</guid><pubDate>Fri, 09 Jun 2017 19:40:32 GMT</pubDate></item></channel></rss>

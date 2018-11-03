@@ -2,7 +2,7 @@
 .. title: Enable C Extension for gensim on Windows
 .. slug: enable-c-extension-for-gensim-on-windows
 .. date: 2017-06-10 03:40:32 UTC+08:00
-.. tags: 
+.. tags: gensim,windows
 .. category: 
 .. link: 
 .. description: 
