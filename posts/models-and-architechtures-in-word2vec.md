@@ -2,7 +2,7 @@
 .. title: Models and Architechtures in Word2vec
 .. slug: models-and-architechtures-in-word2vec
 .. date: 2018-01-05 21:57:17 UTC+08:00
-.. tags: mathjax
+.. tags: mathjax,word2vec
 .. category: 
 .. link: 
 .. description: 

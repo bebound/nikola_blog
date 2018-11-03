@@ -2,7 +2,7 @@
 .. title: Semi-supervised text classification using doc2vec and label spreading
 .. slug: semi-supervised-text-classification-using-doc2vec-and-label-spreading
 .. date: 2017-09-10 22:18:15 UTC+08:00
-.. tags: mathjax
+.. tags: mathjax,NLP,doc2vec,text classification
 .. category: 
 .. link: 
 .. description: 

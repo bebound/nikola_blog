@@ -2,7 +2,7 @@
 .. title: Parameters in dov2vec
 .. slug: parameters-in-dov2vec
 .. date: 2017-08-03 00:02:17 UTC+08:00
-.. tags: mathjax
+.. tags: mathjax,doc2vec
 .. category: 
 .. link: 
 .. description: 
