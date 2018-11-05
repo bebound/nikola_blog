@@ -12,6 +12,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://bebound.github.io/">
+<link rel="next" href="index-1.html" type="text/html">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +25,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/deploy-nikola-orgmode-on-travis/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/create-node-benchmark-in-py2neo/" type="text/html">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
 </head>
 <body class="theme-base-0d">
@@ -62,7 +63,143 @@ MathJax.Hub.Config({
     <div class="content container" id="content">
     
 <div class="post">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/deploy-nikola-orgmode-on-travis/" class="u-url">Deploy Nikola OrgMode on Travis</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/create-node-benchmark-in-py2neo/" class="u-url">Create Node Benchmark in Py2neo</a></h1>
+        <div class="metadata">
+            <span class="post-date dateline"><time class="published dt-published" datetime="2018-11-05T22:30:05+08:00" title="2018-11-05 22:30">2018-11-05 22:30</time></span>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>
+Recently, I'm working on a neo4j project. I use <code>=Py2neo=</code> to interact with graph db. Alghough <code>=Py2neo=</code> is a very pythonic and easy to use, its performance is really poor. Sometimes I have to manually write cypher statement by myself if I can't bear with the slow excution. Here is a small script which I use to compare the performance of 4 diffrent ways to insert nodes.
+</p>
+
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">from</span> <span class="nn">graph_db</span> <span class="kn">import</span> <span class="n">graph</span>
+
+<span class="kn">from</span> <span class="nn">py2neo.data</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Subgraph</span>
+
+
+<span class="k">def</span> <span class="nf">delete_label</span><span class="p">(</span><span class="n">label</span><span class="p">):</span>
+    <span class="n">graph</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">'MATCH (n:{}) DETACH DELETE n'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">label</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">delete_all</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">'delete all'</span><span class="p">)</span>
+    <span class="n">graph</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">'match (n) detach delete n'</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">count_label</span><span class="p">(</span><span class="n">label</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">label</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">bench_create1</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">'Using py2neo one by one'</span><span class="p">)</span>
+    <span class="n">delete_label</span><span class="p">(</span><span class="s1">'test'</span><span class="p">)</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">tx</span> <span class="o">=</span> <span class="n">graph</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100000</span><span class="p">):</span>
+	<span class="n">n</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">'test'</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+	<span class="n">tx</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">tx</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">count_label</span><span class="p">(</span><span class="s1">'test'</span><span class="p">))</span>
+    <span class="n">delete_label</span><span class="p">(</span><span class="s1">'test'</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">bench_create2</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">'Using cypher one by one'</span><span class="p">)</span>
+    <span class="n">delete_label</span><span class="p">(</span><span class="s1">'test'</span><span class="p">)</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">tx</span> <span class="o">=</span> <span class="n">graph</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100000</span><span class="p">):</span>
+	<span class="n">tx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">'create (n:test {id: $id})'</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">i</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">1000</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+	    <span class="n">tx</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+	    <span class="n">tx</span> <span class="o">=</span> <span class="n">graph</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+    <span class="n">tx</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">count_label</span><span class="p">(</span><span class="s1">'test'</span><span class="p">))</span>
+    <span class="n">delete_label</span><span class="p">(</span><span class="s1">'test'</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">bench_create3</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">'Using Subgraph'</span><span class="p">)</span>
+    <span class="n">delete_label</span><span class="p">(</span><span class="s1">'test'</span><span class="p">)</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">tx</span> <span class="o">=</span> <span class="n">graph</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+    <span class="n">nodes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100000</span><span class="p">):</span>
+	<span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Node</span><span class="p">(</span><span class="s1">'test'</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">Subgraph</span><span class="p">(</span><span class="n">nodes</span><span class="o">=</span><span class="n">nodes</span><span class="p">)</span>
+    <span class="n">tx</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">tx</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">count_label</span><span class="p">(</span><span class="s1">'test'</span><span class="p">))</span>
+    <span class="n">delete_label</span><span class="p">(</span><span class="s1">'test'</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">bench_create4</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">'Using unwind'</span><span class="p">)</span>
+    <span class="n">delete_label</span><span class="p">(</span><span class="s1">'test'</span><span class="p">)</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">tx</span> <span class="o">=</span> <span class="n">graph</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+    <span class="n">ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100000</span><span class="p">))</span>
+    <span class="n">tx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">'unwind $ids as id create (n:test {id: id})'</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="n">ids</span><span class="p">)</span>
+    <span class="n">tx</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">count_label</span><span class="p">(</span><span class="s1">'test'</span><span class="p">))</span>
+    <span class="n">delete_label</span><span class="p">(</span><span class="s1">'test'</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">bench_create</span><span class="p">():</span>
+    <span class="n">create_tests</span> <span class="o">=</span> <span class="p">[</span><span class="n">bench_create1</span><span class="p">,</span> <span class="n">bench_create2</span><span class="p">,</span> <span class="n">bench_create3</span><span class="p">,</span> <span class="n">bench_create4</span><span class="p">]</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s1">'testing create'</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">create_tests</span><span class="p">:</span>
+	<span class="n">i</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+    <span class="n">bench_create</span><span class="p">()</span>
+</pre></div>
+
+<p>
+Apparently, using cypher with <code>=unwind=</code> keyword is the fastest way to batch insert nodes.
+</p>
+<div class="highlight"><pre><span></span>testing create
+Using py2neo one by one
+96.09799289703369
+100000
+Using cypher one by one
+9.493892192840576
+100000
+Using Subgraph
+7.638832092285156
+100000
+Using unwind
+2.511630058288574
+100000
+</pre></div>
+
+<p>
+The above result is baed on <code>=http=</code> protocal. An very interesting result is that, <code>=bolt=</code> protocal will decrease the time of the first method, but double the time of sencond method. That's wired, maybe <code>=py2neo=</code> has some special opitimusation when doing batch insert on <code>=bolt=</code> protocal? But I have no idea why insert one by one with cypher is 2x slower. Here is the result of <code>=bolt=</code> protocal.
+</p>
+<div class="highlight"><pre><span></span>testing create
+Using py2neo one by one
+51.73185706138611
+100000
+Using cypher one by one
+22.051995992660522
+100000
+Using Subgraph
+8.81674599647522
+100000
+Using unwind
+2.8623900413513184
+100000
+</pre></div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/deploy-nikola-orgmode-on-travis/" class="u-url">Deploy Nikola OrgMode on Travis</a></h1>
         <div class="metadata">
             <span class="post-date dateline"><time class="published dt-published" datetime="2018-11-03T20:20:45+08:00" title="2018-11-03 20:20">2018-11-03 20:20</time></span>
         </div>
@@ -532,20 +669,13 @@ $$T_{ij}=P(j \rightarrow i)=\frac{w_{ij}}{\sum^{l+u}_{k=1}w_{kj}}$$
 <p><img alt="thefuck" src="images/shell_thefuck.gif"></p>
 </div>
     </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/start/" class="u-url">Start</a></h1>
-        <div class="metadata">
-            <span class="post-date dateline"><time class="published dt-published" datetime="2017-04-18T23:33:55+08:00" title="2017-04-18 23:33">2017-04-18 23:33</time></span>
-        </div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>Over the years, I have read so many programmers’ blogs, which has  helped me a lot. Now I think it’s the time to start my own blog.</p>
-<p>I hope this can enforce myself to review what I have learned, and it would even be better if someone can benefit from it.</p>
-</div>
-    </div>
     </article>
 </div>
-
-               <script>var disqus_shortname="kkblog-1";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha256-ExtbCSBuYA7kq1Pz362ibde9nnsHYPt6JxuxYeZbU+c=" crossorigin="anonymous"></script><script>
+        <nav class="postindexpager"><ul class="pager">
+<li class="next">
+                <a href="index-1.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="kkblog-1";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha256-ExtbCSBuYA7kq1Pz362ibde9nnsHYPt6JxuxYeZbU+c=" crossorigin="anonymous"></script><script>
                 renderMathInElement(document.body,
                     {
                         
