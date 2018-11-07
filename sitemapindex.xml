@@ -6,63 +6,71 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://bebound.github.io/categories/django.xml</loc>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://bebound.github.io/categories/doc2vec.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://bebound.github.io/categories/gensim.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://bebound.github.io/categories/mathjax.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://bebound.github.io/categories/nikola.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://bebound.github.io/categories/nlp.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://bebound.github.io/categories/py2neo.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://bebound.github.io/categories/python.xml</loc>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://bebound.github.io/categories/shell.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://bebound.github.io/categories/text-classification.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://bebound.github.io/categories/travis.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://bebound.github.io/categories/windows.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://bebound.github.io/categories/word2vec.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://bebound.github.io/galleries/demo/rss.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://bebound.github.io/galleries/rss.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://bebound.github.io/rss.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:20:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://bebound.github.io/sitemap.xml</loc>
-  <lastmod>2018-11-05T14:53:00Z</lastmod>
+  <lastmod>2018-11-07T15:20:00Z</lastmod>
  </sitemap>
 </sitemapindex>

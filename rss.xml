@@ -1,5 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog</title><link>https://bebound.github.io/</link><description>KK's personal blog</description><atom:link href="https://bebound.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Mon, 05 Nov 2018 14:53:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Create Node Benchmark in Py2neo</title><link>https://bebound.github.io/posts/create-node-benchmark-in-py2neo/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog</title><link>https://bebound.github.io/</link><description>KK's personal blog</description><atom:link href="https://bebound.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Wed, 07 Nov 2018 15:20:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>CSRF in Django</title><link>https://bebound.github.io/posts/csrf-in-django/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;p&gt;
+CSRF(Cross-site request forgery) is a way to generate fake user request to target website. For example, on a malicious website A, there is a button, click it will send request to www.B.com/logout. When the user click this button, he will logout from website B unconsciously. Logout is not a big problem, but malicious website can generate more dangerous request like money transfer.
+&lt;/p&gt;
+
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;Django CSRF protection&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;p&gt;
+Each web framework has different approach to do CSRF protection. In Django, the  validation process is below:
+&lt;/p&gt;
+
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;When user login for the first time, Django generate a &lt;code&gt;=csrf_secret=&lt;/code&gt;, add random salt and encrypt it as A, save A to cookie &lt;code&gt;=csrftoken=&lt;/code&gt;.
+&lt;/li&gt;
+&lt;li&gt;When Django processing tag &lt;code&gt;={{ csrf_token }}=&lt;/code&gt; or &lt;code&gt;={% csrf_token %}=&lt;/code&gt;, it read &lt;code&gt;=csrftoken=&lt;/code&gt; cookie A, reverse it to &lt;code&gt;=csrf_secret=&lt;/code&gt;, add random salt and encrypt it as B, return corresponding HTML.
+&lt;/li&gt;
+&lt;li&gt;When Django receive POST request, it will retrive cookie &lt;code&gt;=csrftoken=&lt;/code&gt; as A, and tries to get &lt;code&gt;=csrfmiddlewaretoken=&lt;/code&gt; value B from POST data, if it does not exist, it will get header &lt;code&gt;=X-CSRFToken=&lt;/code&gt; value as B. Then A and B will be reversed to &lt;code&gt;=csrf_secret=&lt;/code&gt;. If the values are identical, the validation is passed. Otherwise, a 403 error will raise.
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2" class="outline-2"&gt;
+&lt;h2 id="sec-2"&gt;Django CSRF Usage&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-2"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-2-1" class="outline-3"&gt;
+&lt;h3 id="sec-2-1"&gt;Form&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-1"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;form&amp;gt;
+    {% csrf_token %}
+&amp;lt;/form&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2-2" class="outline-3"&gt;
+&lt;h3 id="sec-2-2"&gt;Single AJAX request&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-2"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;ajax&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+    &lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+	&lt;span class="nx"&gt;csrfmiddlewaretoken&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'{{ csrf_token }}'&lt;/span&gt;
+    &lt;span class="p"&gt;},&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-sec-2-3" class="outline-3"&gt;
+&lt;h3 id="sec-2-3"&gt;Multiple AJAX request&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-2-3"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;getCookie&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;cookieValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;cookie&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;cookie&lt;/span&gt; &lt;span class="o"&gt;!==&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+	&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;cookies&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;cookie&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;';'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+	&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;cookies&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+	    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;cookie&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;jQuery&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;trim&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;cookies&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
+	    &lt;span class="c1"&gt;// Does this cookie string begin with the name we want?&lt;/span&gt;
+	    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;cookie&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;substring&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;'='&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+		&lt;span class="nx"&gt;cookieValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;decodeURIComponent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;cookie&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;substring&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+		&lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+	    &lt;span class="p"&gt;}&lt;/span&gt;
+	&lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;cookieValue&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;csrftoken&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;getCookie&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'csrftoken'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;csrfSafeMethod&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;method&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="c1"&gt;// these HTTP methods do not require CSRF protection&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/^(GET|HEAD|OPTIONS|TRACE)$/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;test&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;method&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;ajaxSetup&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+    &lt;span class="nx"&gt;beforeSend&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;xhr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;settings&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+	&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;csrfSafeMethod&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;settings&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;crossDomain&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+	    &lt;span class="nx"&gt;xhr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setRequestHeader&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"X-CSRFToken"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;csrftoken&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+	&lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;
+Ref:
+&lt;/p&gt;
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;&lt;a href="https://docs.djangoproject.com/en/2.1/ref/csrf/"&gt;Cross Site Request Forgery protection&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/django/django/blob/master/django/middleware/csrf.py"&gt;csrf.py&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://stackoverflow.com/questions/48002861/whats-the-relationship-between-csrfmiddlewaretoken-and-csrftoken"&gt;What's the relationship between csrfmiddlewaretoken and csrftoken?&lt;/a&gt; 
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>django</category><category>python</category><guid>https://bebound.github.io/posts/csrf-in-django/</guid><pubDate>Wed, 07 Nov 2018 15:12:14 GMT</pubDate></item><item><title>Create Node Benchmark in Py2neo</title><link>https://bebound.github.io/posts/create-node-benchmark-in-py2neo/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;p&gt;
 Recently, I'm working on a neo4j project. I use &lt;code&gt;=Py2neo=&lt;/code&gt; to interact with graph db. Alghough &lt;code&gt;=Py2neo=&lt;/code&gt; is a very pythonic and easy to use, its performance is really poor. Sometimes I have to manually write cypher statement by myself if I can't bear with the slow excution. Here is a small script which I use to compare the performance of 4 diffrent ways to insert nodes.
 &lt;/p&gt;
 
@@ -494,27 +587,4 @@ $$T_{ij}=P(j \rightarrow i)=\frac{w_{ij}}{\sum^{l+u}_{k=1}w_{kj}}$$
 &lt;p&gt;If this output a none &lt;code&gt;-1&lt;/code&gt; digit, then it's fine.&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;gensim.models&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;word2vec&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;word2vec&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;FAST_VERSION&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><category>gensim</category><category>windows</category><guid>https://bebound.github.io/posts/enable-c-extension-for-gensim-on-windows/</guid><pubDate>Fri, 09 Jun 2017 19:40:32 GMT</pubDate></item><item><title>Some Useful Shell Tools</title><link>https://bebound.github.io/posts/some-useful-shell-tools/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here are some shell tools I use, which can boost your productivity.&lt;/p&gt;
-&lt;h4&gt;&lt;a href="https://github.com/sorin-ionescu/prezto"&gt;Prezto&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;A zsh configuration framework. Provides auto completion, prompt theme and lots of modules to work with other useful tools. I extremely love the &lt;code&gt;agnoster&lt;/code&gt; theme.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="agnoster" src="https://bebound.github.io/images/shell_agnoster.png"&gt;&lt;/p&gt;
-&lt;h4&gt;&lt;a href="https://github.com/clvv/fasd"&gt;Fasd&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Help you to navigate between folders and launch application.&lt;/p&gt;
-&lt;p&gt;Here are the official usage example:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;  v def conf       =&amp;gt;     vim /some/awkward/path/to/type/default.conf
-  j abc            =&amp;gt;     cd /hell/of/a/awkward/path/to/get/to/abcdef
-  m movie          =&amp;gt;     mplayer /whatever/whatever/whatever/awesome_movie.mp4
-  o eng paper      =&amp;gt;     xdg-open /you/dont/remember/where/english_paper.pdf
-  vim `f rc lo`    =&amp;gt;     vim /etc/rc.local
-  vim `f rc conf`  =&amp;gt;     vim /etc/rc.conf
-&lt;/pre&gt;
-
-
-&lt;h4&gt;&lt;a href="https://github.com/monochromegane/the_platinum_searcher"&gt;pt&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;A fast code search tool similar to &lt;code&gt;ack&lt;/code&gt;.&lt;/p&gt;
-&lt;h4&gt;&lt;a href="https://github.com/junegunn/fzf"&gt;fzf&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;A great fuzzy finder, it can also integrate with vim by &lt;a href="https://github.com/junegunn/fzf.vim"&gt;fzf.vim&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="fzf" src="https://bebound.github.io/images/shell_fzf.gif"&gt;&lt;/p&gt;
-&lt;h4&gt;&lt;a href="https://github.com/nvbn/thefuck"&gt;thefuck&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Magnificent app which corrects your previous console command.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="thefuck" src="https://bebound.github.io/images/shell_thefuck.gif"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>shell</category><guid>https://bebound.github.io/posts/some-useful-shell-tools/</guid><pubDate>Sat, 06 May 2017 16:10:25 GMT</pubDate></item></channel></rss>
+&lt;/pre&gt;&lt;/div&gt;</description><category>gensim</category><category>windows</category><guid>https://bebound.github.io/posts/enable-c-extension-for-gensim-on-windows/</guid><pubDate>Fri, 09 Jun 2017 19:40:32 GMT</pubDate></item></channel></rss>
