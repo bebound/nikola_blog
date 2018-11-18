@@ -480,7 +480,7 @@ $$
 
 </div>
 
-<p>$f_t$,$i_t$,$o_t$ are forget gate, input gate and output gate respectively. $\tilde{C_t}$ is the new memory content. $Ct$ is cell state. $ht$ is the output. </p>
+<p>$f_t$,$i_t$,$o_t$ are forget gate, input gate and output gate respectively. $\tilde{C_t}$ is the new memory content. $C_t$ is cell state. $h_t$ is the output. </p>
 <p>Use $f_t$ and $i_t$ to update $C_t$, use $o_t$ to decide which part of hidden state should be outputted.</p>
 <h3>GRU</h3>
 <p><img alt="LSTM" src="images/LSTM_GRU.png"></p>
@@ -499,6 +499,8 @@ $$
 
 <p>$z_t$ is update gate, $r_t$ is reset gate, $\tilde{h_t}$ is candidate activation, $h_t$ is activation.</p>
 <p>Compare with LSTM, GRU merge cell state and hidden state to one hiddent state, and use $z_t$ to decide how to update the state rather than $f_t$ and $i_t$.</p>
+<p>Update:</p>
+<p>Here is a good article: <a href="https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Ftowardsdatascience.com%2Fillustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21">Illustrated Guide to LSTM’s and GRU’s: A step by step explanation</a></p>
 <p>Ref：</p>
 <ul>
 <li><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTM Networks</a></li>
