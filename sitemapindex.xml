@@ -6,71 +6,71 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>https://blog.fromkk.com/categories/django.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/categories/django.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/categories/doc2vec.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/categories/doc2vec.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/categories/gensim.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/categories/gensim.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/categories/mathjax.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/categories/mathjax.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/categories/nikola.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/categories/nikola.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/categories/nlp.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/categories/nlp.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/categories/py2neo.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/categories/py2neo.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/categories/python.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/categories/python.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/categories/shell.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/categories/shell.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/categories/text-classification.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/categories/text-classification.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/categories/travis.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/categories/travis.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/categories/windows.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/categories/windows.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/categories/word2vec.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/categories/word2vec.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/galleries/demo/rss.xml</loc>
-  <lastmod>2018-12-02T08:08:00Z</lastmod>
+  <loc>https://bebound.github.io/galleries/demo/rss.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/galleries/rss.xml</loc>
-  <lastmod>2018-12-02T08:08:00Z</lastmod>
+  <loc>https://bebound.github.io/galleries/rss.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/rss.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/rss.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.fromkk.com/sitemap.xml</loc>
-  <lastmod>2018-12-02T08:09:00Z</lastmod>
+  <loc>https://bebound.github.io/sitemap.xml</loc>
+  <lastmod>2018-12-02T08:19:00Z</lastmod>
  </sitemap>
 </sitemapindex>
