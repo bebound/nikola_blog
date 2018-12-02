@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog (Posts about doc2vec)</title><link>https://bebound.github.io/</link><description></description><atom:link href="https://bebound.github.io/categories/doc2vec.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Sun, 18 Nov 2018 07:44:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Semi-supervised text classification using doc2vec and label spreading</title><link>https://bebound.github.io/posts/semi-supervised-text-classification-using-doc2vec-and-label-spreading/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here is a simple way to classify text without much human effort and get a impressive performance.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog (Posts about doc2vec)</title><link>https://blog.fromkk.com/</link><description></description><atom:link href="https://blog.fromkk.com/categories/doc2vec.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Sun, 02 Dec 2018 08:09:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Semi-supervised text classification using doc2vec and label spreading</title><link>https://blog.fromkk.com/posts/semi-supervised-text-classification-using-doc2vec-and-label-spreading/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here is a simple way to classify text without much human effort and get a impressive performance.&lt;/p&gt;
 &lt;p&gt;It can be divided into two steps:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Get train data by using keyword classificaton&lt;/li&gt;
@@ -22,11 +22,11 @@
 &lt;li&gt;Using corpus to train the &lt;code&gt;doc2vec&lt;/code&gt; model.&lt;/li&gt;
 &lt;li&gt;Using &lt;code&gt;doc2vec&lt;/code&gt; model to convert sentence into vector.&lt;/li&gt;
 &lt;li&gt;Using label spreading algorithm to train a classify model to classify the vectors.&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>doc2vec</category><category>mathjax</category><category>NLP</category><category>text classification</category><guid>https://bebound.github.io/posts/semi-supervised-text-classification-using-doc2vec-and-label-spreading/</guid><pubDate>Sun, 10 Sep 2017 14:18:15 GMT</pubDate></item><item><title>Parameters in dov2vec</title><link>https://bebound.github.io/posts/parameters-in-dov2vec/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here are some parameter in &lt;code&gt;gensim&lt;/code&gt;'s &lt;code&gt;doc2vec&lt;/code&gt; class.&lt;/p&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>doc2vec</category><category>mathjax</category><category>NLP</category><category>text classification</category><guid>https://blog.fromkk.com/posts/semi-supervised-text-classification-using-doc2vec-and-label-spreading/</guid><pubDate>Sun, 10 Sep 2017 14:18:15 GMT</pubDate></item><item><title>Parameters in dov2vec</title><link>https://blog.fromkk.com/posts/parameters-in-dov2vec/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here are some parameter in &lt;code&gt;gensim&lt;/code&gt;'s &lt;code&gt;doc2vec&lt;/code&gt; class.&lt;/p&gt;
 &lt;h4&gt;window&lt;/h4&gt;
 &lt;p&gt;window is the maximum distance between the predicted word and context words used for prediction within a document. It will look behind and ahead.&lt;/p&gt;
 &lt;p&gt;In &lt;code&gt;skip-gram&lt;/code&gt; model, if the window size is 2, the training samples will be this:(the blue word is the input word)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="window" src="https://bebound.github.io/images/doc2vec_window.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="window" src="https://blog.fromkk.com/images/doc2vec_window.png"&gt;&lt;/p&gt;
 &lt;h4&gt;min_count&lt;/h4&gt;
 &lt;p&gt;If the word appears less than this value, it will be skipped&lt;/p&gt;
 &lt;h4&gt;sample&lt;/h4&gt;
@@ -34,7 +34,7 @@
 &lt;p&gt;$$P(w_i) = (\sqrt{\frac{z(\omega_i)}{s}} + 1) \cdot \frac{s}{z(\omega_i)}$$&lt;/p&gt;
 &lt;p&gt;where $z(w_i)$ is the frequency of the word and $s$ is the sample rate.&lt;/p&gt;
 &lt;p&gt;This is the plot when &lt;code&gt;sample&lt;/code&gt; is 1e-3.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="negative-sample" src="https://bebound.github.io/images/doc2vec_negative_sample.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="negative-sample" src="https://blog.fromkk.com/images/doc2vec_negative_sample.png"&gt;&lt;/p&gt;
 &lt;h4&gt;negative&lt;/h4&gt;
 &lt;p&gt;Usually, when training a neural network, for each training sample, all of the weights in the neural network need to be tweaked. For example, if the word pair is ('fox', 'quick'), then only the word quick's neurons should output 1, and all of the other word neurons should output 0.&lt;/p&gt;
 &lt;p&gt;But it would takes a lot of time to do this when we have billions of training samples. So, instead of update all of the weight, we random choose a small number of "negative" words (default value is 5) to update the weight.(Update their wight to output 0).&lt;/p&gt;
@@ -46,4 +46,4 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/"&gt;Word2Vec Tutorial - The Skip-Gram Model&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/"&gt;Word2Vec Tutorial Part 2 - Negative Sampling&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>doc2vec</category><category>mathjax</category><guid>https://bebound.github.io/posts/parameters-in-dov2vec/</guid><pubDate>Wed, 02 Aug 2017 16:02:17 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><category>doc2vec</category><category>mathjax</category><guid>https://blog.fromkk.com/posts/parameters-in-dov2vec/</guid><pubDate>Wed, 02 Aug 2017 16:02:17 GMT</pubDate></item></channel></rss>
