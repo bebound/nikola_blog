@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog (Posts about mathjax)</title><link>https://bebound.github.io/</link><description></description><atom:link href="https://bebound.github.io/categories/mathjax.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Sun, 02 Dec 2018 08:19:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>LSTM and GRU</title><link>https://bebound.github.io/posts/lstm-and-gru/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;h3&gt;LSTM&lt;/h3&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog (Posts about mathjax)</title><link>https://blog.fromkk.com/</link><description></description><atom:link href="https://blog.fromkk.com/categories/mathjax.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Sun, 02 Dec 2018 08:45:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>LSTM and GRU</title><link>https://blog.fromkk.com/posts/lstm-and-gru/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;h3&gt;LSTM&lt;/h3&gt;
 &lt;p&gt;The avoid the problem of vanishing gradient and exploding gradient in vanilla RNN, LSTM was published, which can remember information for longer periods of time.&lt;/p&gt;
 &lt;p&gt;Here is the structure of LSTM:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="LSTM" src="https://bebound.github.io/images/LSTM_LSTM.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="LSTM" src="https://blog.fromkk.com/images/LSTM_LSTM.png"&gt;&lt;/p&gt;
 &lt;p&gt;The calculate procedure are:&lt;/p&gt;
 &lt;div&gt;
 
@@ -22,7 +22,7 @@ $$
 &lt;p&gt;$f_t$,$i_t$,$o_t$ are forget gate, input gate and output gate respectively. $\tilde{C_t}$ is the new memory content. $C_t$ is cell state. $h_t$ is the output. &lt;/p&gt;
 &lt;p&gt;Use $f_t$ and $i_t$ to update $C_t$, use $o_t$ to decide which part of hidden state should be outputted.&lt;/p&gt;
 &lt;h3&gt;GRU&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="LSTM" src="https://bebound.github.io/images/LSTM_GRU.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="LSTM" src="https://blog.fromkk.com/images/LSTM_GRU.png"&gt;&lt;/p&gt;
 &lt;div&gt;
 
 $$
@@ -44,10 +44,10 @@ $$
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/"&gt;Understanding LSTM Networks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://blog.csdn.net/zhangxb35/article/details/70060295"&gt;RNN, LSTM, GRU 公式总结&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>mathjax</category><guid>https://bebound.github.io/posts/lstm-and-gru/</guid><pubDate>Sun, 22 Apr 2018 15:27:45 GMT</pubDate></item><item><title>Models and Architechtures in Word2vec</title><link>https://bebound.github.io/posts/models-and-architechtures-in-word2vec/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;h3&gt;Models&lt;/h3&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>mathjax</category><guid>https://blog.fromkk.com/posts/lstm-and-gru/</guid><pubDate>Sun, 22 Apr 2018 15:27:45 GMT</pubDate></item><item><title>Models and Architechtures in Word2vec</title><link>https://blog.fromkk.com/posts/models-and-architechtures-in-word2vec/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;h3&gt;Models&lt;/h3&gt;
 &lt;h4&gt;CBOW (Continuous Bag of Words)&lt;/h4&gt;
 &lt;p&gt;Use the context to predict the probability of current word.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="cbow" src="https://bebound.github.io/images/doc2vec_cbow.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="cbow" src="https://blog.fromkk.com/images/doc2vec_cbow.png"&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Context words' vectors are $\upsilon_{c-n} ... \upsilon_{c+m}$ ($m$ is the window size)&lt;/li&gt;
 &lt;li&gt;Context vector $ \hat{\upsilon}=\frac{\upsilon_{c-m}+\upsilon_{c-m+1}+...+\upsilon_{c+m}}{2m} $&lt;/li&gt;
@@ -74,7 +74,7 @@ minimize\ J &amp;amp;=-\log P(\omega_c\lvert \omega_{c-m},...,\omega_{c-1},...,\
 
 &lt;h4&gt;Skip-Gram&lt;/h4&gt;
 &lt;p&gt;Use current word to predict its context.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="cbow" src="https://bebound.github.io/images/doc2vec_skip-gram.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="cbow" src="https://blog.fromkk.com/images/doc2vec_skip-gram.png"&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;We get the input word's vector $\upsilon_c$&lt;/li&gt;
 &lt;li&gt;Generate $2m$ score vectors, $uc_{c-m},...,u_{c-1},...,u_{c+m}$.&lt;/li&gt;
@@ -104,7 +104,7 @@ $$&lt;/p&gt;
 $$
 1-\sigma(X^T_\omega \theta)
 $$&lt;/p&gt;
-&lt;p&gt;&lt;img alt="cbow" src="https://bebound.github.io/images/doc2vec_hierarchical_softmax.png"&gt;
+&lt;p&gt;&lt;img alt="cbow" src="https://blog.fromkk.com/images/doc2vec_hierarchical_softmax.png"&gt;
 足球's Huffman code is $1001$, then it's probability in each node are&lt;/p&gt;
 &lt;div&gt;
 
@@ -141,7 +141,7 @@ $$\theta = \text{argmax} \prod_{(\omega,c)\in D} P(D=1\lvert \omega,c,\theta) \p
 &lt;li&gt;&lt;a href="http://www.hankcs.com/nlp/word2vec.html"&gt;word2vec原理推导与代码分析&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://cs224d.stanford.edu/lecture_notes/notes1.pdf"&gt;CS 224D: Deep Learning for NLP Lecture Notes: Part I&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://blog.csdn.net/itplus/article/details/37969519"&gt;word2vec 中的数学原理详解（一）目录和前言&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>mathjax</category><category>word2vec</category><guid>https://bebound.github.io/posts/models-and-architechtures-in-word2vec/</guid><pubDate>Fri, 05 Jan 2018 13:57:17 GMT</pubDate></item><item><title>Semi-supervised text classification using doc2vec and label spreading</title><link>https://bebound.github.io/posts/semi-supervised-text-classification-using-doc2vec-and-label-spreading/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here is a simple way to classify text without much human effort and get a impressive performance.&lt;/p&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>mathjax</category><category>word2vec</category><guid>https://blog.fromkk.com/posts/models-and-architechtures-in-word2vec/</guid><pubDate>Fri, 05 Jan 2018 13:57:17 GMT</pubDate></item><item><title>Semi-supervised text classification using doc2vec and label spreading</title><link>https://blog.fromkk.com/posts/semi-supervised-text-classification-using-doc2vec-and-label-spreading/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here is a simple way to classify text without much human effort and get a impressive performance.&lt;/p&gt;
 &lt;p&gt;It can be divided into two steps:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Get train data by using keyword classificaton&lt;/li&gt;
@@ -164,11 +164,11 @@ $$\theta = \text{argmax} \prod_{(\omega,c)\in D} P(D=1\lvert \omega,c,\theta) \p
 &lt;li&gt;Using corpus to train the &lt;code&gt;doc2vec&lt;/code&gt; model.&lt;/li&gt;
 &lt;li&gt;Using &lt;code&gt;doc2vec&lt;/code&gt; model to convert sentence into vector.&lt;/li&gt;
 &lt;li&gt;Using label spreading algorithm to train a classify model to classify the vectors.&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>doc2vec</category><category>mathjax</category><category>NLP</category><category>text classification</category><guid>https://bebound.github.io/posts/semi-supervised-text-classification-using-doc2vec-and-label-spreading/</guid><pubDate>Sun, 10 Sep 2017 14:18:15 GMT</pubDate></item><item><title>Parameters in dov2vec</title><link>https://bebound.github.io/posts/parameters-in-dov2vec/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here are some parameter in &lt;code&gt;gensim&lt;/code&gt;'s &lt;code&gt;doc2vec&lt;/code&gt; class.&lt;/p&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>doc2vec</category><category>mathjax</category><category>NLP</category><category>text classification</category><guid>https://blog.fromkk.com/posts/semi-supervised-text-classification-using-doc2vec-and-label-spreading/</guid><pubDate>Sun, 10 Sep 2017 14:18:15 GMT</pubDate></item><item><title>Parameters in dov2vec</title><link>https://blog.fromkk.com/posts/parameters-in-dov2vec/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here are some parameter in &lt;code&gt;gensim&lt;/code&gt;'s &lt;code&gt;doc2vec&lt;/code&gt; class.&lt;/p&gt;
 &lt;h4&gt;window&lt;/h4&gt;
 &lt;p&gt;window is the maximum distance between the predicted word and context words used for prediction within a document. It will look behind and ahead.&lt;/p&gt;
 &lt;p&gt;In &lt;code&gt;skip-gram&lt;/code&gt; model, if the window size is 2, the training samples will be this:(the blue word is the input word)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="window" src="https://bebound.github.io/images/doc2vec_window.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="window" src="https://blog.fromkk.com/images/doc2vec_window.png"&gt;&lt;/p&gt;
 &lt;h4&gt;min_count&lt;/h4&gt;
 &lt;p&gt;If the word appears less than this value, it will be skipped&lt;/p&gt;
 &lt;h4&gt;sample&lt;/h4&gt;
@@ -176,7 +176,7 @@ $$\theta = \text{argmax} \prod_{(\omega,c)\in D} P(D=1\lvert \omega,c,\theta) \p
 &lt;p&gt;$$P(w_i) = (\sqrt{\frac{z(\omega_i)}{s}} + 1) \cdot \frac{s}{z(\omega_i)}$$&lt;/p&gt;
 &lt;p&gt;where $z(w_i)$ is the frequency of the word and $s$ is the sample rate.&lt;/p&gt;
 &lt;p&gt;This is the plot when &lt;code&gt;sample&lt;/code&gt; is 1e-3.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="negative-sample" src="https://bebound.github.io/images/doc2vec_negative_sample.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="negative-sample" src="https://blog.fromkk.com/images/doc2vec_negative_sample.png"&gt;&lt;/p&gt;
 &lt;h4&gt;negative&lt;/h4&gt;
 &lt;p&gt;Usually, when training a neural network, for each training sample, all of the weights in the neural network need to be tweaked. For example, if the word pair is ('fox', 'quick'), then only the word quick's neurons should output 1, and all of the other word neurons should output 0.&lt;/p&gt;
 &lt;p&gt;But it would takes a lot of time to do this when we have billions of training samples. So, instead of update all of the weight, we random choose a small number of "negative" words (default value is 5) to update the weight.(Update their wight to output 0).&lt;/p&gt;
@@ -188,7 +188,7 @@ $$\theta = \text{argmax} \prod_{(\omega,c)\in D} P(D=1\lvert \omega,c,\theta) \p
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/"&gt;Word2Vec Tutorial - The Skip-Gram Model&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/"&gt;Word2Vec Tutorial Part 2 - Negative Sampling&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>doc2vec</category><category>mathjax</category><guid>https://bebound.github.io/posts/parameters-in-dov2vec/</guid><pubDate>Wed, 02 Aug 2017 16:02:17 GMT</pubDate></item><item><title>Brief Introduction of Label Propagation Algorithm</title><link>https://bebound.github.io/posts/brief-introduction-of-label-propagation-algorithm/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;As I said before, I'm working on a text classification project. I use &lt;code&gt;doc2vec&lt;/code&gt; to convert text into vectors, then I use LPA to classify the vectors.&lt;/p&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>doc2vec</category><category>mathjax</category><guid>https://blog.fromkk.com/posts/parameters-in-dov2vec/</guid><pubDate>Wed, 02 Aug 2017 16:02:17 GMT</pubDate></item><item><title>Brief Introduction of Label Propagation Algorithm</title><link>https://blog.fromkk.com/posts/brief-introduction-of-label-propagation-algorithm/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;As I said before, I'm working on a text classification project. I use &lt;code&gt;doc2vec&lt;/code&gt; to convert text into vectors, then I use LPA to classify the vectors.&lt;/p&gt;
 &lt;p&gt;LPA is a simple, effective semi-supervised algotithm. It can use the density of unlabeled data to find a hyperplane to split the data.&lt;/p&gt;
 &lt;p&gt;Here are the main stop of the algorithm:&lt;/p&gt;
 &lt;ol&gt;
@@ -213,7 +213,7 @@ $$T_{ij}=P(j \rightarrow i)=\frac{w_{ij}}{\sum^{l+u}_{k=1}w_{kj}}$$
 &lt;li&gt;Reset labeled data's Y. Repeat 3 until Y converges.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;In short, let the nearest label has larger weight, then calculate each label's new label, reset labeled data's label, repeat.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="label spreading" src="https://bebound.github.io/images/label_spreading.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="label spreading" src="https://blog.fromkk.com/images/label_spreading.png"&gt;&lt;/p&gt;
 &lt;p&gt;Ref:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -222,4 +222,4 @@ $$T_{ij}=P(j \rightarrow i)=\frac{w_{ij}}{\sum^{l+u}_{k=1}w_{kj}}$$
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://blog.csdn.net/zouxy09/article/details/49105265"&gt;标签传播算法（Label Propagation）及Python实现&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>mathjax</category><guid>https://bebound.github.io/posts/brief-introduction-of-label-propagation-algorithm/</guid><pubDate>Sun, 16 Jul 2017 15:46:04 GMT</pubDate></item></channel></rss>
+&lt;/ol&gt;&lt;/div&gt;</description><category>mathjax</category><guid>https://blog.fromkk.com/posts/brief-introduction-of-label-propagation-algorithm/</guid><pubDate>Sun, 16 Jul 2017 15:46:04 GMT</pubDate></item></channel></rss>

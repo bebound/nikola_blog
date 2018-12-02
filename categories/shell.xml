@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog (Posts about shell)</title><link>https://bebound.github.io/</link><description></description><atom:link href="https://bebound.github.io/categories/shell.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Sun, 02 Dec 2018 08:19:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Some Useful Shell Tools</title><link>https://bebound.github.io/posts/some-useful-shell-tools/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here are some shell tools I use, which can boost your productivity.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KK's Blog (Posts about shell)</title><link>https://blog.fromkk.com/</link><description></description><atom:link href="https://blog.fromkk.com/categories/shell.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:bebound gm@il.com"&gt;Kurt Lei&lt;/a&gt; </copyright><lastBuildDate>Sun, 02 Dec 2018 08:45:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Some Useful Shell Tools</title><link>https://blog.fromkk.com/posts/some-useful-shell-tools/</link><dc:creator>Kurt Lei</dc:creator><description>&lt;div&gt;&lt;p&gt;Here are some shell tools I use, which can boost your productivity.&lt;/p&gt;
 &lt;h4&gt;&lt;a href="https://github.com/sorin-ionescu/prezto"&gt;Prezto&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;A zsh configuration framework. Provides auto completion, prompt theme and lots of modules to work with other useful tools. I extremely love the &lt;code&gt;agnoster&lt;/code&gt; theme.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="agnoster" src="https://bebound.github.io/images/shell_agnoster.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="agnoster" src="https://blog.fromkk.com/images/shell_agnoster.png"&gt;&lt;/p&gt;
 &lt;h4&gt;&lt;a href="https://github.com/clvv/fasd"&gt;Fasd&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Help you to navigate between folders and launch application.&lt;/p&gt;
 &lt;p&gt;Here are the official usage example:&lt;/p&gt;
@@ -19,7 +19,7 @@
 &lt;p&gt;A fast code search tool similar to &lt;code&gt;ack&lt;/code&gt;.&lt;/p&gt;
 &lt;h4&gt;&lt;a href="https://github.com/junegunn/fzf"&gt;fzf&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;A great fuzzy finder, it can also integrate with vim by &lt;a href="https://github.com/junegunn/fzf.vim"&gt;fzf.vim&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="fzf" src="https://bebound.github.io/images/shell_fzf.gif"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fzf" src="https://blog.fromkk.com/images/shell_fzf.gif"&gt;&lt;/p&gt;
 &lt;h4&gt;&lt;a href="https://github.com/nvbn/thefuck"&gt;thefuck&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Magnificent app which corrects your previous console command.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="thefuck" src="https://bebound.github.io/images/shell_thefuck.gif"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>shell</category><guid>https://bebound.github.io/posts/some-useful-shell-tools/</guid><pubDate>Sat, 06 May 2017 16:10:25 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;img alt="thefuck" src="https://blog.fromkk.com/images/shell_thefuck.gif"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>shell</category><guid>https://blog.fromkk.com/posts/some-useful-shell-tools/</guid><pubDate>Sat, 06 May 2017 16:10:25 GMT</pubDate></item></channel></rss>

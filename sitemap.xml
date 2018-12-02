@@ -6,203 +6,203 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>https://bebound.github.io/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/2017/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/2017/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/2018/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/2018/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/archive.html</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/archive.html</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/categories/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/categories/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/categories/django/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/categories/django/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/categories/doc2vec/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/categories/doc2vec/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/categories/gensim/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/categories/gensim/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/categories/mathjax/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/categories/mathjax/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/categories/nikola/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/categories/nikola/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/categories/nlp/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/categories/nlp/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/categories/py2neo/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/categories/py2neo/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/categories/python/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/categories/python/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/categories/shell/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/categories/shell/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/categories/text-classification/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/categories/text-classification/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/categories/travis/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/categories/travis/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/categories/windows/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/categories/windows/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/categories/word2vec/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/categories/word2vec/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/galleries/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/galleries/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/galleries/demo/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/galleries/demo/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/index-1.html</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/index-1.html</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/listings/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/listings/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/listings/hello.py.html</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/listings/hello.py.html</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/about-nikola/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/about-nikola/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/bootstrap-demo/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/bootstrap-demo/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/charts/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/charts/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/creating-a-theme/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/creating-a-theme/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/dr-nikolas-vendetta/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/dr-nikolas-vendetta/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/extending/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/extending/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/handbook/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/handbook/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/internals/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/internals/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/listings-demo/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/listings-demo/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/path-handlers/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/path-handlers/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/quickref/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/quickref/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/quickstart/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/quickstart/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/slides-demo/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/slides-demo/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/social_buttons/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/social_buttons/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/pages/theming/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/pages/theming/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/posts/brief-introduction-of-label-propagation-algorithm/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/posts/brief-introduction-of-label-propagation-algorithm/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/posts/create-node-benchmark-in-py2neo/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/posts/create-node-benchmark-in-py2neo/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/posts/csrf-in-django/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/posts/csrf-in-django/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/posts/deploy-nikola-orgmode-on-travis/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/posts/deploy-nikola-orgmode-on-travis/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/posts/enable-c-extension-for-gensim-on-windows/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/posts/enable-c-extension-for-gensim-on-windows/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/posts/lstm-and-gru/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/posts/lstm-and-gru/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/posts/models-and-architechtures-in-word2vec/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/posts/models-and-architechtures-in-word2vec/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/posts/parameters-in-dov2vec/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/posts/parameters-in-dov2vec/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/posts/semi-supervised-text-classification-using-doc2vec-and-label-spreading/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/posts/semi-supervised-text-classification-using-doc2vec-and-label-spreading/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/posts/some-useful-shell-tools/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/posts/some-useful-shell-tools/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/posts/start/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/posts/start/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
  <url>
-  <loc>https://bebound.github.io/posts/using-chinese-characters-in-matplotlib/</loc>
-  <lastmod>2018-12-02T08:19:00Z</lastmod>
+  <loc>https://blog.fromkk.com/posts/using-chinese-characters-in-matplotlib/</loc>
+  <lastmod>2018-12-02T08:45:00Z</lastmod>
  </url>
 </urlset>

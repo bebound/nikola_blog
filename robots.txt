@@ -1,4 +1,4 @@
-Sitemap: https://bebound.github.io/sitemapindex.xml
+Sitemap: https://blog.fromkk.com/sitemapindex.xml
 
 User-Agent: *
-Host: bebound.github.io
+Host: blog.fromkk.com
