@@ -62,7 +62,28 @@ MathJax.Hub.Config({
     <div class="content container" id="content">
     
 <div class="post">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/some-useful-shell-tools/" class="u-url">Some Useful Shell Tools</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/enable-c-extension-for-gensim-on-windows/" class="u-url">Enable C Extension for gensim on Windows</a></h1>
+        <div class="metadata">
+            <span class="post-date dateline"><time class="published dt-published" datetime="2017-06-10T03:40:32+08:00" title="2017-06-10 03:40">2017-06-10 03:40</time></span>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>For these days, I’m working on some text classification works, and I use <code>gensim</code>’s <code>doc2vec</code> function.</p>
+<p>When using gensim, it shows this warning message:</p>
+<pre class="code literal-block"><span></span>C extension not loaded for Word2Vec, training will be slow.
+</pre>
+
+
+<p>I search this on Internet and found that gensim has rewrite some part of the code using <code>cython</code> rather than <code>numpy</code> to get better performance. A compiler is required to enable this feature.</p>
+<p>I tried to install mingw and add it into the path, but it's not working.</p>
+<p>Finally, I tried to install <a href="https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017">Visual C++ Build Tools</a> and it works.</p>
+<p>If this output a none <code>-1</code> digit, then it's fine.</p>
+<pre class="code literal-block"><span></span><span class="kn">from</span> <span class="nn">gensim.models</span> <span class="k">import</span> <span class="n">word2vec</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word2vec</span><span class="o">.</span><span class="n">FAST_VERSION</span><span class="p">)</span>
+</pre>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/some-useful-shell-tools/" class="u-url">Some Useful Shell Tools</a></h1>
         <div class="metadata">
             <span class="post-date dateline"><time class="published dt-published" datetime="2017-05-07T00:10:25+08:00" title="2017-05-07 00:10">2017-05-07 00:10</time></span>
         </div>
