@@ -13,7 +13,7 @@ As I said before, I'm working on a text classification project. I use `doc2vec` 
 
 LPA is a simple, effective semi-supervised algotithm. It can use the density of unlabeled data to find a hyperplane to split the data.
 
-Here are the main stop of the algorithm:
+Here are the main steps of the algorithm:
 
 0. Let $ (x_1,y1)...(x_l,y_l)$ be labeled data, $Y_L = \{y_1...y_l\} $ are the class labels. Let $(x_{l+1},y_{l+u})$ be unlabeled data where $Y_U = \{y_{l+1}...y_{l+u}\}$ are unobserved, useally $l \ll u$. Let $X=\{x_1...x_{l+u}\}$ where $x_i\in R^D$. The problem is to estimate $Y_U$ for $X$ and $Y_L$.
 1. Calculate the similarity of the data points. The most simple metric is Euclidean distance. Use a parameter $\sigma$ to cotrol the weights.

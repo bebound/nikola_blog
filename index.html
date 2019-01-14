@@ -52,7 +52,7 @@ MathJax.Hub.Config({
     
     
     </nav><footer id="footer"><span class="copyright">
-              Contents © 2018         <a href="mailto:bebound%20gm@il.com">Kurt Lei</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+              Contents © 2019         <a href="mailto:bebound%20gm@il.com">Kurt Lei</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             </span>
             
             
@@ -885,7 +885,7 @@ $$\theta = \text{argmax} \prod_{(\omega,c)\in D} P(D=1\lvert \omega,c,\theta) \p
     <div>
 <p>As I said before, I'm working on a text classification project. I use <code>doc2vec</code> to convert text into vectors, then I use LPA to classify the vectors.</p>
 <p>LPA is a simple, effective semi-supervised algotithm. It can use the density of unlabeled data to find a hyperplane to split the data.</p>
-<p>Here are the main stop of the algorithm:</p>
+<p>Here are the main steps of the algorithm:</p>
 <ol>
 <li>Let $ (x_1,y1)...(x_l,y_l)$ be labeled data, $Y_L = {y_1...y_l} $ are the class labels. Let $(x_{l+1},y_{l+u})$ be unlabeled data where $Y_U = {y_{l+1}...y_{l+u}}$ are unobserved, useally $l \ll u$. Let $X={x_1...x_{l+u}}$ where $x_i\in R^D$. The problem is to estimate $Y_U$ for $X$ and $Y_L$.</li>
 <li>Calculate the similarity of the data points. The most simple metric is Euclidean distance. Use a parameter $\sigma$ to cotrol the weights.</li>
